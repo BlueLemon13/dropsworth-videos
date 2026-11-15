@@ -15,8 +15,8 @@ Every shot type always means the same thing. Pick b-roll by the meaning of the l
 | Cash | money (sparingly) | budget beats |
 
 ## Rules
-- **Explainers open on a SUPERCAR with on-screen hook text** (e.g. "the first step to ai dropshipping" / "age 16 - 29"). Sauce/other formats: first shot has a person or is a rich car/penthouse.
-- **Explainers:** same-size caption text throughout; positive step-by-step guide (no sad/struggling beats); shots ONLY supercars, penthouses (lots) and real Dropsworth app demos; the guy-at-a-computer shot at most once.
+- **Explainers open on a POV SUPERCAR with on-screen hook text:** line 1 always contains "ai dropshipping" (e.g. "best product research tool for ai dropshipping"), line 2 an age range (e.g. "age 16 - 29").
+- **Explainers:** ALL b-roll is POV (first-person driving supercars, views from penthouses, yacht/boat views); smaller same-size captions; positive step-by-step guide (no sad beats); steps shown on REAL Dropsworth app screens (find, demand, competition, supplier, product score); guy-at-a-computer at most once.
 - **Mostly real video.** Graphics only where footage can't show it (store count, scorecard, comment CTA). Never open on a graphic.
 - **A guy** as the main character in people shots.
 - **No box character** in explainers.

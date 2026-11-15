@@ -68,6 +68,23 @@ export const Visual: React.FC<{name: string; items?: string[]; durationInFrames:
     );
   }
 
+  if (name.startsWith('appreal:')) {
+    // REAL Dropsworth app page (tools/capture-real-app.mjs): a phone-width card that slowly scrolls the page.
+    const pg = name.slice(8);
+    const frames = Number(opts.frames) || 30;
+    const idx = Math.min(frames - 1, Math.floor(interpolate(f, [8, Math.max(9, durationInFrames - 6)], [0, frames - 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})));
+    const enter = spring({frame: f, fps, config: {damping: 16, mass: 0.7}});
+    return (
+      <div style={{position: 'absolute', inset: 0, overflow: 'hidden'}}>
+        <GBackground />
+        <div style={{position: 'absolute', left: 36, right: 36, top: 430, bottom: 80, borderRadius: 34, overflow: 'hidden', background: '#f7f3ea', transform: `translateY(${(1 - enter) * 140}px) scale(${0.94 + 0.06 * enter})`, opacity: enter, boxShadow: '0 40px 90px rgba(0,0,0,0.6)'}}>
+          {/* zoomed in so the app text reads on a phone, slow pan across the page */}
+          <Img src={staticFile(`app/real/${pg}/${String(idx).padStart(4, '0')}.jpg`)} style={{width: '150%', display: 'block', transform: `translateX(${interpolate(f, [0, durationInFrames], [0, -22], {extrapolateRight: 'clamp'})}%)`}} />
+        </div>
+      </div>
+    );
+  }
+
   if (name.startsWith('app:')) {
     // Real Dropsworth product demo, captured frame by frame from the landing page (tools/capture-app.mjs).
     const dir = name.slice(4);

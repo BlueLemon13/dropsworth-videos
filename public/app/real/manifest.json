@@ -1,0 +1,50 @@
+{
+ "overview": {
+  "still": "app/real/overview.jpg",
+  "dir": "app/real/overview",
+  "frames": 30,
+  "scroll": 0
+ },
+ "find": {
+  "still": "app/real/find.jpg",
+  "dir": "app/real/find",
+  "frames": 30,
+  "scroll": 0
+ },
+ "verdict": {
+  "still": "app/real/verdict.jpg",
+  "dir": "app/real/verdict",
+  "frames": 30,
+  "scroll": 0
+ },
+ "demand": {
+  "still": "app/real/demand.jpg",
+  "dir": "app/real/demand",
+  "frames": 30,
+  "scroll": 756
+ },
+ "competition": {
+  "still": "app/real/competition.jpg",
+  "dir": "app/real/competition",
+  "frames": 30,
+  "scroll": 900
+ },
+ "supplier": {
+  "still": "app/real/supplier.jpg",
+  "dir": "app/real/supplier",
+  "frames": 30,
+  "scroll": 634
+ },
+ "winners": {
+  "still": "app/real/winners.jpg",
+  "dir": "app/real/winners",
+  "frames": 30,
+  "scroll": 0
+ },
+ "saved": {
+  "still": "app/real/saved.jpg",
+  "dir": "app/real/saved",
+  "frames": 30,
+  "scroll": 0
+ }
+}

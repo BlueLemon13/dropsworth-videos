@@ -13,7 +13,7 @@ const MODEL = process.env.SCRIPT_MODEL || 'claude-haiku-5-5'; // owner chose the
 const date = process.argv[2] || new Date().toISOString().slice(0, 10);
 const read = (p) => (fs.existsSync(path.join(ROOT, p)) ? fs.readFileSync(path.join(ROOT, p), 'utf8') : '');
 
-const SHOTS = ['opener', 'tired', 'working', 'phone', 'product', 'supercar', 'sales', 'penthouse', 'money', 'g-stores', 'g-score', 'g-trend', 'app-drop', 'app-demand', 'app-competition', 'app-supplier'];
+const SHOTS = ['opener', 'tired', 'working', 'phone', 'product', 'supercar', 'sales', 'penthouse', 'money', 'g-stores', 'g-score', 'g-trend', 'app-drop', 'app-demand', 'app-competition', 'app-supplier', 'app-score', 'yacht'];
 const SLOTS = ['A1', 'A2', 'A3', 'A4', 'B1', 'B2', 'B3', 'B4'];
 const FORMAT_OF = (slot) => (slot[1] === '1' || slot[1] === '2' ? 'explainer' : 'sauce');
 const Line = z.object({
@@ -26,7 +26,7 @@ const Video = z.object({
   format: z.enum(['explainer', 'sauce']),
   topic: z.string(),
   hook_style: z.string(),
-  hook_text: z.array(z.string()).describe('Explainers only: 1-2 short lowercase on-screen hook lines shown over the opening supercar, e.g. ["the first step to ai dropshipping", "age 16 - 29"]. Empty for sauce.'),
+  hook_text: z.array(z.string()).describe('Explainers only: EXACTLY 2 lowercase lines over the opening POV supercar. Line 1 MUST contain "ai dropshipping" (e.g. "best product research tool for ai dropshipping", "the first step to ai dropshipping"). Line 2 is an age range like "age 16 - 29". Empty for sauce.'),
   lines: z.array(Line).describe('Voiced formats only (empty for sauce). Do NOT include the CTA, it is appended automatically.'),
   sauce_text: z.string().describe('Sauce posts only (empty otherwise)'),
   caption: z.string().describe('TikTok caption, 1-2 short lines, no hashtags'),
@@ -68,9 +68,10 @@ Use graphics at most twice per video. Change shot every line or two; never the s
 const notes = read('notes.md').trim();
 const user = `Write tomorrow's 8 videos for ${date}: slots A1 A2 A3 A4 B1 B2 B3 B4. A1, A2, B1, B2 are explainers; A3, A4, B3, B4 are sauce posts.
 Explainers are STEP-BY-STEP GUIDES (like scripts/f5-guide), never "judging" videos. OWNER'S RULES FOR EVERY EXPLAINER:
-- Opens on a SUPERCAR (first line shot "supercar") with hook_text on screen, e.g. ["the first step to ai dropshipping", "age 16 - 29"], ["how to find a winning product", "beginners only"], ["the 4 step validation method", "save this"].
+- Opens on a POV SUPERCAR (first line shot "supercar") with hook_text: line 1 ALWAYS contains "ai dropshipping", line 2 ALWAYS an age range. e.g. ["best product research tool for ai dropshipping", "age 16 - 29"], ["the first step to ai dropshipping", "age 17 - 25"], ["how i find winners for ai dropshipping", "age 18 - 30"].
+- All b-roll is POV (first person): supercar = POV driving, penthouse = POV view from a penthouse, yacht = POV on a yacht/boat.
 - 100% positive: NO sad, struggling, losing-money or "most beginners fail" beats. Confident how-to energy.
-- Shots ONLY: supercar, penthouse (use lots), app-drop/app-demand/app-competition/app-supplier (the real Dropsworth app for each step), and "working" at most ONCE. Nothing else.
+- Shots ONLY: supercar, penthouse, yacht (mix all three), app-drop/app-demand/app-competition/app-supplier/app-score (REAL Dropsworth app screens: find a product, demand chart, competition, supplier & profit, product score), and "working" at most ONCE. Nothing else.
 Structure: a hook promising a how-to, "save this", 2-4 numbered steps where each step line uses the matching app-* shot so the viewer SEES Dropsworth doing it, then a short payoff line. 90-130 spoken words. Vary the angle between the 4 explainers (e.g. full 4-step validation, just reading demand properly, spotting saturated products with the competition step, the profit math with the supplier step).
 Topics used in the last 14 days (do NOT repeat these topics or hooks):
 ${recent.length ? recent.join('\n') : '(none yet)'}
@@ -101,7 +102,7 @@ for (let attempt = 1; attempt <= 3; attempt++) {
 }
 
 // ---- validation / clean-up (never trust, always fix) ----
-const EXPLAINER_SHOTS = new Set(['supercar', 'penthouse', 'working', 'sales', 'app-drop', 'app-demand', 'app-competition', 'app-supplier']);
+const EXPLAINER_SHOTS = new Set(['supercar', 'penthouse', 'yacht', 'working', 'app-drop', 'app-demand', 'app-competition', 'app-supplier', 'app-score']);
 const DASH = /[–—]/g;
 for (const v of plan.videos) {
   v.sauce_text = v.sauce_text.replace(DASH, ',').replace(/\s+-\s+/g, ', ').trim();
@@ -112,11 +113,12 @@ for (const v of plan.videos) {
     let working = 0, alt = 0;
     v.lines.forEach((l, i) => {
       if (i === 0) { l.shot = 'supercar'; return; }
-      if (!EXPLAINER_SHOTS.has(l.shot) || (l.shot === 'working' && ++working > 1)) l.shot = alt++ % 2 ? 'supercar' : 'penthouse';
-      if (l.shot === v.lines[i - 1].shot && !l.shot.startsWith('app-')) l.shot = l.shot === 'penthouse' ? 'supercar' : 'penthouse';
+      if (!EXPLAINER_SHOTS.has(l.shot) || (l.shot === 'working' && ++working > 1)) l.shot = ['penthouse', 'yacht', 'supercar'][alt++ % 3];
+      if (l.shot === v.lines[i - 1].shot && !l.shot.startsWith('app-')) l.shot = l.shot === 'penthouse' ? 'yacht' : 'penthouse';
     });
     v.hook_text = (v.hook_text || []).map((h) => h.replace(DASH, '-').toLowerCase().trim()).filter(Boolean).slice(0, 2);
-    if (!v.hook_text.length) v.hook_text = ['the first step to ai dropshipping'];
+    if (!v.hook_text[0] || !/ai dropshipping/.test(v.hook_text[0])) v.hook_text[0] = 'the first step to ai dropshipping';
+    if (!v.hook_text[1] || !/ages*d/.test(v.hook_text[1])) v.hook_text[1] = 'age 16 - 29';
   } else if (!v.sauce_text) throw new Error(`${v.slot} sauce has no text`);
   v.hashtags = v.hashtags.map((h) => '#' + h.replace(/^#+/, '').replace(/\s+/g, '')).slice(0, 6);
 }

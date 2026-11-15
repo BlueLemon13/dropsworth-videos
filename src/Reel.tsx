@@ -55,7 +55,7 @@ const Captions: React.FC<{words: Word[]; groups: Group[]; scenes: ReelScene[]; u
             style={{
               fontFamily: 'Montserrat',
               fontWeight: big ? 900 : uniform ? 800 : 700,
-              fontSize: big ? Math.min(150, 960 / (w.text.length * 0.78)) : uniform ? 80 : 74,
+              fontSize: big ? Math.min(150, 960 / (w.text.length * 0.78)) : uniform ? 64 : 74,
               lineHeight: big ? 1.0 : 1.25,
               letterSpacing: big ? -2 : 0,
               color: w.blue ? BLUE : w.red ? RED : '#fff',
@@ -66,7 +66,7 @@ const Captions: React.FC<{words: Word[]; groups: Group[]; scenes: ReelScene[]; u
               display: 'inline-block',
             }}
           >
-            {w.text}
+            {uniform && w.big && w.text === w.text.toUpperCase() ? w.text.toLowerCase() : w.text}
           </span>
         );
       })}
@@ -88,7 +88,7 @@ const HookCard: React.FC<{scenes: ReelScene[]}> = ({scenes}) => {
   return (
     <div style={{position: 'absolute', left: 70, right: 70, top: 520, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18, opacity: o, transform: `scale(${interpolate(local, [0, 6], [0.92, 1], {extrapolateRight: 'clamp'})})`}}>
       {lines.map((l, i) => (
-        <div key={i} style={{fontFamily: 'TikTok Sans', fontWeight: 700, fontSize: i === 0 ? 72 : 60, lineHeight: 1.15, color: '#fff', textAlign: 'center', textShadow: '0 0 4px rgba(0,0,0,0.95), 0 3px 14px rgba(0,0,0,0.8)'}}>{l}</div>
+        <div key={i} style={{fontFamily: 'TikTok Sans', fontWeight: 700, fontSize: i === 0 ? 58 : 48, lineHeight: 1.15, color: '#fff', textAlign: 'center', textShadow: '0 0 4px rgba(0,0,0,0.95), 0 3px 14px rgba(0,0,0,0.8)'}}>{l}</div>
       ))}
     </div>
   );

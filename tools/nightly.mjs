@@ -104,8 +104,9 @@ for (const v of plan.videos) {
       for (const [i, l] of v.lines.entries()) {
         let marker;
         if (l.shot.startsWith('app-')) {
-          const dir = {'app-drop': 'step1-drop', 'app-demand': 'step2-demand', 'app-competition': 'step3-competition', 'app-supplier': 'step4-supplier'}[l.shot];
-          marker = `[app:${dir}${l.step ? ` step=${l.step}` : ''}]`;
+          // REAL app pages (public/app/real, captured from the app in demo mode)
+          const pg = {'app-drop': 'find', 'app-demand': 'demand', 'app-competition': 'competition', 'app-supplier': 'supplier', 'app-score': 'verdict'}[l.shot];
+          marker = `[appreal:${pg}${l.step ? ` step=${l.step}` : ''}]`;
         } else if (l.shot.startsWith('g-')) {
           marker = `[${l.shot} img=${thumb}${l.shot === 'g-score' ? ' ticks=demand|margin|competition' : ''}${l.step ? ` step=${l.step}` : ''}]`;
         } else {
@@ -118,7 +119,7 @@ for (const v of plan.videos) {
         }
         lines.push(`${marker} ${l.text}`);
       }
-      const end = await pick('penthouse', taken); // made it, then the DM graphic
+      const end = await pick(Math.random() < 0.5 ? 'penthouse' : 'yacht', taken); // made it, then the DM graphic
       lines.push(`[vid:_lib/${end.file} grade=bright step=0] Send me the word ^VALIDATE [g-dm] and I'll send you my *FREE checklist.`);
       const specPath = path.join(outDir, `${v.slot}.spec.json`);
       fs.writeFileSync(specPath, JSON.stringify({name, lines, options: {sfx: 'minimal', tail: 2.6}, props: {uniformText: true}}, null, 2));

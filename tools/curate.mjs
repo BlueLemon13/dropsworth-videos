@@ -15,9 +15,10 @@ const PICKS = {
   working: ['G5', 'G6', 'G7', 'G3', 'G9', 'M2'],          // grinding at the computer
   phone: ['B6', 'B7'],                                    // scrolling TikTok
   product: ['N0', 'N2', 'N3', 'N5', 'N10', 'N11', 'N14'], // real viral dropshipping products
-  supercar: ['B16', 'B20', 'S23', 'S24', 'T0', 'T1'],         // winners + explainer hooks (no McLaren)
+  supercar: ['P1', 'P2', 'P4', 'P8', 'P9', 'P12', 'P3'], // POV driving only (owner: always POV), no McLaren
   sales: ['G15'],                                         // Shopify sales (G10 removed: TikTok watermark + a real customer's name)
-  penthouse: ['G24', 'G19', 'N20', 'N22', 'N24', 'S13', 'S14', 'S19'], // made it; used a lot in explainers (N21 removed: too crazy)
+  penthouse: ['P24', 'S13', 'S14', 'S19', 'N22', 'N24'], // POV-style views from penthouses
+  yacht: ['P26', 'P31', 'P32', 'P33', 'P30', 'P29', 'P34', 'P25'], // POV yacht / boat views
   money: ['A13', 'A14', 'A12', 'A16'],                    // cash
   // calm, slow, moving, SHARP + BRIGHT ENOUGH (removed: A21 watermark, A4 blurry, A19 + A9 too dark/low quality,
   // S15 TikTok watermark, S6 burned-in text). S/T = MacBook sessions, penthouses, non-McLaren cars (2026-11-16).
@@ -25,7 +26,7 @@ const PICKS = {
 };
 // product photo shown inside the store-grid / scorecard graphics
 const PRODUCT_THUMB = 'N14';
-const SHEETS = {A: 'v-all', B: 'v-all2', N: 'v-new', M: 'v-new2', G: 'v-g1', C: 'v-car', S: 'v-s1', T: 'v-s2'};
+const SHEETS = {A: 'v-all', B: 'v-all2', N: 'v-new', M: 'v-new2', G: 'v-g1', C: 'v-car', S: 'v-s1', T: 'v-s2', P: 'v-pov'};
 const GH = process.env.GH_BIN || 'C:\\Program Files\\GitHub CLI\\gh.exe';
 const REPO = 'BlueLemon13/dropsworth-videos';
 
