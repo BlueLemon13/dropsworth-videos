@@ -1,0 +1,17 @@
+{
+  "audio": "audio/v2-fast.mp3",
+  "segments": "scripts/v3-segments.json",
+  "lines": [
+    "[photo:money1.jpg zoom=1.5] You're about to *WASTE ^$500=five_hundred_dollars on a product *NOBODY wants.",
+    "[photo:phone1.jpg zoom=1.1] All because you saw it go *VIRAL on TikTok.",
+    "[photo:market2.jpg zoom=1.1] But by the time it hits your feed, [figure-crowd items=ALREADY_SELLING_IT] a ^thousand *STORES are already selling it.",
+    "[photo:ads2.jpg zoom=1.15] Your *ADS get expensive, [photo:crash3.jpg zoom=1.25] and your ^PROFIT *disappears.",
+    "[photo:burn1.jpg zoom=1.2] That's how most beginners *BURN through their whole budget.",
+    "[figure-idle] The ones who *WIN?",
+    "They ^VALIDATE first.",
+    "[checklist items=PROFIT|DEMAND|COMPETITION|SUPPLIER ticks=profit|demand|competition|supplier] Before spending a cent, they check the *profit, the *demand, the *competition, and the *supplier.",
+    "[padlock] If it *FAILS on paper, it never touches their ad budget.",
+    "[photo:money6.jpg zoom=1.15] If it passes, they *SCALE with confidence.",
+    "[comment items=VALIDATE] ^COMMENT *“VALIDATE” and I'll send you my step by step validation method."
+  ]
+}

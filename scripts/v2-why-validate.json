@@ -1,0 +1,132 @@
+{
+ "account": "A",
+ "scenes": [
+  {
+   "say": "You're about to waste five hundred dollars on a product nobody wants.",
+   "big": "$500",
+   "small": "wasted.",
+   "visual": "photo:money1.jpg",
+   "zoom": 1.45,
+   "score": 4,
+   "start": 0.05,
+   "end": 4.03,
+   "bigAt": 1.2,
+   "smallAt": 1.7
+  },
+  {
+   "say": "All because you saw it go viral on TikTok.",
+   "big": "VIRAL",
+   "small": "isn't proof.",
+   "visual": "photo:phone1.jpg",
+   "zoom": 1.1,
+   "score": 8,
+   "start": 4.03,
+   "end": 6.68,
+   "bigAt": 5.4,
+   "smallAt": 5.9
+  },
+  {
+   "say": "But by the time it hits your feed, a thousand stores are already selling it.",
+   "big": "1,000",
+   "small": "stores.",
+   "visual": "figure-crowd",
+   "items": [
+    "ALREADY SELLING IT"
+   ],
+   "score": 12,
+   "start": 6.68,
+   "end": 10.81,
+   "bigAt": 8.9,
+   "smallAt": 9.4
+  },
+  {
+   "say": "Your ads get expensive, and your profit disappears.",
+   "big": "PROFIT",
+   "small": "gone.",
+   "visual": "chart-down",
+   "score": 16,
+   "start": 10.81,
+   "end": 14.37,
+   "bigAt": 12.9,
+   "smallAt": 13.5
+  },
+  {
+   "say": "That's how most beginners burn through their whole budget.",
+   "big": "BUDGET",
+   "small": "burned.",
+   "visual": "photo:wallet1.jpg",
+   "zoom": 1.15,
+   "score": 20,
+   "start": 14.37,
+   "end": 17.24,
+   "bigAt": 16.3,
+   "smallAt": 16.7
+  },
+  {
+   "say": "The ones who win? They validate first.",
+   "big": "VALIDATE",
+   "small": "first.",
+   "visual": "figure-idle",
+   "score": 45,
+   "start": 17.24,
+   "end": 19.96,
+   "bigAt": 19.0,
+   "smallAt": 19.4
+  },
+  {
+   "say": "Before spending a cent, they check the profit, the demand, the competition, and the supplier.",
+   "big": "BEFORE",
+   "small": "a cent.",
+   "visual": "checklist",
+   "items": [
+    "PROFIT",
+    "DEMAND",
+    "COMPETITION",
+    "SUPPLIER"
+   ],
+   "score": 68,
+   "start": 19.96,
+   "end": 25.48,
+   "bigAt": 20.3,
+   "smallAt": 20.9
+  },
+  {
+   "say": "If it fails on paper, it never touches their ad budget.",
+   "big": "FAILS?",
+   "small": "never launches.",
+   "visual": "padlock",
+   "score": 82,
+   "start": 25.48,
+   "end": 28.77,
+   "bigAt": 26.3,
+   "smallAt": 27.3
+  },
+  {
+   "say": "If it passes, they scale with confidence.",
+   "big": "SCALE",
+   "small": "with confidence.",
+   "visual": "photo:money6.jpg",
+   "zoom": 1.12,
+   "score": 94,
+   "start": 28.77,
+   "end": 31.58,
+   "bigAt": 30.1,
+   "smallAt": 30.6
+  },
+  {
+   "say": "Comment validate, and I'll send you my step by step validation method.",
+   "big": "COMMENT",
+   "small": "\u201cvalidate\u201d",
+   "visual": "comment",
+   "items": [
+    "VALIDATE"
+   ],
+   "score": 100,
+   "start": 31.58,
+   "end": 35.32,
+   "bigAt": 31.95,
+   "smallAt": 32.6
+  }
+ ],
+ "audio": "audio/v2.mp3"
+}

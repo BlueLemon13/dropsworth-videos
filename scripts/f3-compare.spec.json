@@ -1,0 +1,14 @@
+{
+  "name": "f3-compare",
+  "lines": [
+    "[compare stage=intro cap=mid] Two beginners. Same ^$1,000=one_thousand_dollar budget.",
+    "[compare stage=pick cap=mid transition=none] *THIS one picks a product because it looked *VIRAL.",
+    "[compare stage=check cap=mid transition=none] *THIS one checks the demand, the margin and the competition *FIRST.",
+    "[compare stage=ads cap=mid transition=none] Both start running *ADS.",
+    "[compare stage=week1 cap=mid transition=none sfx=fail] Week one. The first one pays !$40=forty_dollars per sale, on a !$30=thirty_dollar product.",
+    "[compare stage=week1b cap=mid transition=none sfx=cash] The second one keeps ^$18=eighteen_dollars on every order.",
+    "[compare stage=week4 cap=mid transition=none] Week four. One is !BROKE. One is ^SCALING.",
+    "[boxy mood=think prop=magnifier] The only difference? Fifteen minutes of ^VALIDATING.",
+    "[comment items=VALIDATE] ^COMMENT *VALIDATE and I'll send you the checklist."
+  ]
+}

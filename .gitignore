@@ -1,0 +1,22 @@
+# secrets — never upload
+.env
+.env.*
+
+# dependencies / build output
+node_modules/
+build/
+cache/
+output/
+
+# media: scraped Pinterest clips/photos, voiceovers, renders — downloaded/generated at run time, never uploaded
+public/broll/
+public/bvideo/
+public/audio/
+public/photos/
+assets/images/
+*.mp4
+*.mp3
+*.wav
+
+# personal notes from the earlier chat
+HANDOFF.md

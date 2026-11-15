@@ -1,0 +1,1117 @@
+{
+ "audio": "audio/f1-explainer.wav",
+ "words": [
+  {
+   "text": "Dropshipping",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 0,
+   "end": 0.534
+  },
+  {
+   "text": "isn't",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 0.592,
+   "end": 0.801
+  },
+  {
+   "text": "DEAD.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 0.859,
+   "end": 1.289
+  },
+  {
+   "text": "You're",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 1.399,
+   "end": 1.596
+  },
+  {
+   "text": "just",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 1.631,
+   "end": 1.77
+  },
+  {
+   "text": "picking",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 1.805,
+   "end": 2.026
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 2.06,
+   "end": 2.13
+  },
+  {
+   "text": "WRONG",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 2.165,
+   "end": 2.478
+  },
+  {
+   "text": "products.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 2.536,
+   "end": 3.129
+  },
+  {
+   "text": "And",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.239,
+   "end": 3.355
+  },
+  {
+   "text": "it's",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.401,
+   "end": 3.517
+  },
+  {
+   "text": "not",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.552,
+   "end": 3.68
+  },
+  {
+   "text": "because",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.715,
+   "end": 3.97
+  },
+  {
+   "text": "you're",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.993,
+   "end": 4.156
+  },
+  {
+   "text": "LAZY.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 4.191,
+   "end": 4.736
+  },
+  {
+   "text": "It's",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 4.846,
+   "end": 5.009
+  },
+  {
+   "text": "because",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.044,
+   "end": 5.276
+  },
+  {
+   "text": "you",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.299,
+   "end": 5.369
+  },
+  {
+   "text": "pick",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.415,
+   "end": 5.554
+  },
+  {
+   "text": "products",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.613,
+   "end": 5.914
+  },
+  {
+   "text": "from",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.938,
+   "end": 6.065
+  },
+  {
+   "text": "TikTok",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 6.123,
+   "end": 6.448
+  },
+  {
+   "text": "HYPE.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 6.518,
+   "end": 6.878
+  },
+  {
+   "text": "By",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 6.988,
+   "end": 7.104
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.15,
+   "end": 7.22
+  },
+  {
+   "text": "time",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.255,
+   "end": 7.417
+  },
+  {
+   "text": "it's",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.441,
+   "end": 7.568
+  },
+  {
+   "text": "on",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.603,
+   "end": 7.673
+  },
+  {
+   "text": "your",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.708,
+   "end": 7.824
+  },
+  {
+   "text": "feed,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.87,
+   "end": 8.276
+  },
+  {
+   "text": "HUNDREDS",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 8.427,
+   "end": 8.729
+  },
+  {
+   "text": "of",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 8.764,
+   "end": 8.822
+  },
+  {
+   "text": "stores",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 8.857,
+   "end": 9.112
+  },
+  {
+   "text": "are",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.147,
+   "end": 9.252
+  },
+  {
+   "text": "already",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.287,
+   "end": 9.554
+  },
+  {
+   "text": "selling",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.6,
+   "end": 9.855
+  },
+  {
+   "text": "it.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.902,
+   "end": 10.122
+  },
+  {
+   "text": "The",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.232,
+   "end": 10.337
+  },
+  {
+   "text": "ones",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.407,
+   "end": 10.546
+  },
+  {
+   "text": "who",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.569,
+   "end": 10.662
+  },
+  {
+   "text": "actually",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.732,
+   "end": 11.127
+  },
+  {
+   "text": "WIN",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 11.196,
+   "end": 11.463
+  },
+  {
+   "text": "do",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 11.573,
+   "end": 11.701
+  },
+  {
+   "text": "one",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 11.805,
+   "end": 12.014
+  },
+  {
+   "text": "thing",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 12.049,
+   "end": 12.223
+  },
+  {
+   "text": "DIFFERENT.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 12.27,
+   "end": 12.722
+  },
+  {
+   "text": "They",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 12.832,
+   "end": 12.983
+  },
+  {
+   "text": "VALIDATE",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 13.053,
+   "end": 13.505
+  },
+  {
+   "text": "before",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 13.54,
+   "end": 13.842
+  },
+  {
+   "text": "they",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 13.877,
+   "end": 13.993
+  },
+  {
+   "text": "spend",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 14.04,
+   "end": 14.225
+  },
+  {
+   "text": "a",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 14.26,
+   "end": 14.295
+  },
+  {
+   "text": "single",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 14.341,
+   "end": 14.597
+  },
+  {
+   "text": "DOLLAR.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 14.632,
+   "end": 15.073
+  },
+  {
+   "text": "Real",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 15.183,
+   "end": 15.38
+  },
+  {
+   "text": "demand.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 15.427,
+   "end": 15.868
+  },
+  {
+   "text": "A",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 15.978,
+   "end": 16.047
+  },
+  {
+   "text": "healthy",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 16.117,
+   "end": 16.349
+  },
+  {
+   "text": "margin.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 16.407,
+   "end": 16.837
+  },
+  {
+   "text": "Not",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 16.965,
+   "end": 17.115
+  },
+  {
+   "text": "too",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 17.15,
+   "end": 17.243
+  },
+  {
+   "text": "much",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 17.278,
+   "end": 17.406
+  },
+  {
+   "text": "competition.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 17.441,
+   "end": 18.044
+  },
+  {
+   "text": "Three",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 18.172,
+   "end": 18.381
+  },
+  {
+   "text": "yeses?",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 18.416,
+   "end": 18.961
+  },
+  {
+   "text": "They",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 19.112,
+   "end": 19.252
+  },
+  {
+   "text": "SCALE",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 19.31,
+   "end": 19.6
+  },
+  {
+   "text": "it.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 19.635,
+   "end": 19.867
+  },
+  {
+   "text": "One",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 19.977,
+   "end": 20.174
+  },
+  {
+   "text": "no?",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 20.209,
+   "end": 20.557
+  },
+  {
+   "text": "They",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 20.667,
+   "end": 20.818
+  },
+  {
+   "text": "SKIP",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 20.887,
+   "end": 21.096
+  },
+  {
+   "text": "it,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.154,
+   "end": 21.363
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.491,
+   "end": 21.619
+  },
+  {
+   "text": "keep",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.677,
+   "end": 21.828
+  },
+  {
+   "text": "their",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.863,
+   "end": 21.99
+  },
+  {
+   "text": "BUDGET.",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 22.037,
+   "end": 22.455
+  },
+  {
+   "text": "COMMENT",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 22.565,
+   "end": 22.936
+  },
+  {
+   "text": "VALIDATE",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 23.041,
+   "end": 23.563
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 23.673,
+   "end": 23.859
+  },
+  {
+   "text": "I'll",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 23.905,
+   "end": 24.021
+  },
+  {
+   "text": "send",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 24.056,
+   "end": 24.184
+  },
+  {
+   "text": "you",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 24.219,
+   "end": 24.288
+  },
+  {
+   "text": "my",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 24.335,
+   "end": 24.405
+  },
+  {
+   "text": "full",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 24.474,
+   "end": 24.637
+  },
+  {
+   "text": "checklist.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 24.683,
+   "end": 25.415
+  }
+ ],
+ "groups": [
+  {
+   "words": [
+    0,
+    1
+   ],
+   "start": 0,
+   "end": 0.859
+  },
+  {
+   "words": [
+    2
+   ],
+   "start": 0.859,
+   "end": 1.399
+  },
+  {
+   "words": [
+    3,
+    4,
+    5
+   ],
+   "start": 1.399,
+   "end": 2.06
+  },
+  {
+   "words": [
+    6,
+    7,
+    8
+   ],
+   "start": 2.06,
+   "end": 3.239
+  },
+  {
+   "words": [
+    9,
+    10,
+    11
+   ],
+   "start": 3.239,
+   "end": 3.715
+  },
+  {
+   "words": [
+    12,
+    13
+   ],
+   "start": 3.715,
+   "end": 4.191
+  },
+  {
+   "words": [
+    14
+   ],
+   "start": 4.191,
+   "end": 4.846
+  },
+  {
+   "words": [
+    15,
+    16,
+    17
+   ],
+   "start": 4.846,
+   "end": 5.415
+  },
+  {
+   "words": [
+    18,
+    19,
+    20
+   ],
+   "start": 5.415,
+   "end": 6.123
+  },
+  {
+   "words": [
+    21,
+    22
+   ],
+   "start": 6.123,
+   "end": 6.988
+  },
+  {
+   "words": [
+    23,
+    24,
+    25
+   ],
+   "start": 6.988,
+   "end": 7.441
+  },
+  {
+   "words": [
+    26,
+    27,
+    28
+   ],
+   "start": 7.441,
+   "end": 7.87
+  },
+  {
+   "words": [
+    29
+   ],
+   "start": 7.87,
+   "end": 8.427
+  },
+  {
+   "words": [
+    30,
+    31,
+    32
+   ],
+   "start": 8.427,
+   "end": 9.147
+  },
+  {
+   "words": [
+    33,
+    34,
+    35
+   ],
+   "start": 9.147,
+   "end": 9.902
+  },
+  {
+   "words": [
+    36
+   ],
+   "start": 9.902,
+   "end": 10.232
+  },
+  {
+   "words": [
+    37,
+    38,
+    39
+   ],
+   "start": 10.232,
+   "end": 10.732
+  },
+  {
+   "words": [
+    40,
+    41,
+    42
+   ],
+   "start": 10.732,
+   "end": 11.805
+  },
+  {
+   "words": [
+    43,
+    44
+   ],
+   "start": 11.805,
+   "end": 12.27
+  },
+  {
+   "words": [
+    45
+   ],
+   "start": 12.27,
+   "end": 12.832
+  },
+  {
+   "words": [
+    46,
+    47,
+    48
+   ],
+   "start": 12.832,
+   "end": 13.877
+  },
+  {
+   "words": [
+    49,
+    50,
+    51
+   ],
+   "start": 13.877,
+   "end": 14.341
+  },
+  {
+   "words": [
+    52,
+    53
+   ],
+   "start": 14.341,
+   "end": 15.183
+  },
+  {
+   "words": [
+    54,
+    55
+   ],
+   "start": 15.183,
+   "end": 15.978
+  },
+  {
+   "words": [
+    56,
+    57
+   ],
+   "start": 15.978,
+   "end": 16.407
+  },
+  {
+   "words": [
+    58
+   ],
+   "start": 16.407,
+   "end": 16.965
+  },
+  {
+   "words": [
+    59,
+    60,
+    61
+   ],
+   "start": 16.965,
+   "end": 17.441
+  },
+  {
+   "words": [
+    62
+   ],
+   "start": 17.441,
+   "end": 18.172
+  },
+  {
+   "words": [
+    63,
+    64
+   ],
+   "start": 18.172,
+   "end": 19.112
+  },
+  {
+   "words": [
+    65,
+    66,
+    67
+   ],
+   "start": 19.112,
+   "end": 19.977
+  },
+  {
+   "words": [
+    68,
+    69
+   ],
+   "start": 19.977,
+   "end": 20.667
+  },
+  {
+   "words": [
+    70,
+    71,
+    72
+   ],
+   "start": 20.667,
+   "end": 21.491
+  },
+  {
+   "words": [
+    73,
+    74,
+    75
+   ],
+   "start": 21.491,
+   "end": 22.037
+  },
+  {
+   "words": [
+    76
+   ],
+   "start": 22.037,
+   "end": 22.565
+  },
+  {
+   "words": [
+    77,
+    78,
+    79
+   ],
+   "start": 22.565,
+   "end": 23.905
+  },
+  {
+   "words": [
+    80,
+    81,
+    82
+   ],
+   "start": 23.905,
+   "end": 24.335
+  },
+  {
+   "words": [
+    83,
+    84,
+    85
+   ],
+   "start": 24.335,
+   "end": 26.515
+  }
+ ],
+ "scenes": [
+  {
+   "visual": "vid:tired/e1_AfqPShx5Ves6POBXS6YBnksfhEcHgDODr1ZvVMgKsoXH9ZRGBVuP.mp4",
+   "grade": "bright",
+   "start": 0,
+   "end": 3.189
+  },
+  {
+   "visual": "vid:working/e1_AfqPShy8-8jt0_iUVo4NjKIuLTG5WOTiK_o4c8JJOz5FFbzEthDenQ.mp4",
+   "grade": "bright",
+   "start": 3.189,
+   "end": 4.796
+  },
+  {
+   "visual": "vid:products/e1_AfqPShwat9Djx7c02oKawQz7RoK80nUjCG32KaSJNC5ItzI6pUoi.mp4",
+   "grade": "bright",
+   "start": 4.796,
+   "end": 6.938
+  },
+  {
+   "visual": "g-stores",
+   "img": "bvideo/products2/e1_AfqPShxG3Thx5Vs2aCIr-byiwCq89fZt5dAdYMl0PGq-iDHMkcMk0Q.jpg",
+   "start": 6.938,
+   "end": 10.182
+  },
+  {
+   "visual": "vid:supercar3/e1_AfqPShzL55YMsMDQ0j0JktjQFhcvyjNtM4MYFzFpux_kudWcy3E5.mp4",
+   "grade": "bright",
+   "start": 10.182,
+   "end": 12.782
+  },
+  {
+   "visual": "vid:working/e1_AfqPShy9ZRK0zrHmNCYWF--Bv4ldLLfwL1Vcu_-piY7petV8ZOdJ.mp4",
+   "grade": "bright",
+   "start": 12.782,
+   "end": 15.133
+  },
+  {
+   "visual": "g-score",
+   "img": "bvideo/products2/e1_AfqPShxG3Thx5Vs2aCIr-byiwCq89fZt5dAdYMl0PGq-iDHMkcMk0Q.jpg",
+   "start": 15.133,
+   "end": 18.122,
+   "ticks": [
+    0.294,
+    1.274,
+    2.308
+   ]
+  },
+  {
+   "visual": "vid:shopifysales/e1_AfqPShwe3kFou4fMkWquyBodTUWify0vkjpCx_RN4M8tw-lD3YQq.mp4",
+   "grade": "bright",
+   "start": 18.122,
+   "end": 19.927
+  },
+  {
+   "visual": "vid:madeit/e1_AfqPShxKEub2y35LEwcj5-6_FC_RVAYxT80nV7dy0A_jKZ07Twg.mp4",
+   "grade": "bright",
+   "start": 19.927,
+   "end": 22.515
+  },
+  {
+   "visual": "g-comments",
+   "start": 22.515,
+   "end": 26.515
+  }
+ ],
+ "sfx": [
+  {
+   "name": "whoosh",
+   "t": 3.129,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 4.736000000000001,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 6.878,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 10.122,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 12.722,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 15.072999999999999,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 18.062,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 19.867,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 22.455000000000002,
+   "vol": 0.12
+  }
+ ],
+ "duration": 26.515
+}

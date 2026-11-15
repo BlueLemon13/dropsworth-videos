@@ -1,0 +1,13 @@
+{
+  "account": "A",
+  "scenes": [
+    { "say": "Most beginners test ten products and just pray.", "big": "TEST", "small": "and pray.", "visual": "figure-confused", "score": 8 },
+    { "say": "Five hundred dollars on ads. Zero sales.", "big": "ZERO", "small": "sales.", "visual": "phone", "score": 14 },
+    { "say": "So they quit and call dropshipping a scam.", "big": "QUIT.", "small": "", "visual": "chart-down", "score": 18 },
+    { "say": "But winners never guess.", "big": "WINNERS", "small": "don't guess.", "visual": "figure-vs", "items": ["GUESSER", "YOU"], "score": 32 },
+    { "say": "They check the margin, the saturation, the supplier and the shipping before spending a cent.", "big": "BEFORE", "small": "a cent.", "visual": "checklist", "items": ["MARGIN", "SATURATION", "SUPPLIER", "SHIPPING"], "score": 58 },
+    { "say": "If the numbers don't work, it doesn't get tested.", "big": "NUMBERS", "small": "first.", "visual": "padlock", "score": 72 },
+    { "say": "Then they test fewer products and find winners faster.", "big": "FEWER", "small": "tests.", "visual": "chart-up", "score": 88 },
+    { "say": "Stop guessing. Validate first.", "big": "STOP", "small": "guessing.", "visual": "figure-celebrate", "score": 100 }
+  ]
+}

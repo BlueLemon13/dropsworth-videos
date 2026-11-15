@@ -1,0 +1,1171 @@
+{
+ "audio": "audio/v2-fast.mp3",
+ "words": [
+  {
+   "text": "You're",
+   "big": false,
+   "blue": false,
+   "t": 0.0,
+   "end": 0.284
+  },
+  {
+   "text": "about",
+   "big": false,
+   "blue": false,
+   "t": 0.284,
+   "end": 0.567
+  },
+  {
+   "text": "to",
+   "big": false,
+   "blue": false,
+   "t": 0.567,
+   "end": 0.737
+  },
+  {
+   "text": "WASTE",
+   "big": true,
+   "blue": false,
+   "t": 0.737,
+   "end": 1.021
+  },
+  {
+   "text": "$500",
+   "big": true,
+   "blue": true,
+   "t": 1.021,
+   "end": 1.985
+  },
+  {
+   "text": "on",
+   "big": false,
+   "blue": false,
+   "t": 1.985,
+   "end": 2.155
+  },
+  {
+   "text": "a",
+   "big": false,
+   "blue": false,
+   "t": 2.155,
+   "end": 2.287
+  },
+  {
+   "text": "product",
+   "big": false,
+   "blue": false,
+   "t": 2.287,
+   "end": 2.646
+  },
+  {
+   "text": "NOBODY",
+   "big": true,
+   "blue": false,
+   "t": 2.646,
+   "end": 2.968
+  },
+  {
+   "text": "wants.",
+   "big": false,
+   "blue": false,
+   "t": 2.968,
+   "end": 3.327
+  },
+  {
+   "text": "All",
+   "big": false,
+   "blue": false,
+   "t": 3.431,
+   "end": 3.616
+  },
+  {
+   "text": "because",
+   "big": false,
+   "blue": false,
+   "t": 3.616,
+   "end": 3.934
+  },
+  {
+   "text": "you",
+   "big": false,
+   "blue": false,
+   "t": 3.934,
+   "end": 4.119
+  },
+  {
+   "text": "saw",
+   "big": false,
+   "blue": false,
+   "t": 4.119,
+   "end": 4.303
+  },
+  {
+   "text": "it",
+   "big": false,
+   "blue": false,
+   "t": 4.303,
+   "end": 4.454
+  },
+  {
+   "text": "go",
+   "big": false,
+   "blue": false,
+   "t": 4.454,
+   "end": 4.605
+  },
+  {
+   "text": "VIRAL",
+   "big": true,
+   "blue": false,
+   "t": 4.605,
+   "end": 4.856
+  },
+  {
+   "text": "on",
+   "big": false,
+   "blue": false,
+   "t": 4.856,
+   "end": 5.007
+  },
+  {
+   "text": "TikTok.",
+   "big": false,
+   "blue": false,
+   "t": 5.007,
+   "end": 5.359
+  },
+  {
+   "text": "But",
+   "big": false,
+   "blue": false,
+   "t": 5.463,
+   "end": 5.635
+  },
+  {
+   "text": "by",
+   "big": false,
+   "blue": false,
+   "t": 5.635,
+   "end": 5.775
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "t": 5.775,
+   "end": 5.946
+  },
+  {
+   "text": "time",
+   "big": false,
+   "blue": false,
+   "t": 5.946,
+   "end": 6.148
+  },
+  {
+   "text": "it",
+   "big": false,
+   "blue": false,
+   "t": 6.148,
+   "end": 6.288
+  },
+  {
+   "text": "hits",
+   "big": false,
+   "blue": false,
+   "t": 6.288,
+   "end": 6.491
+  },
+  {
+   "text": "your",
+   "big": false,
+   "blue": false,
+   "t": 6.491,
+   "end": 6.693
+  },
+  {
+   "text": "feed,",
+   "big": false,
+   "blue": false,
+   "t": 6.693,
+   "end": 6.958
+  },
+  {
+   "text": "a",
+   "big": false,
+   "blue": false,
+   "t": 6.958,
+   "end": 7.067
+  },
+  {
+   "text": "thousand",
+   "big": true,
+   "blue": true,
+   "t": 7.067,
+   "end": 7.394
+  },
+  {
+   "text": "STORES",
+   "big": true,
+   "blue": false,
+   "t": 7.394,
+   "end": 7.658
+  },
+  {
+   "text": "are",
+   "big": false,
+   "blue": false,
+   "t": 7.658,
+   "end": 7.83
+  },
+  {
+   "text": "already",
+   "big": false,
+   "blue": false,
+   "t": 7.83,
+   "end": 8.125
+  },
+  {
+   "text": "selling",
+   "big": false,
+   "blue": false,
+   "t": 8.125,
+   "end": 8.421
+  },
+  {
+   "text": "it.",
+   "big": false,
+   "blue": false,
+   "t": 8.421,
+   "end": 8.623
+  },
+  {
+   "text": "Your",
+   "big": false,
+   "blue": false,
+   "t": 8.728,
+   "end": 8.991
+  },
+  {
+   "text": "ADS",
+   "big": true,
+   "blue": false,
+   "t": 8.991,
+   "end": 9.214
+  },
+  {
+   "text": "get",
+   "big": false,
+   "blue": false,
+   "t": 9.214,
+   "end": 9.437
+  },
+  {
+   "text": "expensive,",
+   "big": false,
+   "blue": false,
+   "t": 9.437,
+   "end": 9.983
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "t": 9.983,
+   "end": 10.206
+  },
+  {
+   "text": "your",
+   "big": false,
+   "blue": false,
+   "t": 10.206,
+   "end": 10.469
+  },
+  {
+   "text": "PROFIT",
+   "big": true,
+   "blue": true,
+   "t": 10.469,
+   "end": 10.814
+  },
+  {
+   "text": "disappears.",
+   "big": true,
+   "blue": false,
+   "t": 10.814,
+   "end": 11.401
+  },
+  {
+   "text": "That's",
+   "big": false,
+   "blue": false,
+   "t": 11.505,
+   "end": 11.721
+  },
+  {
+   "text": "how",
+   "big": false,
+   "blue": false,
+   "t": 11.721,
+   "end": 11.88
+  },
+  {
+   "text": "most",
+   "big": false,
+   "blue": false,
+   "t": 11.88,
+   "end": 12.067
+  },
+  {
+   "text": "beginners",
+   "big": false,
+   "blue": false,
+   "t": 12.067,
+   "end": 12.398
+  },
+  {
+   "text": "BURN",
+   "big": true,
+   "blue": false,
+   "t": 12.398,
+   "end": 12.586
+  },
+  {
+   "text": "through",
+   "big": false,
+   "blue": false,
+   "t": 12.586,
+   "end": 12.859
+  },
+  {
+   "text": "their",
+   "big": false,
+   "blue": false,
+   "t": 12.859,
+   "end": 13.075
+  },
+  {
+   "text": "whole",
+   "big": false,
+   "blue": false,
+   "t": 13.075,
+   "end": 13.291
+  },
+  {
+   "text": "budget.",
+   "big": false,
+   "blue": false,
+   "t": 13.291,
+   "end": 13.594
+  },
+  {
+   "text": "The",
+   "big": false,
+   "blue": false,
+   "t": 13.698,
+   "end": 13.832
+  },
+  {
+   "text": "ones",
+   "big": false,
+   "blue": false,
+   "t": 13.832,
+   "end": 13.989
+  },
+  {
+   "text": "who",
+   "big": false,
+   "blue": false,
+   "t": 13.989,
+   "end": 14.123
+  },
+  {
+   "text": "WIN?",
+   "big": true,
+   "blue": false,
+   "t": 14.123,
+   "end": 14.304
+  },
+  {
+   "text": "They",
+   "big": false,
+   "blue": false,
+   "t": 14.409,
+   "end": 14.651
+  },
+  {
+   "text": "VALIDATE",
+   "big": true,
+   "blue": true,
+   "t": 14.651,
+   "end": 15.043
+  },
+  {
+   "text": "first.",
+   "big": false,
+   "blue": false,
+   "t": 15.043,
+   "end": 15.398
+  },
+  {
+   "text": "Before",
+   "big": false,
+   "blue": false,
+   "t": 15.503,
+   "end": 15.811
+  },
+  {
+   "text": "spending",
+   "big": false,
+   "blue": false,
+   "t": 15.811,
+   "end": 16.192
+  },
+  {
+   "text": "a",
+   "big": false,
+   "blue": false,
+   "t": 16.192,
+   "end": 16.319
+  },
+  {
+   "text": "cent,",
+   "big": false,
+   "blue": false,
+   "t": 16.319,
+   "end": 16.628
+  },
+  {
+   "text": "they",
+   "big": false,
+   "blue": false,
+   "t": 16.628,
+   "end": 16.864
+  },
+  {
+   "text": "check",
+   "big": false,
+   "blue": false,
+   "t": 16.864,
+   "end": 17.136
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "t": 17.136,
+   "end": 17.336
+  },
+  {
+   "text": "profit,",
+   "big": true,
+   "blue": false,
+   "t": 17.336,
+   "end": 17.717
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "t": 17.717,
+   "end": 17.917
+  },
+  {
+   "text": "demand,",
+   "big": true,
+   "blue": false,
+   "t": 17.917,
+   "end": 18.298
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "t": 18.298,
+   "end": 18.497
+  },
+  {
+   "text": "competition,",
+   "big": true,
+   "blue": false,
+   "t": 18.497,
+   "end": 19.06
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "t": 19.06,
+   "end": 19.26
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "t": 19.26,
+   "end": 19.459
+  },
+  {
+   "text": "supplier.",
+   "big": true,
+   "blue": false,
+   "t": 19.459,
+   "end": 19.913
+  },
+  {
+   "text": "If",
+   "big": false,
+   "blue": false,
+   "t": 20.017,
+   "end": 20.168
+  },
+  {
+   "text": "it",
+   "big": false,
+   "blue": false,
+   "t": 20.168,
+   "end": 20.318
+  },
+  {
+   "text": "FAILS",
+   "big": true,
+   "blue": false,
+   "t": 20.318,
+   "end": 20.568
+  },
+  {
+   "text": "on",
+   "big": false,
+   "blue": false,
+   "t": 20.568,
+   "end": 20.718
+  },
+  {
+   "text": "paper,",
+   "big": false,
+   "blue": false,
+   "t": 20.718,
+   "end": 21.035
+  },
+  {
+   "text": "it",
+   "big": false,
+   "blue": false,
+   "t": 21.035,
+   "end": 21.185
+  },
+  {
+   "text": "never",
+   "big": false,
+   "blue": false,
+   "t": 21.185,
+   "end": 21.435
+  },
+  {
+   "text": "touches",
+   "big": false,
+   "blue": false,
+   "t": 21.435,
+   "end": 21.752
+  },
+  {
+   "text": "their",
+   "big": false,
+   "blue": false,
+   "t": 21.752,
+   "end": 22.002
+  },
+  {
+   "text": "ad",
+   "big": false,
+   "blue": false,
+   "t": 22.002,
+   "end": 22.152
+  },
+  {
+   "text": "budget.",
+   "big": false,
+   "blue": false,
+   "t": 22.152,
+   "end": 22.503
+  },
+  {
+   "text": "If",
+   "big": false,
+   "blue": false,
+   "t": 22.607,
+   "end": 22.777
+  },
+  {
+   "text": "it",
+   "big": false,
+   "blue": false,
+   "t": 22.777,
+   "end": 22.947
+  },
+  {
+   "text": "passes,",
+   "big": false,
+   "blue": false,
+   "t": 22.947,
+   "end": 23.344
+  },
+  {
+   "text": "they",
+   "big": false,
+   "blue": false,
+   "t": 23.344,
+   "end": 23.589
+  },
+  {
+   "text": "SCALE",
+   "big": true,
+   "blue": false,
+   "t": 23.589,
+   "end": 23.873
+  },
+  {
+   "text": "with",
+   "big": false,
+   "blue": false,
+   "t": 23.873,
+   "end": 24.118
+  },
+  {
+   "text": "confidence.",
+   "big": false,
+   "blue": false,
+   "t": 24.118,
+   "end": 24.666
+  },
+  {
+   "text": "COMMENT",
+   "big": true,
+   "blue": true,
+   "t": 24.77,
+   "end": 25.1
+  },
+  {
+   "text": "\u201cVALIDATE\u201d",
+   "big": true,
+   "blue": false,
+   "t": 25.1,
+   "end": 25.464
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "t": 25.464,
+   "end": 25.655
+  },
+  {
+   "text": "I'll",
+   "big": false,
+   "blue": false,
+   "t": 25.655,
+   "end": 25.845
+  },
+  {
+   "text": "send",
+   "big": false,
+   "blue": false,
+   "t": 25.845,
+   "end": 26.071
+  },
+  {
+   "text": "you",
+   "big": false,
+   "blue": false,
+   "t": 26.071,
+   "end": 26.262
+  },
+  {
+   "text": "my",
+   "big": false,
+   "blue": false,
+   "t": 26.262,
+   "end": 26.418
+  },
+  {
+   "text": "step",
+   "big": false,
+   "blue": false,
+   "t": 26.418,
+   "end": 26.643
+  },
+  {
+   "text": "by",
+   "big": false,
+   "blue": false,
+   "t": 26.643,
+   "end": 26.799
+  },
+  {
+   "text": "step",
+   "big": false,
+   "blue": false,
+   "t": 26.799,
+   "end": 27.025
+  },
+  {
+   "text": "validation",
+   "big": false,
+   "blue": false,
+   "t": 27.025,
+   "end": 27.458
+  },
+  {
+   "text": "method.",
+   "big": false,
+   "blue": false,
+   "t": 27.458,
+   "end": 27.822
+  }
+ ],
+ "groups": [
+  {
+   "words": [
+    0,
+    1,
+    2
+   ],
+   "start": 0.0,
+   "end": 0.737
+  },
+  {
+   "words": [
+    3,
+    4,
+    5
+   ],
+   "start": 0.737,
+   "end": 2.155
+  },
+  {
+   "words": [
+    6,
+    7
+   ],
+   "start": 2.155,
+   "end": 2.646
+  },
+  {
+   "words": [
+    8,
+    9
+   ],
+   "start": 2.646,
+   "end": 3.431
+  },
+  {
+   "words": [
+    10,
+    11,
+    12
+   ],
+   "start": 3.431,
+   "end": 4.119
+  },
+  {
+   "words": [
+    13,
+    14,
+    15
+   ],
+   "start": 4.119,
+   "end": 4.605
+  },
+  {
+   "words": [
+    16,
+    17,
+    18
+   ],
+   "start": 4.605,
+   "end": 5.463
+  },
+  {
+   "words": [
+    19,
+    20,
+    21
+   ],
+   "start": 5.463,
+   "end": 5.946
+  },
+  {
+   "words": [
+    22,
+    23,
+    24
+   ],
+   "start": 5.946,
+   "end": 6.491
+  },
+  {
+   "words": [
+    25,
+    26
+   ],
+   "start": 6.491,
+   "end": 6.958
+  },
+  {
+   "words": [
+    27,
+    28
+   ],
+   "start": 6.958,
+   "end": 7.394
+  },
+  {
+   "words": [
+    29,
+    30,
+    31
+   ],
+   "start": 7.394,
+   "end": 8.125
+  },
+  {
+   "words": [
+    32,
+    33
+   ],
+   "start": 8.125,
+   "end": 8.728
+  },
+  {
+   "words": [
+    34,
+    35,
+    36
+   ],
+   "start": 8.728,
+   "end": 9.437
+  },
+  {
+   "words": [
+    37
+   ],
+   "start": 9.437,
+   "end": 9.983
+  },
+  {
+   "words": [
+    38,
+    39
+   ],
+   "start": 9.983,
+   "end": 10.469
+  },
+  {
+   "words": [
+    40,
+    41
+   ],
+   "start": 10.469,
+   "end": 11.505
+  },
+  {
+   "words": [
+    42,
+    43,
+    44
+   ],
+   "start": 11.505,
+   "end": 12.067
+  },
+  {
+   "words": [
+    45,
+    46,
+    47
+   ],
+   "start": 12.067,
+   "end": 12.859
+  },
+  {
+   "words": [
+    48,
+    49,
+    50
+   ],
+   "start": 12.859,
+   "end": 13.698
+  },
+  {
+   "words": [
+    51,
+    52,
+    53
+   ],
+   "start": 13.698,
+   "end": 14.123
+  },
+  {
+   "words": [
+    54
+   ],
+   "start": 14.123,
+   "end": 14.409
+  },
+  {
+   "words": [
+    55,
+    56,
+    57
+   ],
+   "start": 14.409,
+   "end": 15.503
+  },
+  {
+   "words": [
+    58,
+    59,
+    60
+   ],
+   "start": 15.503,
+   "end": 16.319
+  },
+  {
+   "words": [
+    61
+   ],
+   "start": 16.319,
+   "end": 16.628
+  },
+  {
+   "words": [
+    62,
+    63,
+    64
+   ],
+   "start": 16.628,
+   "end": 17.336
+  },
+  {
+   "words": [
+    65
+   ],
+   "start": 17.336,
+   "end": 17.717
+  },
+  {
+   "words": [
+    66,
+    67
+   ],
+   "start": 17.717,
+   "end": 18.298
+  },
+  {
+   "words": [
+    68,
+    69
+   ],
+   "start": 18.298,
+   "end": 19.06
+  },
+  {
+   "words": [
+    70,
+    71
+   ],
+   "start": 19.06,
+   "end": 19.459
+  },
+  {
+   "words": [
+    72
+   ],
+   "start": 19.459,
+   "end": 20.017
+  },
+  {
+   "words": [
+    73,
+    74
+   ],
+   "start": 20.017,
+   "end": 20.318
+  },
+  {
+   "words": [
+    75,
+    76,
+    77
+   ],
+   "start": 20.318,
+   "end": 21.035
+  },
+  {
+   "words": [
+    78,
+    79,
+    80
+   ],
+   "start": 21.035,
+   "end": 21.752
+  },
+  {
+   "words": [
+    81,
+    82,
+    83
+   ],
+   "start": 21.752,
+   "end": 22.607
+  },
+  {
+   "words": [
+    84,
+    85,
+    86
+   ],
+   "start": 22.607,
+   "end": 23.344
+  },
+  {
+   "words": [
+    87,
+    88,
+    89
+   ],
+   "start": 23.344,
+   "end": 24.118
+  },
+  {
+   "words": [
+    90
+   ],
+   "start": 24.118,
+   "end": 24.77
+  },
+  {
+   "words": [
+    91,
+    92,
+    93
+   ],
+   "start": 24.77,
+   "end": 25.655
+  },
+  {
+   "words": [
+    94,
+    95,
+    96
+   ],
+   "start": 25.655,
+   "end": 26.262
+  },
+  {
+   "words": [
+    97,
+    98,
+    99
+   ],
+   "start": 26.262,
+   "end": 26.799
+  },
+  {
+   "words": [
+    100,
+    101,
+    102
+   ],
+   "start": 26.799,
+   "end": 28.4221620822242
+  }
+ ],
+ "scenes": [
+  {
+   "visual": "photo:money1.jpg",
+   "zoom": 1.5,
+   "start": 0.0,
+   "end": 3.431
+  },
+  {
+   "visual": "photo:phone1.jpg",
+   "zoom": 1.1,
+   "start": 3.431,
+   "end": 5.463
+  },
+  {
+   "visual": "photo:market2.jpg",
+   "zoom": 1.1,
+   "start": 5.463,
+   "end": 6.958
+  },
+  {
+   "visual": "figure-crowd",
+   "items": [
+    "ALREADY SELLING IT"
+   ],
+   "start": 6.958,
+   "end": 8.728
+  },
+  {
+   "visual": "photo:ads2.jpg",
+   "zoom": 1.15,
+   "start": 8.728,
+   "end": 9.983
+  },
+  {
+   "visual": "photo:crash3.jpg",
+   "zoom": 1.25,
+   "start": 9.983,
+   "end": 11.505
+  },
+  {
+   "visual": "photo:burn1.jpg",
+   "zoom": 1.2,
+   "start": 11.505,
+   "end": 13.698
+  },
+  {
+   "visual": "figure-idle",
+   "start": 13.698,
+   "end": 15.503
+  },
+  {
+   "visual": "checklist",
+   "items": [
+    "PROFIT",
+    "DEMAND",
+    "COMPETITION",
+    "SUPPLIER"
+   ],
+   "start": 15.503,
+   "end": 20.017,
+   "ticks": [
+    1.833,
+    2.414,
+    2.994,
+    3.956
+   ]
+  },
+  {
+   "visual": "padlock",
+   "start": 20.017,
+   "end": 22.607
+  },
+  {
+   "visual": "photo:money6.jpg",
+   "zoom": 1.15,
+   "start": 22.607,
+   "end": 24.77
+  },
+  {
+   "visual": "comment",
+   "items": [
+    "VALIDATE"
+   ],
+   "start": 24.77,
+   "end": 28.4221620822242
+  }
+ ],
+ "duration": 28.422
+}

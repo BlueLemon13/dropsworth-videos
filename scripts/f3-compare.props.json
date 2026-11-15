@@ -1,0 +1,995 @@
+{
+ "audio": "audio/f3-compare.wav",
+ "words": [
+  {
+   "text": "Two",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 0,
+   "end": 0.186
+  },
+  {
+   "text": "beginners.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 0.244,
+   "end": 0.778
+  },
+  {
+   "text": "Same",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 0.888,
+   "end": 1.12
+  },
+  {
+   "text": "$1,000",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 1.166,
+   "end": 1.886
+  },
+  {
+   "text": "budget.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 1.933,
+   "end": 2.351
+  },
+  {
+   "text": "THIS",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 2.461,
+   "end": 2.647
+  },
+  {
+   "text": "one",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 2.717,
+   "end": 2.879
+  },
+  {
+   "text": "picks",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 2.914,
+   "end": 3.088
+  },
+  {
+   "text": "a",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.123,
+   "end": 3.146
+  },
+  {
+   "text": "product",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.181,
+   "end": 3.483
+  },
+  {
+   "text": "because",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.518,
+   "end": 3.785
+  },
+  {
+   "text": "it",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.831,
+   "end": 3.901
+  },
+  {
+   "text": "looked",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.947,
+   "end": 4.145
+  },
+  {
+   "text": "VIRAL.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 4.203,
+   "end": 4.737
+  },
+  {
+   "text": "THIS",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 4.847,
+   "end": 5.01
+  },
+  {
+   "text": "one",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.068,
+   "end": 5.207
+  },
+  {
+   "text": "checks",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.242,
+   "end": 5.463
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.498,
+   "end": 5.567
+  },
+  {
+   "text": "demand,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.602,
+   "end": 5.904
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.927,
+   "end": 5.997
+  },
+  {
+   "text": "margin",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 6.032,
+   "end": 6.287
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 6.333,
+   "end": 6.426
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 6.461,
+   "end": 6.531
+  },
+  {
+   "text": "competition",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 6.566,
+   "end": 7.053
+  },
+  {
+   "text": "FIRST.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 7.123,
+   "end": 7.599
+  },
+  {
+   "text": "Both",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.709,
+   "end": 7.953
+  },
+  {
+   "text": "start",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 8.011,
+   "end": 8.208
+  },
+  {
+   "text": "running",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 8.243,
+   "end": 8.464
+  },
+  {
+   "text": "ADS.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 8.533,
+   "end": 9.184
+  },
+  {
+   "text": "Week",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.294,
+   "end": 9.503
+  },
+  {
+   "text": "one.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.584,
+   "end": 9.874
+  },
+  {
+   "text": "The",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.984,
+   "end": 10.077
+  },
+  {
+   "text": "first",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.124,
+   "end": 10.309
+  },
+  {
+   "text": "one",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.356,
+   "end": 10.483
+  },
+  {
+   "text": "pays",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.518,
+   "end": 10.692
+  },
+  {
+   "text": "$40",
+   "big": true,
+   "blue": false,
+   "red": true,
+   "t": 10.751,
+   "end": 11.238
+  },
+  {
+   "text": "per",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 11.273,
+   "end": 11.377
+  },
+  {
+   "text": "sale,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 11.412,
+   "end": 11.772
+  },
+  {
+   "text": "on",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 11.882,
+   "end": 11.998
+  },
+  {
+   "text": "a",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 12.033,
+   "end": 12.056
+  },
+  {
+   "text": "$30",
+   "big": true,
+   "blue": false,
+   "red": true,
+   "t": 12.114,
+   "end": 12.555
+  },
+  {
+   "text": "product.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 12.59,
+   "end": 13.02
+  },
+  {
+   "text": "The",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 13.13,
+   "end": 13.247
+  },
+  {
+   "text": "second",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 13.281,
+   "end": 13.502
+  },
+  {
+   "text": "one",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 13.56,
+   "end": 13.665
+  },
+  {
+   "text": "keeps",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 13.699,
+   "end": 13.885
+  },
+  {
+   "text": "$18",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 13.99,
+   "end": 14.64
+  },
+  {
+   "text": "on",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 14.686,
+   "end": 14.756
+  },
+  {
+   "text": "every",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 14.791,
+   "end": 14.953
+  },
+  {
+   "text": "order.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 15,
+   "end": 15.325
+  },
+  {
+   "text": "Week",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 15.435,
+   "end": 15.609
+  },
+  {
+   "text": "four.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 15.655,
+   "end": 16.027
+  },
+  {
+   "text": "One",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 16.137,
+   "end": 16.323
+  },
+  {
+   "text": "is",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 16.346,
+   "end": 16.416
+  },
+  {
+   "text": "BROKE.",
+   "big": true,
+   "blue": false,
+   "red": true,
+   "t": 16.474,
+   "end": 16.846
+  },
+  {
+   "text": "One",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 16.956,
+   "end": 17.154
+  },
+  {
+   "text": "is",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 17.189,
+   "end": 17.247
+  },
+  {
+   "text": "SCALING.",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 17.316,
+   "end": 17.815
+  },
+  {
+   "text": "The",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 17.925,
+   "end": 18.041
+  },
+  {
+   "text": "only",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 18.076,
+   "end": 18.215
+  },
+  {
+   "text": "difference?",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 18.25,
+   "end": 18.715
+  },
+  {
+   "text": "Fifteen",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 18.825,
+   "end": 19.174
+  },
+  {
+   "text": "minutes",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 19.208,
+   "end": 19.441
+  },
+  {
+   "text": "of",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 19.487,
+   "end": 19.557
+  },
+  {
+   "text": "VALIDATING.",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 19.638,
+   "end": 20.23
+  },
+  {
+   "text": "COMMENT",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 20.34,
+   "end": 20.805
+  },
+  {
+   "text": "VALIDATE",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 20.915,
+   "end": 21.437
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.472,
+   "end": 21.588
+  },
+  {
+   "text": "I'll",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.635,
+   "end": 21.751
+  },
+  {
+   "text": "send",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.797,
+   "end": 21.948
+  },
+  {
+   "text": "you",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.983,
+   "end": 22.052
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 22.087,
+   "end": 22.157
+  },
+  {
+   "text": "checklist.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 22.192,
+   "end": 22.946
+  }
+ ],
+ "groups": [
+  {
+   "words": [
+    0,
+    1
+   ],
+   "start": 0,
+   "end": 0.888
+  },
+  {
+   "words": [
+    2,
+    3,
+    4
+   ],
+   "start": 0.888,
+   "end": 2.461
+  },
+  {
+   "words": [
+    5,
+    6,
+    7
+   ],
+   "start": 2.461,
+   "end": 3.123
+  },
+  {
+   "words": [
+    8,
+    9,
+    10
+   ],
+   "start": 3.123,
+   "end": 3.831
+  },
+  {
+   "words": [
+    11,
+    12
+   ],
+   "start": 3.831,
+   "end": 4.203
+  },
+  {
+   "words": [
+    13
+   ],
+   "start": 4.203,
+   "end": 4.847
+  },
+  {
+   "words": [
+    14,
+    15,
+    16
+   ],
+   "start": 4.847,
+   "end": 5.498
+  },
+  {
+   "words": [
+    17,
+    18
+   ],
+   "start": 5.498,
+   "end": 5.927
+  },
+  {
+   "words": [
+    19,
+    20,
+    21
+   ],
+   "start": 5.927,
+   "end": 6.461
+  },
+  {
+   "words": [
+    22,
+    23
+   ],
+   "start": 6.461,
+   "end": 7.123
+  },
+  {
+   "words": [
+    24
+   ],
+   "start": 7.123,
+   "end": 7.709
+  },
+  {
+   "words": [
+    25,
+    26,
+    27
+   ],
+   "start": 7.709,
+   "end": 8.533
+  },
+  {
+   "words": [
+    28
+   ],
+   "start": 8.533,
+   "end": 9.294
+  },
+  {
+   "words": [
+    29,
+    30
+   ],
+   "start": 9.294,
+   "end": 9.984
+  },
+  {
+   "words": [
+    31,
+    32,
+    33
+   ],
+   "start": 9.984,
+   "end": 10.518
+  },
+  {
+   "words": [
+    34,
+    35,
+    36
+   ],
+   "start": 10.518,
+   "end": 11.412
+  },
+  {
+   "words": [
+    37
+   ],
+   "start": 11.412,
+   "end": 11.882
+  },
+  {
+   "words": [
+    38,
+    39
+   ],
+   "start": 11.882,
+   "end": 12.114
+  },
+  {
+   "words": [
+    40,
+    41
+   ],
+   "start": 12.114,
+   "end": 13.13
+  },
+  {
+   "words": [
+    42,
+    43,
+    44
+   ],
+   "start": 13.13,
+   "end": 13.699
+  },
+  {
+   "words": [
+    45,
+    46,
+    47
+   ],
+   "start": 13.699,
+   "end": 14.791
+  },
+  {
+   "words": [
+    48,
+    49
+   ],
+   "start": 14.791,
+   "end": 15.435
+  },
+  {
+   "words": [
+    50,
+    51
+   ],
+   "start": 15.435,
+   "end": 16.137
+  },
+  {
+   "words": [
+    52,
+    53
+   ],
+   "start": 16.137,
+   "end": 16.474
+  },
+  {
+   "words": [
+    54
+   ],
+   "start": 16.474,
+   "end": 16.956
+  },
+  {
+   "words": [
+    55,
+    56
+   ],
+   "start": 16.956,
+   "end": 17.316
+  },
+  {
+   "words": [
+    57
+   ],
+   "start": 17.316,
+   "end": 17.925
+  },
+  {
+   "words": [
+    58,
+    59,
+    60
+   ],
+   "start": 17.925,
+   "end": 18.825
+  },
+  {
+   "words": [
+    61,
+    62,
+    63
+   ],
+   "start": 18.825,
+   "end": 19.638
+  },
+  {
+   "words": [
+    64
+   ],
+   "start": 19.638,
+   "end": 20.34
+  },
+  {
+   "words": [
+    65,
+    66,
+    67
+   ],
+   "start": 20.34,
+   "end": 21.635
+  },
+  {
+   "words": [
+    68,
+    69,
+    70
+   ],
+   "start": 21.635,
+   "end": 22.087
+  },
+  {
+   "words": [
+    71,
+    72
+   ],
+   "start": 22.087,
+   "end": 24.046
+  }
+ ],
+ "scenes": [
+  {
+   "visual": "compare",
+   "stage": "intro",
+   "cap": "mid",
+   "start": 0,
+   "end": 2.411
+  },
+  {
+   "visual": "compare",
+   "stage": "pick",
+   "cap": "mid",
+   "transition": "none",
+   "start": 2.411,
+   "end": 4.797
+  },
+  {
+   "visual": "compare",
+   "stage": "check",
+   "cap": "mid",
+   "transition": "none",
+   "start": 4.797,
+   "end": 7.659
+  },
+  {
+   "visual": "compare",
+   "stage": "ads",
+   "cap": "mid",
+   "transition": "none",
+   "start": 7.659,
+   "end": 9.244
+  },
+  {
+   "visual": "compare",
+   "stage": "week1",
+   "cap": "mid",
+   "transition": "none",
+   "start": 9.244,
+   "end": 13.08
+  },
+  {
+   "visual": "compare",
+   "stage": "week1b",
+   "cap": "mid",
+   "transition": "none",
+   "start": 13.08,
+   "end": 15.385
+  },
+  {
+   "visual": "compare",
+   "stage": "week4",
+   "cap": "mid",
+   "transition": "none",
+   "start": 15.385,
+   "end": 17.875
+  },
+  {
+   "visual": "boxy",
+   "mood": "think",
+   "prop": "magnifier",
+   "start": 17.875,
+   "end": 20.29
+  },
+  {
+   "visual": "comment",
+   "items": [
+    "VALIDATE"
+   ],
+   "start": 20.29,
+   "end": 24.046
+  }
+ ],
+ "sfx": [
+  {
+   "name": "pop",
+   "t": 1.166,
+   "vol": 0.35
+  },
+  {
+   "name": "fail",
+   "t": 9.244
+  },
+  {
+   "name": "pop",
+   "t": 10.751,
+   "vol": 0.35
+  },
+  {
+   "name": "pop",
+   "t": 12.114,
+   "vol": 0.35
+  },
+  {
+   "name": "cash",
+   "t": 13.08
+  },
+  {
+   "name": "pop",
+   "t": 13.99,
+   "vol": 0.35
+  },
+  {
+   "name": "pop",
+   "t": 16.474,
+   "vol": 0.35
+  },
+  {
+   "name": "pop",
+   "t": 17.316,
+   "vol": 0.35
+  },
+  {
+   "name": "whoosh",
+   "t": 17.815,
+   "vol": 0.5
+  },
+  {
+   "name": "pop",
+   "t": 19.638,
+   "vol": 0.35
+  },
+  {
+   "name": "whoosh",
+   "t": 20.23,
+   "vol": 0.5
+  },
+  {
+   "name": "pop",
+   "t": 20.34,
+   "vol": 0.35
+  }
+ ],
+ "duration": 24.046
+}

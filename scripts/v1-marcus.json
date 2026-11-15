@@ -1,0 +1,104 @@
+{
+ "account": "A",
+ "scenes": [
+  {
+   "say": "Most beginners test ten products and just pray.",
+   "big": "TEST",
+   "small": "and pray.",
+   "visual": "figure-confused",
+   "score": 8,
+   "start": 0.05,
+   "end": 3.48,
+   "bigAt": 0.9,
+   "smallAt": 2.6
+  },
+  {
+   "say": "Five hundred dollars on ads. Zero sales.",
+   "big": "ZERO",
+   "small": "sales.",
+   "visual": "phone",
+   "score": 14,
+   "start": 3.48,
+   "end": 6.65,
+   "bigAt": 5.6,
+   "smallAt": 6.0
+  },
+  {
+   "say": "So they quit and call dropshipping a scam.",
+   "big": "QUIT.",
+   "small": "",
+   "visual": "chart-down",
+   "score": 18,
+   "start": 6.65,
+   "end": 9.4,
+   "bigAt": 7.3,
+   "smallAt": 7.9
+  },
+  {
+   "say": "But winners never guess.",
+   "big": "WINNERS",
+   "small": "don't guess.",
+   "visual": "figure-vs",
+   "items": [
+    "GUESSER",
+    "YOU"
+   ],
+   "score": 32,
+   "start": 9.4,
+   "end": 11.34,
+   "bigAt": 10.2,
+   "smallAt": 10.6
+  },
+  {
+   "say": "They check the margin, the saturation, the supplier and the shipping before spending a cent.",
+   "big": "BEFORE",
+   "small": "a cent.",
+   "visual": "checklist",
+   "items": [
+    "MARGIN",
+    "SATURATION",
+    "SUPPLIER",
+    "SHIPPING"
+   ],
+   "score": 58,
+   "start": 11.34,
+   "end": 16.93,
+   "bigAt": 15.3,
+   "smallAt": 16.0
+  },
+  {
+   "say": "If the numbers don't work, it doesn't get tested.",
+   "big": "NUMBERS",
+   "small": "first.",
+   "visual": "padlock",
+   "score": 72,
+   "start": 16.93,
+   "end": 19.66,
+   "bigAt": 17.6,
+   "smallAt": 18.4
+  },
+  {
+   "say": "Then they test fewer products and find winners faster.",
+   "big": "FEWER",
+   "small": "tests.",
+   "visual": "chart-up",
+   "score": 88,
+   "start": 19.66,
+   "end": 23.0,
+   "bigAt": 21.0,
+   "smallAt": 21.5
+  },
+  {
+   "say": "Stop guessing. Validate first.",
+   "big": "STOP",
+   "small": "guessing.",
+   "visual": "figure-celebrate",
+   "score": 100,
+   "start": 23.0,
+   "end": 25.73,
+   "bigAt": 23.2,
+   "smallAt": 23.6
+  }
+ ],
+ "audio": "audio/v1.mp3"
+}
