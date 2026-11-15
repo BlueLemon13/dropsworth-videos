@@ -2,13 +2,14 @@ import React from 'react';
 import {AbsoluteFill, Audio, Easing, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import '@fontsource/montserrat/700.css';
 import '@fontsource/montserrat/900.css';
+import '@fontsource/tiktok-sans/700.css';
 import {Visual} from './visuals/Visual';
 
 export type Word = {text: string; big: boolean; blue: boolean; red?: boolean; t: number; end: number};
 export type Group = {words: number[]; start: number; end: number};
 export type ReelScene = {visual: string; start: number; end: number; zoom?: number; items?: string[]; ticks?: (number | null)[]; transition?: string; cap?: string; [k: string]: any};
 export type Sfx = {name: string; t: number; vol?: number};
-export type ReelProps = {audio?: string; words: Word[]; groups: Group[]; scenes: ReelScene[]; sfx?: Sfx[]; duration: number; music?: string; musicVol?: number};
+export type ReelProps = {audio?: string; words: Word[]; groups: Group[]; scenes: ReelScene[]; sfx?: Sfx[]; duration: number; music?: string; musicVol?: number; uniformText?: boolean};
 
 const BLUE = '#2F7BFF';
 const RED = '#FF3B3B';
@@ -29,13 +30,15 @@ const Swipe: React.FC<{dir: [number, number]; first: boolean; children: React.Re
 
 const CAP_TOP: Record<string, number> = {top: 270, mid: 850, low: 1300};
 
-const Captions: React.FC<{words: Word[]; groups: Group[]; scenes: ReelScene[]}> = ({words, groups, scenes}) => {
+// uniform: every word the same size (owner's explainer style); key words keep their blue/red colour.
+const Captions: React.FC<{words: Word[]; groups: Group[]; scenes: ReelScene[]; uniform?: boolean}> = ({words, groups, scenes, uniform}) => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
   const t = f / fps;
   const g = groups.find((g) => t >= g.start && t < g.end);
   if (!g) return null;
   const scene = [...scenes].reverse().find((s) => t >= s.start);
+  if (scene?.cap === 'none') return null;
   const top = CAP_TOP[scene?.cap ?? 'top'] ?? 270;
   return (
     <div style={{position: 'absolute', top, left: 50, right: 50, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'baseline', columnGap: 24, rowGap: 0}}>
@@ -44,18 +47,19 @@ const Captions: React.FC<{words: Word[]; groups: Group[]; scenes: ReelScene[]}> 
         const local = f - Math.round(w.t * fps);
         if (local < 0) return null;
         const p = interpolate(local, [0, 3], [0, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
-        const punch = w.big ? interpolate(local, [0, 3, 6], [1.25, 0.96, 1], {extrapolateRight: 'clamp'}) : 1;
+        const big = w.big && !uniform;
+        const punch = big ? interpolate(local, [0, 3, 6], [1.25, 0.96, 1], {extrapolateRight: 'clamp'}) : 1;
         return (
           <span
             key={wi}
             style={{
               fontFamily: 'Montserrat',
-              fontWeight: w.big ? 900 : 700,
-              fontSize: w.big ? Math.min(150, 960 / (w.text.length * 0.78)) : 74,
-              lineHeight: w.big ? 1.0 : 1.25,
-              letterSpacing: w.big ? -2 : 0,
+              fontWeight: big ? 900 : uniform ? 800 : 700,
+              fontSize: big ? Math.min(150, 960 / (w.text.length * 0.78)) : uniform ? 80 : 74,
+              lineHeight: big ? 1.0 : 1.25,
+              letterSpacing: big ? -2 : 0,
               color: w.blue ? BLUE : w.red ? RED : '#fff',
-              textTransform: w.big ? 'uppercase' : 'none',
+              textTransform: big ? 'uppercase' : 'none',
               textShadow: '0 4px 20px rgba(0,0,0,0.85), 0 2px 4px rgba(0,0,0,0.9)',
               opacity: p,
               transform: `translateY(${(1 - p) * 30}px) scale(${punch})`,
@@ -70,7 +74,27 @@ const Captions: React.FC<{words: Word[]; groups: Group[]; scenes: ReelScene[]}> 
   );
 };
 
-export const Reel: React.FC<ReelProps> = ({audio, words, groups, scenes, sfx = [], music, musicVol = 0.12}) => {
+// Hook card: big on-screen hook text (TikTok style) over the first scene, e.g. "the first step to ai dropshipping" / "age 16 - 29".
+const HookCard: React.FC<{scenes: ReelScene[]}> = ({scenes}) => {
+  const f = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const s = scenes.find((x) => x.hook && x.hook.length);
+  if (!s) return null;
+  const from = Math.round(s.start * fps), to = Math.round(s.end * fps);
+  if (f < from || f >= to) return null;
+  const local = f - from;
+  const o = interpolate(local, [0, 5, to - from - 5, to - from], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const lines: string[] = Array.isArray(s.hook) ? s.hook : [String(s.hook)];
+  return (
+    <div style={{position: 'absolute', left: 70, right: 70, top: 520, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18, opacity: o, transform: `scale(${interpolate(local, [0, 6], [0.92, 1], {extrapolateRight: 'clamp'})})`}}>
+      {lines.map((l, i) => (
+        <div key={i} style={{fontFamily: 'TikTok Sans', fontWeight: 700, fontSize: i === 0 ? 72 : 60, lineHeight: 1.15, color: '#fff', textAlign: 'center', textShadow: '0 0 4px rgba(0,0,0,0.95), 0 3px 14px rgba(0,0,0,0.8)'}}>{l}</div>
+      ))}
+    </div>
+  );
+};
+
+export const Reel: React.FC<ReelProps> = ({audio, words, groups, scenes, sfx = [], music, musicVol = 0.12, uniformText}) => {
   const {fps} = useVideoConfig();
   let swipeIdx = 0;
   return (
@@ -98,7 +122,8 @@ export const Reel: React.FC<ReelProps> = ({audio, words, groups, scenes, sfx = [
         );
       })}
       <StepBadge scenes={scenes} />
-      <Captions words={words} groups={groups} scenes={scenes} />
+      <HookCard scenes={scenes} />
+      <Captions words={words} groups={groups} scenes={scenes} uniform={uniformText} />
     </AbsoluteFill>
   );
 };

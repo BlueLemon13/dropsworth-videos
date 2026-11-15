@@ -15,7 +15,8 @@ Every shot type always means the same thing. Pick b-roll by the meaning of the l
 | Cash | money (sparingly) | budget beats |
 
 ## Rules
-- **The first shot always has a PERSON in it** so it feels relatable: a guy with a supercar, a guy in a penthouse, or a guy at a computer. Never open on an empty car, empty room, product or graphic.
+- **Explainers open on a SUPERCAR with on-screen hook text** (e.g. "the first step to ai dropshipping" / "age 16 - 29"). Sauce/other formats: first shot has a person or is a rich car/penthouse.
+- **Explainers:** same-size caption text throughout; positive step-by-step guide (no sad/struggling beats); shots ONLY supercars, penthouses (lots) and real Dropsworth app demos; the guy-at-a-computer shot at most once.
 - **Mostly real video.** Graphics only where footage can't show it (store count, scorecard, comment CTA). Never open on a graphic.
 - **A guy** as the main character in people shots.
 - **No box character** in explainers.

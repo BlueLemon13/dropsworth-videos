@@ -14,7 +14,8 @@ Never the same topic or hook on both accounts on the same day.
 Slot 1 ~10:30, slot 2 ~14:00, slot 3 ~17:30, slot 4 ~20:30. Random 0-25 min jitter. Account B ~40 min after A.
 
 ## Formats
-### explainer = STEP-BY-STEP GUIDE (owner's direction, 2026-11-15)
+### explainer = STEP-BY-STEP GUIDE (owner's direction, 2026-11-15, updated 2026-11-16)
+Opens on a supercar with on-screen hook text (hook_text), e.g. "the first step to ai dropshipping" + "age 16 - 29". Same-size captions. 100% positive, no sad beats. Shots only: supercar, penthouse (lots), real Dropsworth app demos for the steps, working-at-computer max once.
 Feels like a friend showing exactly how they do it, NOT a "judging" AI video. Hook promising a how-to ("here's exactly how I validate a product in 4 steps before spending a dollar on ads") -> "save this" -> 2-4 numbered steps, each step shows the REAL Dropsworth app doing it (app-drop / app-demand / app-competition / app-supplier shots) -> short payoff ("all four check out? test it. if not you just saved your budget") -> CTA (auto). 90-130 spoken words. Approved example: scripts/f5-guide.spec.json.
 ### sauce
 Owner's favourite styles (copy these): POV / self-deprecating ("pov: making 10k a month and thinking im all that. in reality im a f*cking dumbass who found one winning product with dropsworth and the rest is history") and casual flex ("putting the day ones on wasnt even that hard. they just validated products until one hit and now bros making 13k a month"). Monthly numbers like 10k / 13k / 15k / 20k a month attract dropshippers; tie them to validating or finding one winning product. Censor swearing (f*cking).

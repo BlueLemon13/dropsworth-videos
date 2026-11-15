@@ -30,6 +30,7 @@ const parseVisual = (tok) => {
     if (k === 'zoom') v.zoom = Number(val);
     else if (k === 'items') v.items = val.replace(/_/g, ' ').split('|');
     else if (k === 'ticks') v.tickWords = val.split('|');
+    else if (k === 'hook') v.hook = val.replace(/_/g, ' ').split('|');
     else v[k] = val;
   }
   return v;

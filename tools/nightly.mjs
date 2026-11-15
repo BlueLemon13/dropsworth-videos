@@ -111,14 +111,17 @@ for (const v of plan.videos) {
         } else {
           const clip = await pick(l.shot, taken);
           const step = l.step ? ` step=${l.step}` : i === 0 ? ' step=0' : '';
-          marker = `[vid:_lib/${clip.file} grade=bright${step}]`;
+          // the opening supercar carries the on-screen hook text; voice captions are hidden under it
+          const hookLines = i === 0 ? (v.hook_text || []).map((h) => h.replace(/[\[\]=|]/g, '').trim().replace(/\s+/g, '_')).filter(Boolean) : [];
+          const hook = hookLines.length ? ` cap=none hook=${hookLines.join('|')}` : '';
+          marker = `[vid:_lib/${clip.file} grade=bright${step}${hook}]`;
         }
         lines.push(`${marker} ${l.text}`);
       }
       const end = await pick('penthouse', taken); // made it, then the DM graphic
       lines.push(`[vid:_lib/${end.file} grade=bright step=0] Send me the word ^VALIDATE [g-dm] and I'll send you my *FREE checklist.`);
       const specPath = path.join(outDir, `${v.slot}.spec.json`);
-      fs.writeFileSync(specPath, JSON.stringify({name, lines, options: {sfx: 'minimal', tail: 2.6}}, null, 2));
+      fs.writeFileSync(specPath, JSON.stringify({name, lines, options: {sfx: 'minimal', tail: 2.6}, props: {uniformText: true}}, null, 2));
       run('node', ['tools/build.mjs', specPath], 'voice + timing');
       run('npx', ['remotion', 'render', 'src/index.ts', 'Reel', out, `--props=${specPath.replace(/\.spec\.json$/, '.props.json')}`, '--timeout=120000', '--log=error'], 'render');
     }

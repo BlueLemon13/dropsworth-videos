@@ -15,13 +15,13 @@ const PICKS = {
   working: ['G5', 'G6', 'G7', 'G3', 'G9', 'M2'],          // grinding at the computer
   phone: ['B6', 'B7'],                                    // scrolling TikTok
   product: ['N0', 'N2', 'N3', 'N5', 'N10', 'N11', 'N14'], // real viral dropshipping products
-  supercar: ['B16', 'B20'],            // winners
+  supercar: ['B16', 'B20', 'S23', 'S24', 'T0', 'T1'],         // winners + explainer hooks (no McLaren)
   sales: ['G15'],                                         // Shopify sales (G10 removed: TikTok watermark + a real customer's name)
-  penthouse: ['G24', 'G19', 'N20', 'N21', 'N22', 'N24'],  // made it (END of video)
+  penthouse: ['G24', 'G19', 'N20', 'N22', 'N24', 'S13', 'S14', 'S19'], // made it; used a lot in explainers (N21 removed: too crazy)
   money: ['A13', 'A14', 'A12', 'A16'],                    // cash
   // calm, slow, moving, SHARP + BRIGHT ENOUGH (removed: A21 watermark, A4 blurry, A19 + A9 too dark/low quality,
   // S15 TikTok watermark, S6 burned-in text). S/T = MacBook sessions, penthouses, non-McLaren cars (2026-11-16).
-  sauce: ['B0', 'A24', 'N19', 'N22', 'N24', 'B16', 'S1', 'S4', 'S8', 'S11', 'S13', 'S14', 'S19', 'S23', 'S24', 'T0', 'T1'],
+  sauce: ['B0', 'A24', 'N19', 'N22', 'N24', 'B16', 'S13', 'S14', 'S19', 'S23', 'S24', 'T0', 'T1'], // cozy MacBook clips S1 S4 S8 S11 removed: MacBooks must look RICH (black, luxury setting)
 };
 // product photo shown inside the store-grid / scorecard graphics
 const PRODUCT_THUMB = 'N14';

@@ -26,6 +26,7 @@ const Video = z.object({
   format: z.enum(['explainer', 'sauce']),
   topic: z.string(),
   hook_style: z.string(),
+  hook_text: z.array(z.string()).describe('Explainers only: 1-2 short lowercase on-screen hook lines shown over the opening supercar, e.g. ["the first step to ai dropshipping", "age 16 - 29"]. Empty for sauce.'),
   lines: z.array(Line).describe('Voiced formats only (empty for sauce). Do NOT include the CTA, it is appended automatically.'),
   sauce_text: z.string().describe('Sauce posts only (empty otherwise)'),
   caption: z.string().describe('TikTok caption, 1-2 short lines, no hashtags'),
@@ -66,7 +67,11 @@ Use graphics at most twice per video. Change shot every line or two; never the s
 
 const notes = read('notes.md').trim();
 const user = `Write tomorrow's 8 videos for ${date}: slots A1 A2 A3 A4 B1 B2 B3 B4. A1, A2, B1, B2 are explainers; A3, A4, B3, B4 are sauce posts.
-Explainers are STEP-BY-STEP GUIDES (like scripts/f5-guide), never "judging" videos: a hook promising a how-to, "save this", 2-4 numbered steps where each step line uses the matching app-* shot so the viewer SEES Dropsworth doing it, then a short payoff line. 90-130 spoken words. Vary the angle between the 4 explainers (e.g. full 4-step validation, just reading demand properly, spotting saturated products with the competition step, the profit math with the supplier step).
+Explainers are STEP-BY-STEP GUIDES (like scripts/f5-guide), never "judging" videos. OWNER'S RULES FOR EVERY EXPLAINER:
+- Opens on a SUPERCAR (first line shot "supercar") with hook_text on screen, e.g. ["the first step to ai dropshipping", "age 16 - 29"], ["how to find a winning product", "beginners only"], ["the 4 step validation method", "save this"].
+- 100% positive: NO sad, struggling, losing-money or "most beginners fail" beats. Confident how-to energy.
+- Shots ONLY: supercar, penthouse (use lots), app-drop/app-demand/app-competition/app-supplier (the real Dropsworth app for each step), and "working" at most ONCE. Nothing else.
+Structure: a hook promising a how-to, "save this", 2-4 numbered steps where each step line uses the matching app-* shot so the viewer SEES Dropsworth doing it, then a short payoff line. 90-130 spoken words. Vary the angle between the 4 explainers (e.g. full 4-step validation, just reading demand properly, spotting saturated products with the competition step, the profit math with the supplier step).
 Topics used in the last 14 days (do NOT repeat these topics or hooks):
 ${recent.length ? recent.join('\n') : '(none yet)'}
 ${notes ? `\nOwner's notes for this batch (follow them):\n${notes}` : ''}
@@ -96,14 +101,22 @@ for (let attempt = 1; attempt <= 3; attempt++) {
 }
 
 // ---- validation / clean-up (never trust, always fix) ----
+const EXPLAINER_SHOTS = new Set(['supercar', 'penthouse', 'working', 'sales', 'app-drop', 'app-demand', 'app-competition', 'app-supplier']);
 const DASH = /[–—]/g;
 for (const v of plan.videos) {
   v.sauce_text = v.sauce_text.replace(DASH, ',').replace(/\s+-\s+/g, ', ').trim();
   for (const l of v.lines) l.text = l.text.replace(DASH, ',').replace(/\s+/g, ' ').trim();
   if (v.format !== 'sauce') {
     if (!v.lines.length) throw new Error(`${v.slot} has no lines`);
-    v.lines[0].shot = 'opener';
-    for (let i = 1; i < v.lines.length; i++) if (v.lines[i].shot === v.lines[i - 1].shot && !v.lines[i].step) v.lines[i].shot = v.lines[i].shot === 'working' ? 'supercar' : 'working';
+    // explainer rules: supercar hook, only allowed shots, "working" at most once, alternate supercar/penthouse otherwise
+    let working = 0, alt = 0;
+    v.lines.forEach((l, i) => {
+      if (i === 0) { l.shot = 'supercar'; return; }
+      if (!EXPLAINER_SHOTS.has(l.shot) || (l.shot === 'working' && ++working > 1)) l.shot = alt++ % 2 ? 'supercar' : 'penthouse';
+      if (l.shot === v.lines[i - 1].shot && !l.shot.startsWith('app-')) l.shot = l.shot === 'penthouse' ? 'supercar' : 'penthouse';
+    });
+    v.hook_text = (v.hook_text || []).map((h) => h.replace(DASH, '-').toLowerCase().trim()).filter(Boolean).slice(0, 2);
+    if (!v.hook_text.length) v.hook_text = ['the first step to ai dropshipping'];
   } else if (!v.sauce_text) throw new Error(`${v.slot} sauce has no text`);
   v.hashtags = v.hashtags.map((h) => '#' + h.replace(/^#+/, '').replace(/\s+/g, '')).slice(0, 6);
 }
