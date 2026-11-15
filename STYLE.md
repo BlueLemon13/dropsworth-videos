@@ -23,6 +23,7 @@ Every shot type always means the same thing. Pick b-roll by the meaning of the l
 - **Sound effects almost none** (soft whoosh on swipes only).
 - No clips with burned-in text, watermarks, or AI look.
 - **Never use McLaren clips** (owner's rule). Other supercars are fine.
+- **No blurry clips.** The background must clearly read as a penthouse or a car (the blurry night city drive was rejected).
 
 ## Sauce posts
 - One moving dark aesthetic clip (night penthouse, supercar), small TikTok Sans text in one low-key clump, no dashes, nonchalant.
