@@ -19,11 +19,13 @@ const PICKS = {
   sales: ['G15'],                                         // Shopify sales (G10 removed: TikTok watermark + a real customer's name)
   penthouse: ['G24', 'G19', 'N20', 'N21', 'N22', 'N24'],  // made it (END of video)
   money: ['A13', 'A14', 'A12', 'A16'],                    // cash
-  sauce: ['B0', 'A24', 'A19', 'A9', 'N19', 'N22', 'N24', 'B16'], // calm, slow, moving, SHARP (A21 removed: watermark; A4 removed: too blurry)
+  // calm, slow, moving, SHARP + BRIGHT ENOUGH (removed: A21 watermark, A4 blurry, A19 + A9 too dark/low quality,
+  // S15 TikTok watermark, S6 burned-in text). S/T = MacBook sessions, penthouses, non-McLaren cars (2026-11-16).
+  sauce: ['B0', 'A24', 'N19', 'N22', 'N24', 'B16', 'S1', 'S4', 'S8', 'S11', 'S13', 'S14', 'S19', 'S23', 'S24', 'T0', 'T1'],
 };
 // product photo shown inside the store-grid / scorecard graphics
 const PRODUCT_THUMB = 'N14';
-const SHEETS = {A: 'v-all', B: 'v-all2', N: 'v-new', M: 'v-new2', G: 'v-g1', C: 'v-car'};
+const SHEETS = {A: 'v-all', B: 'v-all2', N: 'v-new', M: 'v-new2', G: 'v-g1', C: 'v-car', S: 'v-s1', T: 'v-s2'};
 const GH = process.env.GH_BIN || 'C:\\Program Files\\GitHub CLI\\gh.exe';
 const REPO = 'BlueLemon13/dropsworth-videos';
 
