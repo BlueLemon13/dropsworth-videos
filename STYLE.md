@@ -22,6 +22,7 @@ Every shot type always means the same thing. Pick b-roll by the meaning of the l
 - **Bright, punchy grade** for explainers (`grade=bright`). **Dark moody grade** only for sauce posts.
 - **Sound effects almost none** (soft whoosh on swipes only).
 - No clips with burned-in text, watermarks, or AI look.
+- **Never use McLaren clips** (owner's rule). Other supercars are fine.
 
 ## Sauce posts
 - One moving dark aesthetic clip (night penthouse, supercar), small TikTok Sans text in one low-key clump, no dashes, nonchalant.

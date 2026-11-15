@@ -23,7 +23,12 @@ export const Sauce: React.FC<SauceProps> = ({image, video, videoSeconds, text, f
   const bgStyle: React.CSSProperties = {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transform: video ? undefined : `scale(${z})`, filter: 'saturate(0.9) contrast(1.08) brightness(0.8)'};
   return (
     <AbsoluteFill style={{background: '#000'}}>
-      {audio && <Audio src={staticFile(audio)} />}
+      {audio && (
+        <Audio
+          src={staticFile(audio)}
+          volume={(fr) => interpolate(fr, [0, 12, durationInFrames - 24, durationInFrames], [0, 0.85, 0.85, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+        />
+      )}
       {video ? (
         <Loop durationInFrames={Math.max(1, Math.floor((videoSeconds ?? durationInFrames / fps) * fps) - 1)}>
           <OffthreadVideo src={staticFile(`bvideo/${video}`)} muted style={bgStyle} />

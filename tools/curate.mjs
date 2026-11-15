@@ -15,7 +15,7 @@ const PICKS = {
   working: ['G5', 'G6', 'G7', 'G3', 'G9', 'M2'],          // grinding at the computer
   phone: ['B6', 'B7'],                                    // scrolling TikTok
   product: ['N0', 'N2', 'N3', 'N5', 'N10', 'N11', 'N14'], // real viral dropshipping products
-  supercar: ['C5', 'C3', 'B16', 'B21', 'B20'],            // winners
+  supercar: ['B16', 'B20'],            // winners
   sales: ['G15'],                                         // Shopify sales (G10 removed: TikTok watermark + a real customer's name)
   penthouse: ['G24', 'G19', 'N20', 'N21', 'N22', 'N24'],  // made it (END of video)
   money: ['A13', 'A14', 'A12', 'A16'],                    // cash

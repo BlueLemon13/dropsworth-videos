@@ -124,9 +124,12 @@ for (const v of plan.videos) {
 }
 
 // ---------- 5. captions + state ----------
+// sauce posts get a random calm sound (added in TikTok at upload), no repeats within the day
+const sounds = JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog/sounds.json'), 'utf8')).sounds.sort(() => Math.random() - 0.5);
+for (const v of plan.videos) if (v.format === 'sauce') v.sound = sounds.pop();
 const cap = plan.videos.filter((v) => !only.length || only.includes(v.slot)).map((v) => {
   const r = results.find((x) => x.slot === v.slot);
-  return [`${v.slot} (${v.format}) post at ${postTime(v.slot)} — ${r?.ok ? r.file : 'FAILED: ' + r?.error}`, `topic: ${v.topic}`, v.caption, v.hashtags.join(' '), ''].join('\n');
+  return [`${v.slot} (${v.format}) post at ${postTime(v.slot)} — ${r?.ok ? r.file : 'FAILED: ' + r?.error}`, `topic: ${v.topic}`, ...(v.sound ? [`SOUND (add in TikTok): ${v.sound.title} by ${v.sound.artist} (search "${v.sound.search}")`] : []), v.caption, v.hashtags.join(' '), ''].join('\n');
 }).join('\n');
 fs.writeFileSync(path.join(outDir, 'captions.txt'), `Dropsworth videos for ${date}\nAccount A = teacher, Account B = lifestyle. Tick "AI-generated content" on upload.\n\n${cap}`);
 fs.mkdirSync(path.dirname(statePath), {recursive: true});
