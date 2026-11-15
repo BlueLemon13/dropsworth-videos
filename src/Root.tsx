@@ -30,7 +30,8 @@ export const Root: React.FC = () => (
       fps={FPS}
       durationInFrames={360}
       defaultProps={sauceDefault}
-      calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.duration * FPS)})}
+      // never longer than the background clip: when the clip ends, the video (and music) ends
+      calculateMetadata={({props}) => ({durationInFrames: Math.max(1, Math.floor(Math.min(props.duration, props.video && props.videoSeconds ? props.videoSeconds - 0.15 : props.duration) * FPS))})}
     />
     <Composition id="Sheet" component={Sheet} width={1080} height={1920} fps={FPS} durationInFrames={1} defaultProps={{files: [] as string[]}} />
     <Composition

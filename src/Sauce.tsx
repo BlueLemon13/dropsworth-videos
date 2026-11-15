@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Audio, Img, Loop, OffthreadVideo, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Img, OffthreadVideo, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import '@fontsource/tiktok-sans/600.css';
 
 // Format 2: aesthetic background (video preferred, image fallback) + one small, nonchalant
@@ -30,9 +30,8 @@ export const Sauce: React.FC<SauceProps> = ({image, video, videoSeconds, text, f
         />
       )}
       {video ? (
-        <Loop durationInFrames={Math.max(1, Math.floor((videoSeconds ?? durationInFrames / fps) * fps) - 1)}>
-          <OffthreadVideo src={staticFile(`bvideo/${video}`)} muted style={bgStyle} />
-        </Loop>
+        // Owner's rule: never replay the clip. The composition length is capped to the clip length (Root.tsx).
+        <OffthreadVideo src={staticFile(`bvideo/${video}`)} muted style={bgStyle} />
       ) : image ? (
         <Img src={staticFile(`broll/${image}`)} style={bgStyle} />
       ) : null}

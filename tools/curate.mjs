@@ -19,7 +19,7 @@ const PICKS = {
   sales: ['G15'],                                         // Shopify sales (G10 removed: TikTok watermark + a real customer's name)
   penthouse: ['G24', 'G19', 'N20', 'N21', 'N22', 'N24'],  // made it (END of video)
   money: ['A13', 'A14', 'A12', 'A16'],                    // cash
-  sauce: ['B0', 'A24', 'A19', 'A21', 'A9', 'A4'],         // dark night aesthetic backgrounds for sauce posts
+  sauce: ['B0', 'A24', 'A19', 'A9', 'N19', 'N22', 'N24', 'B16'], // calm, slow, moving (A21 removed: TikTok watermark; A4 too short)
 };
 // product photo shown inside the store-grid / scorecard graphics
 const PRODUCT_THUMB = 'N14';

@@ -59,9 +59,11 @@ async function ensure(asset) {
 }
 
 // least-used clip for a tag, never reusing a clip inside the same video
-async function pick(tag, taken) {
-  const pool = catalog.clips.filter((c) => c.tags.includes(tag) && !taken.has(c.id));
-  const choices = pool.length ? pool : catalog.clips.filter((c) => c.tags.includes(tag));
+// minDur: only clips at least this long (sauce posts never loop their clip)
+async function pick(tag, taken, minDur = 0) {
+  const ok = (c) => c.tags.includes(tag) && (c.dur || 0) >= minDur;
+  const pool = catalog.clips.filter((c) => ok(c) && !taken.has(c.id));
+  const choices = pool.length ? pool : catalog.clips.filter(ok);
   if (!choices.length) throw new Error(`no clips tagged ${tag}`);
   choices.sort((a, b) => (state.clips[a.id] || 0) - (state.clips[b.id] || 0) || Math.random() - 0.5);
   const c = choices[0];
@@ -89,9 +91,12 @@ for (const v of plan.videos) {
   try {
     const taken = new Set();
     if (v.format === 'sauce') {
-      const clip = await pick('sauce', taken);
+      // reading time decides the minimum clip length; the video ends when the clip ends (max 15s), never loops
       const words = v.sauce_text.split(/\s+/).length;
-      const props = {video: `_lib/${clip.file}`, videoSeconds: clip.dur || 8, text: v.sauce_text, duration: Math.min(12, Math.max(7, Math.round(words / 2.8 + 3))), fontSize: 38, y: 0.46};
+      const readSecs = Math.max(7, Math.round(words / 3.3 + 1.5));
+      const longest = Math.max(...catalog.clips.filter((c) => c.tags.includes('sauce')).map((c) => c.dur || 0));
+      const clip = await pick('sauce', taken, Math.min(readSecs, longest));
+      const props = {video: `_lib/${clip.file}`, videoSeconds: clip.dur, text: v.sauce_text, duration: Math.min(15, clip.dur), fontSize: 38, y: 0.46};
       const propsPath = path.join(outDir, `${v.slot}.props.json`);
       fs.writeFileSync(propsPath, JSON.stringify(props, null, 1));
       run('npx', ['remotion', 'render', 'src/index.ts', 'Sauce', out, `--props=${propsPath}`, '--timeout=120000', '--log=error'], 'render');
