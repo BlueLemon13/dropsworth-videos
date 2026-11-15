@@ -69,16 +69,27 @@ ${notes ? `\nOwner's notes for this batch (follow them):\n${notes}` : ''}
 Account A and B must have different topics. Every voiced video's first line uses shot "opener". Steps videos put "supercar" shots between steps and set step numbers on the line that starts each step. Do not write the CTA.`;
 
 const client = new Anthropic({apiKey: need('ANTHROPIC_API_KEY')});
-const res = await client.messages.parse({
-  model: MODEL,
-  max_tokens: 16000,
-  system,
-  messages: [{role: 'user', content: user}],
-  output_config: {format: zodOutputFormat(Plan)},
-});
-if (res.stop_reason === 'refusal') throw new Error('Model declined: ' + JSON.stringify(res.stop_details));
-const plan = res.parsed_output;
-if (!plan) throw new Error('Could not parse plan (stop_reason ' + res.stop_reason + ')');
+// Low effort: script writing doesn't need deep reasoning, and thinking tokens were eating the output budget.
+let res, plan;
+for (let attempt = 1; attempt <= 3; attempt++) {
+  try {
+    res = await client.messages.parse({
+      model: MODEL,
+      max_tokens: 20000,
+      system,
+      messages: [{role: 'user', content: user}],
+      output_config: {effort: 'low', format: zodOutputFormat(Plan)},
+    });
+    if (res.stop_reason === 'refusal') throw new Error('Model declined: ' + JSON.stringify(res.stop_details));
+    plan = res.parsed_output;
+    if (!plan) throw new Error('Could not parse plan (stop_reason ' + res.stop_reason + ')');
+    break;
+  } catch (e) {
+    if (e instanceof Anthropic.AuthenticationError || e instanceof Anthropic.PermissionDeniedError) throw e;
+    console.log(`script attempt ${attempt} failed: ${String(e.message).slice(0, 160)}`);
+    if (attempt === 3) throw e;
+  }
+}
 
 // ---- validation / clean-up (never trust, always fix) ----
 const DASH = /[–—]/g;
