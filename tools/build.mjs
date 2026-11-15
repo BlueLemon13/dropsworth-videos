@@ -15,7 +15,8 @@ import crypto from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {ROOT, need} from './env.mjs';
 
-const FFMPEG = path.join(ROOT, 'node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe');
+// Windows: the ffmpeg bundled with Remotion. Linux (GitHub Actions): system ffmpeg.
+const FFMPEG = process.platform === 'win32' ? path.join(ROOT, 'node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe') : 'ffmpeg';
 const specPath = path.resolve(process.argv[2]);
 const spec = JSON.parse(fs.readFileSync(specPath, 'utf8'));
 const name = spec.name;
@@ -42,7 +43,8 @@ for (const line of spec.lines) {
     else {
       const mark = '*^!'.includes(t[0]) ? t[0] : '';
       const body = mark ? t.slice(1) : t;
-      const [disp, spokenRaw] = body.split(/=(.*)/s);
+      let [disp, spokenRaw] = body.split(/=(.*)/s);
+      if (!spokenRaw && disp.includes('_')) disp = disp.replace(/_/g, ' '); // stray underscores from the writer
       items.push({kind: 'word', text: disp, big: !!mark, blue: mark === '^', red: mark === '!', spoken: spokenRaw ? spokenRaw.replace(/_/g, ' ') : disp});
     }
   }

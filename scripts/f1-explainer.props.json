@@ -7,687 +7,687 @@
    "blue": false,
    "red": false,
    "t": 0,
-   "end": 0.534
+   "end": 0.511
   },
   {
    "text": "isn't",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 0.592,
-   "end": 0.801
+   "t": 0.615,
+   "end": 0.882
   },
   {
    "text": "DEAD.",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 0.859,
-   "end": 1.289
+   "t": 1.033,
+   "end": 1.544
   },
   {
    "text": "You're",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 1.399,
-   "end": 1.596
+   "t": 1.695,
+   "end": 1.869
   },
   {
    "text": "just",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 1.631,
-   "end": 1.77
+   "t": 1.892,
+   "end": 2.02
   },
   {
    "text": "picking",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 1.805,
-   "end": 2.026
+   "t": 2.055,
+   "end": 2.276
   },
   {
    "text": "the",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 2.06,
-   "end": 2.13
+   "t": 2.322,
+   "end": 2.392
   },
   {
    "text": "WRONG",
    "big": true,
    "blue": true,
    "red": false,
-   "t": 2.165,
-   "end": 2.478
+   "t": 2.461,
+   "end": 2.786
   },
   {
    "text": "products.",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 2.536,
-   "end": 3.129
+   "t": 2.868,
+   "end": 3.529
   },
   {
    "text": "And",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 3.239,
-   "end": 3.355
+   "t": 3.68,
+   "end": 3.796
   },
   {
    "text": "it's",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 3.401,
-   "end": 3.517
+   "t": 3.831,
+   "end": 3.947
   },
   {
    "text": "not",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 3.552,
-   "end": 3.68
+   "t": 3.982,
+   "end": 4.098
   },
   {
    "text": "because",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 3.715,
-   "end": 3.97
+   "t": 4.145,
+   "end": 4.377
   },
   {
    "text": "you're",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 3.993,
-   "end": 4.156
+   "t": 4.4,
+   "end": 4.563
   },
   {
    "text": "LAZY.",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 4.191,
-   "end": 4.736
+   "t": 4.598,
+   "end": 5.132
   },
   {
    "text": "It's",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 4.846,
-   "end": 5.009
+   "t": 5.242,
+   "end": 5.382
   },
   {
    "text": "because",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 5.044,
-   "end": 5.276
+   "t": 5.417,
+   "end": 5.649
   },
   {
    "text": "you",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 5.299,
-   "end": 5.369
+   "t": 5.672,
+   "end": 5.753
   },
   {
    "text": "pick",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 5.415,
-   "end": 5.554
+   "t": 5.858,
+   "end": 6.009
   },
   {
    "text": "products",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 5.613,
-   "end": 5.914
+   "t": 6.09,
+   "end": 6.427
   },
   {
    "text": "from",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 5.938,
-   "end": 6.065
+   "t": 6.461,
+   "end": 6.589
   },
   {
    "text": "TikTok",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 6.123,
-   "end": 6.448
+   "t": 6.647,
+   "end": 7.065
   },
   {
    "text": "HYPE.",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 6.518,
-   "end": 6.878
+   "t": 7.193,
+   "end": 7.611
   },
   {
    "text": "By",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 6.988,
-   "end": 7.104
+   "t": 7.721,
+   "end": 7.825
   },
   {
    "text": "the",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 7.15,
-   "end": 7.22
+   "t": 7.86,
+   "end": 7.93
   },
   {
    "text": "time",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 7.255,
-   "end": 7.417
+   "t": 7.964,
+   "end": 8.092
   },
   {
    "text": "it's",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 7.441,
-   "end": 7.568
+   "t": 8.127,
+   "end": 8.22
   },
   {
    "text": "on",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 7.603,
-   "end": 7.673
+   "t": 8.243,
+   "end": 8.301
   },
   {
    "text": "your",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 7.708,
-   "end": 7.824
+   "t": 8.336,
+   "end": 8.44
   },
   {
    "text": "feed,",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 7.87,
-   "end": 8.276
+   "t": 8.487,
+   "end": 8.87
   },
   {
    "text": "HUNDREDS",
    "big": true,
    "blue": true,
    "red": false,
-   "t": 8.427,
-   "end": 8.729
+   "t": 8.98,
+   "end": 9.386
   },
   {
    "text": "of",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 8.764,
-   "end": 8.822
+   "t": 9.421,
+   "end": 9.467
   },
   {
    "text": "stores",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 8.857,
-   "end": 9.112
+   "t": 9.514,
+   "end": 9.85
   },
   {
    "text": "are",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 9.147,
-   "end": 9.252
+   "t": 9.897,
+   "end": 10.001
   },
   {
    "text": "already",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 9.287,
-   "end": 9.554
+   "t": 10.036,
+   "end": 10.292
   },
   {
    "text": "selling",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 9.6,
-   "end": 9.855
+   "t": 10.338,
+   "end": 10.593
   },
   {
    "text": "it.",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 9.902,
-   "end": 10.122
+   "t": 10.628,
+   "end": 10.837
   },
   {
    "text": "The",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 10.232,
-   "end": 10.337
+   "t": 10.947,
+   "end": 11.04
   },
   {
    "text": "ones",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 10.407,
-   "end": 10.546
+   "t": 11.098,
+   "end": 11.226
   },
   {
    "text": "who",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 10.569,
-   "end": 10.662
+   "t": 11.249,
+   "end": 11.33
   },
   {
    "text": "actually",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 10.732,
-   "end": 11.127
+   "t": 11.389,
+   "end": 11.667
   },
   {
    "text": "WIN",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 11.196,
-   "end": 11.463
+   "t": 11.714,
+   "end": 11.923
   },
   {
    "text": "do",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 11.573,
-   "end": 11.701
+   "t": 12.05,
+   "end": 12.178
   },
   {
    "text": "one",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 11.805,
-   "end": 12.014
+   "t": 12.248,
+   "end": 12.375
   },
   {
    "text": "thing",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 12.049,
-   "end": 12.223
+   "t": 12.41,
+   "end": 12.561
   },
   {
    "text": "DIFFERENT.",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 12.27,
-   "end": 12.722
+   "t": 12.619,
+   "end": 13.107
   },
   {
    "text": "They",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 12.832,
-   "end": 12.983
+   "t": 13.217,
+   "end": 13.357
   },
   {
    "text": "VALIDATE",
    "big": true,
    "blue": true,
    "red": false,
-   "t": 13.053,
-   "end": 13.505
+   "t": 13.438,
+   "end": 13.914
   },
   {
    "text": "before",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 13.54,
-   "end": 13.842
+   "t": 13.949,
+   "end": 14.193
   },
   {
    "text": "they",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 13.877,
-   "end": 13.993
+   "t": 14.228,
+   "end": 14.332
   },
   {
    "text": "spend",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 14.04,
-   "end": 14.225
+   "t": 14.367,
+   "end": 14.576
   },
   {
    "text": "a",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 14.26,
-   "end": 14.295
+   "t": 14.611,
+   "end": 14.645
   },
   {
    "text": "single",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 14.341,
-   "end": 14.597
+   "t": 14.704,
+   "end": 14.971
   },
   {
    "text": "DOLLAR.",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 14.632,
-   "end": 15.073
+   "t": 15.005,
+   "end": 15.458
   },
   {
    "text": "Real",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 15.183,
-   "end": 15.38
+   "t": 15.568,
+   "end": 15.765
   },
   {
    "text": "demand.",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 15.427,
-   "end": 15.868
+   "t": 15.812,
+   "end": 16.334
   },
   {
    "text": "A",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 15.978,
-   "end": 16.047
+   "t": 16.444,
+   "end": 16.513
   },
   {
    "text": "healthy",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 16.117,
-   "end": 16.349
+   "t": 16.583,
+   "end": 16.827
   },
   {
    "text": "margin.",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 16.407,
-   "end": 16.837
+   "t": 16.873,
+   "end": 17.326
   },
   {
    "text": "Not",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 16.965,
-   "end": 17.115
+   "t": 17.436,
+   "end": 17.587
   },
   {
    "text": "too",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 17.15,
-   "end": 17.243
+   "t": 17.621,
+   "end": 17.703
   },
   {
    "text": "much",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 17.278,
-   "end": 17.406
+   "t": 17.738,
+   "end": 17.854
   },
   {
    "text": "competition.",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 17.441,
-   "end": 18.044
+   "t": 17.888,
+   "end": 18.527
   },
   {
    "text": "Three",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 18.172,
-   "end": 18.381
+   "t": 18.655,
+   "end": 18.864
   },
   {
    "text": "yeses?",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 18.416,
-   "end": 18.961
+   "t": 18.899,
+   "end": 19.409
   },
   {
    "text": "They",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 19.112,
-   "end": 19.252
+   "t": 19.444,
+   "end": 19.595
   },
   {
    "text": "SCALE",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 19.31,
-   "end": 19.6
+   "t": 19.665,
+   "end": 19.955
   },
   {
    "text": "it.",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 19.635,
-   "end": 19.867
+   "t": 19.978,
+   "end": 20.222
   },
   {
    "text": "One",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 19.977,
-   "end": 20.174
+   "t": 20.332,
+   "end": 20.518
   },
   {
    "text": "no?",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 20.209,
-   "end": 20.557
+   "t": 20.552,
+   "end": 20.924
   },
   {
    "text": "They",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 20.667,
-   "end": 20.818
+   "t": 21.034,
+   "end": 21.173
   },
   {
    "text": "SKIP",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 20.887,
-   "end": 21.096
+   "t": 21.243,
+   "end": 21.452
   },
   {
    "text": "it,",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 21.154,
-   "end": 21.363
+   "t": 21.51,
+   "end": 21.777
   },
   {
    "text": "and",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 21.491,
-   "end": 21.619
+   "t": 21.905,
+   "end": 22.032
   },
   {
    "text": "keep",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 21.677,
-   "end": 21.828
+   "t": 22.102,
+   "end": 22.241
   },
   {
    "text": "their",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 21.863,
-   "end": 21.99
+   "t": 22.276,
+   "end": 22.404
   },
   {
    "text": "BUDGET.",
    "big": true,
    "blue": true,
    "red": false,
-   "t": 22.037,
-   "end": 22.455
+   "t": 22.45,
+   "end": 22.915
   },
   {
    "text": "COMMENT",
    "big": true,
    "blue": true,
    "red": false,
-   "t": 22.565,
-   "end": 22.936
+   "t": 23.025,
+   "end": 23.442
   },
   {
    "text": "VALIDATE",
    "big": true,
    "blue": false,
    "red": false,
-   "t": 23.041,
-   "end": 23.563
+   "t": 23.552,
+   "end": 24.179
   },
   {
    "text": "and",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 23.673,
-   "end": 23.859
+   "t": 24.289,
+   "end": 24.463
   },
   {
    "text": "I'll",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 23.905,
-   "end": 24.021
+   "t": 24.498,
+   "end": 24.614
   },
   {
    "text": "send",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 24.056,
-   "end": 24.184
+   "t": 24.649,
+   "end": 24.788
   },
   {
    "text": "you",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 24.219,
-   "end": 24.288
+   "t": 24.823,
+   "end": 24.893
   },
   {
    "text": "my",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 24.335,
-   "end": 24.405
+   "t": 24.951,
+   "end": 25.02
   },
   {
    "text": "full",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 24.474,
-   "end": 24.637
+   "t": 25.067,
+   "end": 25.206
   },
   {
    "text": "checklist.",
    "big": false,
    "blue": false,
    "red": false,
-   "t": 24.683,
-   "end": 25.415
+   "t": 25.241,
+   "end": 25.961
   }
  ],
  "groups": [
@@ -697,14 +697,14 @@
     1
    ],
    "start": 0,
-   "end": 0.859
+   "end": 1.033
   },
   {
    "words": [
     2
    ],
-   "start": 0.859,
-   "end": 1.399
+   "start": 1.033,
+   "end": 1.695
   },
   {
    "words": [
@@ -712,8 +712,8 @@
     4,
     5
    ],
-   "start": 1.399,
-   "end": 2.06
+   "start": 1.695,
+   "end": 2.322
   },
   {
    "words": [
@@ -721,8 +721,8 @@
     7,
     8
    ],
-   "start": 2.06,
-   "end": 3.239
+   "start": 2.322,
+   "end": 3.68
   },
   {
    "words": [
@@ -730,23 +730,23 @@
     10,
     11
    ],
-   "start": 3.239,
-   "end": 3.715
+   "start": 3.68,
+   "end": 4.145
   },
   {
    "words": [
     12,
     13
    ],
-   "start": 3.715,
-   "end": 4.191
+   "start": 4.145,
+   "end": 4.598
   },
   {
    "words": [
     14
    ],
-   "start": 4.191,
-   "end": 4.846
+   "start": 4.598,
+   "end": 5.242
   },
   {
    "words": [
@@ -754,8 +754,8 @@
     16,
     17
    ],
-   "start": 4.846,
-   "end": 5.415
+   "start": 5.242,
+   "end": 5.858
   },
   {
    "words": [
@@ -763,16 +763,16 @@
     19,
     20
    ],
-   "start": 5.415,
-   "end": 6.123
+   "start": 5.858,
+   "end": 6.647
   },
   {
    "words": [
     21,
     22
    ],
-   "start": 6.123,
-   "end": 6.988
+   "start": 6.647,
+   "end": 7.721
   },
   {
    "words": [
@@ -780,8 +780,8 @@
     24,
     25
    ],
-   "start": 6.988,
-   "end": 7.441
+   "start": 7.721,
+   "end": 8.127
   },
   {
    "words": [
@@ -789,15 +789,15 @@
     27,
     28
    ],
-   "start": 7.441,
-   "end": 7.87
+   "start": 8.127,
+   "end": 8.487
   },
   {
    "words": [
     29
    ],
-   "start": 7.87,
-   "end": 8.427
+   "start": 8.487,
+   "end": 8.98
   },
   {
    "words": [
@@ -805,8 +805,8 @@
     31,
     32
    ],
-   "start": 8.427,
-   "end": 9.147
+   "start": 8.98,
+   "end": 9.897
   },
   {
    "words": [
@@ -814,15 +814,15 @@
     34,
     35
    ],
-   "start": 9.147,
-   "end": 9.902
+   "start": 9.897,
+   "end": 10.628
   },
   {
    "words": [
     36
    ],
-   "start": 9.902,
-   "end": 10.232
+   "start": 10.628,
+   "end": 10.947
   },
   {
    "words": [
@@ -830,8 +830,8 @@
     38,
     39
    ],
-   "start": 10.232,
-   "end": 10.732
+   "start": 10.947,
+   "end": 11.389
   },
   {
    "words": [
@@ -839,23 +839,23 @@
     41,
     42
    ],
-   "start": 10.732,
-   "end": 11.805
+   "start": 11.389,
+   "end": 12.248
   },
   {
    "words": [
     43,
     44
    ],
-   "start": 11.805,
-   "end": 12.27
+   "start": 12.248,
+   "end": 12.619
   },
   {
    "words": [
     45
    ],
-   "start": 12.27,
-   "end": 12.832
+   "start": 12.619,
+   "end": 13.217
   },
   {
    "words": [
@@ -863,8 +863,8 @@
     47,
     48
    ],
-   "start": 12.832,
-   "end": 13.877
+   "start": 13.217,
+   "end": 14.228
   },
   {
    "words": [
@@ -872,39 +872,39 @@
     50,
     51
    ],
-   "start": 13.877,
-   "end": 14.341
+   "start": 14.228,
+   "end": 14.704
   },
   {
    "words": [
     52,
     53
    ],
-   "start": 14.341,
-   "end": 15.183
+   "start": 14.704,
+   "end": 15.568
   },
   {
    "words": [
     54,
     55
    ],
-   "start": 15.183,
-   "end": 15.978
+   "start": 15.568,
+   "end": 16.444
   },
   {
    "words": [
     56,
     57
    ],
-   "start": 15.978,
-   "end": 16.407
+   "start": 16.444,
+   "end": 16.873
   },
   {
    "words": [
     58
    ],
-   "start": 16.407,
-   "end": 16.965
+   "start": 16.873,
+   "end": 17.436
   },
   {
    "words": [
@@ -912,23 +912,23 @@
     60,
     61
    ],
-   "start": 16.965,
-   "end": 17.441
+   "start": 17.436,
+   "end": 17.888
   },
   {
    "words": [
     62
    ],
-   "start": 17.441,
-   "end": 18.172
+   "start": 17.888,
+   "end": 18.655
   },
   {
    "words": [
     63,
     64
    ],
-   "start": 18.172,
-   "end": 19.112
+   "start": 18.655,
+   "end": 19.444
   },
   {
    "words": [
@@ -936,16 +936,16 @@
     66,
     67
    ],
-   "start": 19.112,
-   "end": 19.977
+   "start": 19.444,
+   "end": 20.332
   },
   {
    "words": [
     68,
     69
    ],
-   "start": 19.977,
-   "end": 20.667
+   "start": 20.332,
+   "end": 21.034
   },
   {
    "words": [
@@ -953,8 +953,8 @@
     71,
     72
    ],
-   "start": 20.667,
-   "end": 21.491
+   "start": 21.034,
+   "end": 21.905
   },
   {
    "words": [
@@ -962,15 +962,15 @@
     74,
     75
    ],
-   "start": 21.491,
-   "end": 22.037
+   "start": 21.905,
+   "end": 22.45
   },
   {
    "words": [
     76
    ],
-   "start": 22.037,
-   "end": 22.565
+   "start": 22.45,
+   "end": 23.025
   },
   {
    "words": [
@@ -978,8 +978,8 @@
     78,
     79
    ],
-   "start": 22.565,
-   "end": 23.905
+   "start": 23.025,
+   "end": 24.498
   },
   {
    "words": [
@@ -987,8 +987,8 @@
     81,
     82
    ],
-   "start": 23.905,
-   "end": 24.335
+   "start": 24.498,
+   "end": 24.951
   },
   {
    "words": [
@@ -996,8 +996,8 @@
     84,
     85
    ],
-   "start": 24.335,
-   "end": 26.515
+   "start": 24.951,
+   "end": 27.061
   }
  ],
  "scenes": [
@@ -1005,113 +1005,113 @@
    "visual": "vid:tired/e1_AfqPShx5Ves6POBXS6YBnksfhEcHgDODr1ZvVMgKsoXH9ZRGBVuP.mp4",
    "grade": "bright",
    "start": 0,
-   "end": 3.189
+   "end": 3.63
   },
   {
    "visual": "vid:working/e1_AfqPShy8-8jt0_iUVo4NjKIuLTG5WOTiK_o4c8JJOz5FFbzEthDenQ.mp4",
    "grade": "bright",
-   "start": 3.189,
-   "end": 4.796
+   "start": 3.63,
+   "end": 5.192
   },
   {
    "visual": "vid:products/e1_AfqPShwat9Djx7c02oKawQz7RoK80nUjCG32KaSJNC5ItzI6pUoi.mp4",
    "grade": "bright",
-   "start": 4.796,
-   "end": 6.938
+   "start": 5.192,
+   "end": 7.671
   },
   {
    "visual": "g-stores",
    "img": "bvideo/products2/e1_AfqPShxG3Thx5Vs2aCIr-byiwCq89fZt5dAdYMl0PGq-iDHMkcMk0Q.jpg",
-   "start": 6.938,
-   "end": 10.182
+   "start": 7.671,
+   "end": 10.897
   },
   {
    "visual": "vid:supercar3/e1_AfqPShzL55YMsMDQ0j0JktjQFhcvyjNtM4MYFzFpux_kudWcy3E5.mp4",
    "grade": "bright",
-   "start": 10.182,
-   "end": 12.782
+   "start": 10.897,
+   "end": 13.167
   },
   {
    "visual": "vid:working/e1_AfqPShy9ZRK0zrHmNCYWF--Bv4ldLLfwL1Vcu_-piY7petV8ZOdJ.mp4",
    "grade": "bright",
-   "start": 12.782,
-   "end": 15.133
+   "start": 13.167,
+   "end": 15.518
   },
   {
    "visual": "g-score",
    "img": "bvideo/products2/e1_AfqPShxG3Thx5Vs2aCIr-byiwCq89fZt5dAdYMl0PGq-iDHMkcMk0Q.jpg",
-   "start": 15.133,
-   "end": 18.122,
+   "start": 15.518,
+   "end": 18.605,
    "ticks": [
     0.294,
-    1.274,
-    2.308
+    1.355,
+    2.37
    ]
   },
   {
    "visual": "vid:shopifysales/e1_AfqPShwe3kFou4fMkWquyBodTUWify0vkjpCx_RN4M8tw-lD3YQq.mp4",
    "grade": "bright",
-   "start": 18.122,
-   "end": 19.927
+   "start": 18.605,
+   "end": 20.282
   },
   {
    "visual": "vid:madeit/e1_AfqPShxKEub2y35LEwcj5-6_FC_RVAYxT80nV7dy0A_jKZ07Twg.mp4",
    "grade": "bright",
-   "start": 19.927,
-   "end": 22.515
+   "start": 20.282,
+   "end": 22.975
   },
   {
    "visual": "g-comments",
-   "start": 22.515,
-   "end": 26.515
+   "start": 22.975,
+   "end": 27.061
   }
  ],
  "sfx": [
   {
    "name": "whoosh",
-   "t": 3.129,
+   "t": 3.57,
    "vol": 0.12
   },
   {
    "name": "whoosh",
-   "t": 4.736000000000001,
+   "t": 5.132000000000001,
    "vol": 0.12
   },
   {
    "name": "whoosh",
-   "t": 6.878,
+   "t": 7.611000000000001,
    "vol": 0.12
   },
   {
    "name": "whoosh",
-   "t": 10.122,
+   "t": 10.837,
    "vol": 0.12
   },
   {
    "name": "whoosh",
-   "t": 12.722,
+   "t": 13.107,
    "vol": 0.12
   },
   {
    "name": "whoosh",
-   "t": 15.072999999999999,
+   "t": 15.458,
    "vol": 0.12
   },
   {
    "name": "whoosh",
-   "t": 18.062,
+   "t": 18.545,
    "vol": 0.12
   },
   {
    "name": "whoosh",
-   "t": 19.867,
+   "t": 20.222,
    "vol": 0.12
   },
   {
    "name": "whoosh",
-   "t": 22.455000000000002,
+   "t": 22.915000000000003,
    "vol": 0.12
   }
  ],
- "duration": 26.515
+ "duration": 27.061
 }

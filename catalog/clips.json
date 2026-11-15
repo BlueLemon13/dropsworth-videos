@@ -1,0 +1,330 @@
+{
+ "productThumb": "product-thumb.jpg.enc",
+ "clips": [
+  {
+   "id": "e1_AfqPShy8-8jt0_iUVo4NjKIuLTG5WOTiK_o4c8JJOz5FFbzEthDenQ",
+   "asset": "working-FbzEthDenQ.mp4.enc",
+   "dur": 7.3,
+   "tags": [
+    "opener",
+    "working"
+   ]
+  },
+  {
+   "id": "e1_AfqPShy9ZRK0zrHmNCYWF--Bv4ldLLfwL1Vcu_-piY7petV8ZOdJ",
+   "asset": "working-7petV8ZOdJ.mp4.enc",
+   "dur": 15.9,
+   "tags": [
+    "opener",
+    "working"
+   ]
+  },
+  {
+   "id": "e1_AfqPShzZao19Dk052EWZB4LHwC-D-1CcHmZtGXyYpSa-9bkJuZQA",
+   "asset": "working-a9bkJuZQA.mp4.enc",
+   "dur": 15.2,
+   "tags": [
+    "opener",
+    "working"
+   ]
+  },
+  {
+   "id": "e1_AfqPShz0T7GzOEWbTNBiCotYwNRwOkhZDdJsOJWkwonZ2Shb1w",
+   "asset": "madeit-wonZ2Shb1w.mp4.enc",
+   "dur": 6.7,
+   "tags": [
+    "opener",
+    "penthouse"
+   ]
+  },
+  {
+   "id": "e1_AfqPShxKEub2y35LEwcj5-6_FC_RVAYxT80nV7dy0A_jKZ07Twg",
+   "asset": "madeit-AjKZ07Twg.mp4.enc",
+   "dur": 12.1,
+   "tags": [
+    "opener",
+    "penthouse"
+   ]
+  },
+  {
+   "id": "e1_AfqPShx5Ves6POBXS6YBnksfhEcHgDODr1ZvVMgKsoXH9ZRGBVuP",
+   "asset": "tired-XH9ZRGBVuP.mp4.enc",
+   "dur": 15,
+   "tags": [
+    "tired"
+   ]
+  },
+  {
+   "id": "e1_AfqPShyIyH3pf6joukXOa4yeDx4yg4frZ2euxJJ5cCSHsM4GgZU",
+   "asset": "tired-CSHsM4GgZU.mp4.enc",
+   "dur": 10,
+   "tags": [
+    "tired"
+   ]
+  },
+  {
+   "id": "e1_AfqPShznMVOvOLkZNe0kR96wAFVxCPEcxo6oBnPY1pJ1zLEEqE8cVA",
+   "asset": "tired-zLEEqE8cVA.mp4.enc",
+   "dur": 16,
+   "tags": [
+    "tired"
+   ]
+  },
+  {
+   "id": "e1_AfqPShyEzN0nUQ3t3J-fERguXnKEMuVo3KNfQb2R1p73RQPf6ygq",
+   "asset": "working-73RQPf6ygq.mp4.enc",
+   "dur": 17,
+   "tags": [
+    "working"
+   ]
+  },
+  {
+   "id": "e1_AfqPShzwLS9U8R9VP0rvruzBlJ3xjM-us9dh2wfOtr_ytS0bzlyz",
+   "asset": "tired-ytS0bzlyz.mp4.enc",
+   "dur": 5.2,
+   "tags": [
+    "working"
+   ]
+  },
+  {
+   "id": "e1_AfqPShyq2P8Jtius1kbjFZbD91LpDdkXc9Tsr8AMJ93J2SIKqeY",
+   "asset": "laptop2-93J2SIKqeY.mp4.enc",
+   "dur": 20.8,
+   "tags": [
+    "working"
+   ]
+  },
+  {
+   "id": "e1_AfqPShyjeE2ZuGGBMAi100v0HYHc8963lmacDotUs2eS2kshgU0p",
+   "asset": "phone-eS2kshgU0p.mp4.enc",
+   "dur": 13.4,
+   "tags": [
+    "phone"
+   ]
+  },
+  {
+   "id": "e1_AfqPShySx7tZ1KGE2I9dI13BLt5Ff-esskLigyrrf_SVN4Mvpv8",
+   "asset": "phone-SVN4Mvpv8.mp4.enc",
+   "dur": 52,
+   "tags": [
+    "phone"
+   ]
+  },
+  {
+   "id": "e1_AfqPShwat9Djx7c02oKawQz7RoK80nUjCG32KaSJNC5ItzI6pUoi",
+   "asset": "products-5ItzI6pUoi.mp4.enc",
+   "dur": 14,
+   "tags": [
+    "product"
+   ]
+  },
+  {
+   "id": "e1_AfqPShwXj_NDJYkjoU37yu_uhYw1ghj6eHEzzv2sSS5tmwZIjXUW",
+   "asset": "products-5tmwZIjXUW.mp4.enc",
+   "dur": 4.4,
+   "tags": [
+    "product"
+   ]
+  },
+  {
+   "id": "e1_AfqPShx5dhHUvOC6Hcb2MWgQaaZXuk0WuvLPXq6bsmcHcIRwf8_vWw",
+   "asset": "products-cIRwf8vWw.mp4.enc",
+   "dur": 20.4,
+   "tags": [
+    "product"
+   ]
+  },
+  {
+   "id": "e1_AfqPShxwF9p8P9V3a7kv2kqBL4J8blBthclnq1A3I0QjFM2FIVrx",
+   "asset": "products-QjFM2FIVrx.mp4.enc",
+   "dur": 30,
+   "tags": [
+    "product"
+   ]
+  },
+  {
+   "id": "e1_AfqPShwF8uq69-Rt2kNXU7J5G2PvJ2RFX3cqvyWP9OdbOG_8xHXEtA",
+   "asset": "products2-OG8xHXEtA.mp4.enc",
+   "dur": 13.2,
+   "tags": [
+    "product"
+   ]
+  },
+  {
+   "id": "e1_AfqPShwk1dHs2jbnxOlcTYpk5U8clrb2XzYvldx_Kdrl5cg7ejw03Q",
+   "asset": "products2-5cg7ejw03Q.mp4.enc",
+   "dur": 22.6,
+   "tags": [
+    "product"
+   ]
+  },
+  {
+   "id": "e1_AfqPShxG3Thx5Vs2aCIr-byiwCq89fZt5dAdYMl0PGq-iDHMkcMk0Q",
+   "asset": "products2-iDHMkcMk0Q.mp4.enc",
+   "dur": 11.6,
+   "tags": [
+    "product"
+   ]
+  },
+  {
+   "id": "e1_AfqPShzL55YMsMDQ0j0JktjQFhcvyjNtM4MYFzFpux_kudWcy3E5",
+   "asset": "supercar3-kudWcy3E5.mp4.enc",
+   "dur": 12.9,
+   "tags": [
+    "supercar"
+   ]
+  },
+  {
+   "id": "e1_AfqPShyLwwBqDTXS9S89ugSc0dCuK3l7gSN1WAbILh9SEdl2wIw",
+   "asset": "supercar3-h9SEdl2wIw.mp4.enc",
+   "dur": 11.2,
+   "tags": [
+    "supercar"
+   ]
+  },
+  {
+   "id": "e1_AfqPShxn75MDlsMvBUf05rZFWmKlVfCR6FMjp3Kog9o-71i-aqI",
+   "asset": "supercar-9o71iaqI.mp4.enc",
+   "dur": 22.9,
+   "tags": [
+    "supercar"
+   ]
+  },
+  {
+   "id": "e1_AfqPShzUjnlncGL5swQvR6uwixRL21y2JCe359WLkTAv-Bqi_DY",
+   "asset": "supercar-TAvBqiDY.mp4.enc",
+   "dur": 9.7,
+   "tags": [
+    "supercar"
+   ]
+  },
+  {
+   "id": "e1_AfqPShziUI1NQfISz_DOwN93RBtX8AXL9QwXNKou9swrFDXLm0k",
+   "asset": "supercar-swrFDXLm0k.mp4.enc",
+   "dur": 8.9,
+   "tags": [
+    "supercar"
+   ]
+  },
+  {
+   "id": "e1_AfqPShz6VFJpJTbyV8fZi-8pgtmGmMD_UL0-W1963gds-0NultBQ",
+   "asset": "shopifysales-ds0NultBQ.mp4.enc",
+   "dur": 8.9,
+   "tags": [
+    "sales"
+   ]
+  },
+  {
+   "id": "e1_AfqPShwso_1O6UuywBVoG93SMYHZElGj4bGRzEywC203Qm0k3AjV",
+   "asset": "penthouse2-03Qm0k3AjV.mp4.enc",
+   "dur": 31.4,
+   "tags": [
+    "penthouse"
+   ]
+  },
+  {
+   "id": "e1_AfqPShxid5adI9k1IDFQZcY79llCvTutrbNTYMUlxamltiDe9yRw",
+   "asset": "penthouse2-mltiDe9yRw.mp4.enc",
+   "dur": 15,
+   "tags": [
+    "penthouse"
+   ]
+  },
+  {
+   "id": "e1_AfqPShyJ-17N5GYjLde8K55J_nGcLgHatLnqVyomrwmx1KC8Tw",
+   "asset": "penthouse2-rwmx1KC8Tw.mp4.enc",
+   "dur": 14.7,
+   "tags": [
+    "penthouse"
+   ]
+  },
+  {
+   "id": "e1_AfqPShyUXnI4E6qWsPYV_M3_ibcECRZ6eyu0upGnc6E2iJENEtk",
+   "asset": "penthouse2-6E2iJENEtk.mp4.enc",
+   "dur": 9.6,
+   "tags": [
+    "penthouse"
+   ]
+  },
+  {
+   "id": "e1_AfqPShwkBhOgODj84XAeVtb4lWR9c7Q7YODSzFzpyVeWbJlMg6H97A",
+   "asset": "money-bJlMg6H97A.mp4.enc",
+   "dur": 12.9,
+   "tags": [
+    "money"
+   ]
+  },
+  {
+   "id": "e1_AfqPShwo6aihTVbF-3jJcHYUV3VDZEZpLI_9h1fijHJneVaBG_4h",
+   "asset": "money-JneVaBG4h.mp4.enc",
+   "dur": 10.8,
+   "tags": [
+    "money"
+   ]
+  },
+  {
+   "id": "e1_AfqPShw5g406W9_cecFQGs-JfBKWrm4ehcftyCJILt6OfcH--g",
+   "asset": "money-Lt6OfcHg.mp4.enc",
+   "dur": 8.2,
+   "tags": [
+    "money"
+   ]
+  },
+  {
+   "id": "e1_AfqPShxnE81JPMj4KGyZAwDR71M5JOxdjdHTg8ABZ0UZXxsqZY6j",
+   "asset": "money-UZXxsqZY6j.mp4.enc",
+   "dur": 6.1,
+   "tags": [
+    "money"
+   ]
+  },
+  {
+   "id": "e1_AfqPShzKP9dzISDFn4P9QQ_9OptbnVxEEpKzBEcfQYPWX0g88teQcQ",
+   "asset": "penthouse-X0g88teQcQ.mp4.enc",
+   "dur": 10,
+   "tags": [
+    "sauce"
+   ]
+  },
+  {
+   "id": "e1_AfqPShzK2xUkMqchMBS9X3J8hdRULI2ZyLPkp8ootY039Ctou1U",
+   "asset": "penthouse-Y039Ctou1U.mp4.enc",
+   "dur": 9.6,
+   "tags": [
+    "sauce"
+   ]
+  },
+  {
+   "id": "e1_AfqPShw4F87Ae6QjSETh1Wrld7LKUiAwc-avr7L2YTzF-joONofJ",
+   "asset": "penthouse-zFjoONofJ.mp4.enc",
+   "dur": 9.9,
+   "tags": [
+    "sauce"
+   ]
+  },
+  {
+   "id": "e1_AfqPShyMx2CoUNDib1_4zEHmGc4fxZKmuf6L4Ll_e9LD0F_XoQ",
+   "asset": "penthouse-e9LD0FXoQ.mp4.enc",
+   "dur": 33.1,
+   "tags": [
+    "sauce"
+   ]
+  },
+  {
+   "id": "e1_AfqPShwWqXUDitO-UBcqAYOq0bHY6BhudzOthFs3OAbaxD0CRYU0",
+   "asset": "laptop-baxD0CRYU0.mp4.enc",
+   "dur": 6.9,
+   "tags": [
+    "sauce"
+   ]
+  },
+  {
+   "id": "e1_AfqPShy9brXpekrhsdVcJRtiV6SuKUlHw4HxGUiiObFs1Q555A",
+   "asset": "city-ObFs1Q555A.mp4.enc",
+   "dur": 4.2,
+   "tags": [
+    "sauce"
+   ]
+  }
+ ]
+}
