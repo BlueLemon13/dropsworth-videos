@@ -41,9 +41,18 @@ async function ensure(asset) {
   const enc = path.join(ROOT, 'cache', 'enc', asset);
   if (!fs.existsSync(enc)) {
     fs.mkdirSync(path.dirname(enc), {recursive: true});
-    const r = await fetch(RELEASE + asset);
-    if (!r.ok) throw new Error(`download ${asset}: ${r.status}`);
-    fs.writeFileSync(enc, Buffer.from(await r.arrayBuffer()));
+    for (let attempt = 1; ; attempt++) {
+      try {
+        const r = await fetch(RELEASE + asset, {signal: AbortSignal.timeout(120000)});
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        fs.writeFileSync(enc, Buffer.from(await r.arrayBuffer()));
+        break;
+      } catch (e) {
+        console.log(`  download ${asset} attempt ${attempt} failed: ${e.message}${e.cause ? ' (' + (e.cause.code || e.cause.message) + ')' : ''}`);
+        if (attempt >= 5) throw new Error(`could not download ${asset}`);
+        await new Promise((res) => setTimeout(res, 3000 * attempt));
+      }
+    }
   }
   unlock(enc, dest);
   return plain;

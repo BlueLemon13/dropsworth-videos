@@ -17,6 +17,9 @@ assets/images/
 *.mp4
 *.mp3
 *.wav
+# ...except our own synthesised sound effects, which the renders need
+!public/sfx/
+!public/sfx/*.wav
 
 # personal notes from the earlier chat
 HANDOFF.md
