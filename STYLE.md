@@ -27,5 +27,5 @@ Every shot type always means the same thing. Pick b-roll by the meaning of the l
 ## Sauce posts
 - One moving dark aesthetic clip (night penthouse, supercar), small TikTok Sans text in one low-key clump, no dashes, nonchalant.
 - Sound added in TikTok Studio at upload from the calm list (catalog/sounds.json), never baked into the file.
-- **The video ends when the background clip ends. Never loop or replay the clip** (owner's rule). Pick a clip long enough for the text.
+- **The video ends when the background clip ends. Never loop or replay the clip** (owner's rule). Clip length doesn't need to fit the text: a 4s clip with lots of words is good, people rewatch to finish reading.
 - Backgrounds: calm, slow, MOVING real footage (penthouses or cars, not McLaren). Doesn't have to be dark.

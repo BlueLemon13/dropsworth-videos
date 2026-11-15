@@ -18,7 +18,7 @@ Hook (1 line, names dropshipping or a money pain) -> problem (2-3 lines) -> the 
 ### steps
 "Here's how to X in N steps" hook + "save this, step N is where most people mess up" -> 3-5 numbered steps, each one usable today -> payoff (test small, scale or kill) -> CTA. 150-190 spoken words. Supercar shots between steps.
 ### sauce
-ONE short nonchalant block of text (18-30 words), lowercase, no dashes, no hashtags in the text, like someone casually dropping a secret. Can include a dollar amount or a mildly controversial take. No CTA. Example: "started checking demand and competition before testing any product. thats literally when the money started coming in"
+ONE short nonchalant block of text (18-40 words; a short clip with lots of text is fine, people rewatch to finish reading), lowercase, no dashes, no hashtags in the text, like someone casually dropping a secret. Can include a dollar amount or a mildly controversial take. No CTA. Example: "started checking demand and competition before testing any product. thats literally when the money started coming in"
 
 ## Topic bank (rotate; don't repeat a topic within 14 days)
 1. dropshipping isn't dead, you're picking the wrong products

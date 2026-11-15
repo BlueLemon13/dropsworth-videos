@@ -91,11 +91,9 @@ for (const v of plan.videos) {
   try {
     const taken = new Set();
     if (v.format === 'sauce') {
-      // reading time decides the minimum clip length; the video ends when the clip ends (max 15s), never loops
-      const words = v.sauce_text.split(/\s+/).length;
-      const readSecs = Math.max(7, Math.round(words / 3.3 + 1.5));
-      const longest = Math.max(...catalog.clips.filter((c) => c.tags.includes('sauce')).map((c) => c.dur || 0));
-      const clip = await pick('sauce', taken, Math.min(readSecs, longest));
+      // the video is exactly as long as the clip (max 15s) and never loops. Short clip + lots of text is GOOD:
+      // viewers rewatch to finish reading (owner's call).
+      const clip = await pick('sauce', taken);
       const props = {video: `_lib/${clip.file}`, videoSeconds: clip.dur, text: v.sauce_text, duration: Math.min(15, clip.dur), fontSize: 38, y: 0.46};
       const propsPath = path.join(outDir, `${v.slot}.props.json`);
       fs.writeFileSync(propsPath, JSON.stringify(props, null, 1));
