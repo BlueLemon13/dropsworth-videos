@@ -11,32 +11,65 @@
    "slot": "B3",
    "topic": "why winners test 3-5 products, not 30",
    "hook": "Mistake"
+  },
+  {
+   "date": "2026-11-16",
+   "slot": "A1",
+   "topic": "product that solves a problem vs cool product",
+   "hook": "Contrarian"
+  },
+  {
+   "date": "2026-11-16",
+   "slot": "A2",
+   "topic": "the 15 minute validation that saves months",
+   "hook": "Number"
+  },
+  {
+   "date": "2026-11-16",
+   "slot": "B1",
+   "topic": "consistency beats one viral product",
+   "hook": "Identity"
+  },
+  {
+   "date": "2026-11-16",
+   "slot": "B2",
+   "topic": "why most people never get their first sale",
+   "hook": "Curiosity"
   }
  ],
  "clips": {
-  "e1_AfqPShy9ZRK0zrHmNCYWF--Bv4ldLLfwL1Vcu_-piY7petV8ZOdJ": 1,
+  "e1_AfqPShy9ZRK0zrHmNCYWF--Bv4ldLLfwL1Vcu_-piY7petV8ZOdJ": 3,
   "e1_AfqPShx5Ves6POBXS6YBnksfhEcHgDODr1ZvVMgKsoXH9ZRGBVuP": 1,
   "e1_AfqPShxwF9p8P9V3a7kv2kqBL4J8blBthclnq1A3I0QjFM2FIVrx": 1,
-  "e1_AfqPShyjeE2ZuGGBMAi100v0HYHc8963lmacDotUs2eS2kshgU0p": 1,
-  "e1_AfqPShy8-8jt0_iUVo4NjKIuLTG5WOTiK_o4c8JJOz5FFbzEthDenQ": 1,
-  "e1_AfqPShzUjnlncGL5swQvR6uwixRL21y2JCe359WLkTAv-Bqi_DY": 1,
-  "e1_AfqPShz6VFJpJTbyV8fZi-8pgtmGmMD_UL0-W1963gds-0NultBQ": 2,
-  "e1_AfqPShxKEub2y35LEwcj5-6_FC_RVAYxT80nV7dy0A_jKZ07Twg": 1,
-  "e1_AfqPShxid5adI9k1IDFQZcY79llCvTutrbNTYMUlxamltiDe9yRw": 1,
-  "e1_AfqPShzZao19Dk052EWZB4LHwC-D-1CcHmZtGXyYpSa-9bkJuZQA": 2,
+  "e1_AfqPShyjeE2ZuGGBMAi100v0HYHc8963lmacDotUs2eS2kshgU0p": 5,
+  "e1_AfqPShy8-8jt0_iUVo4NjKIuLTG5WOTiK_o4c8JJOz5FFbzEthDenQ": 3,
+  "e1_AfqPShzUjnlncGL5swQvR6uwixRL21y2JCe359WLkTAv-Bqi_DY": 3,
+  "e1_AfqPShz6VFJpJTbyV8fZi-8pgtmGmMD_UL0-W1963gds-0NultBQ": 5,
+  "e1_AfqPShxKEub2y35LEwcj5-6_FC_RVAYxT80nV7dy0A_jKZ07Twg": 3,
+  "e1_AfqPShxid5adI9k1IDFQZcY79llCvTutrbNTYMUlxamltiDe9yRw": 2,
+  "e1_AfqPShzZao19Dk052EWZB4LHwC-D-1CcHmZtGXyYpSa-9bkJuZQA": 3,
   "e1_AfqPShzK2xUkMqchMBS9X3J8hdRULI2ZyLPkp8ootY039Ctou1U": 1,
-  "e1_AfqPShz0T7GzOEWbTNBiCotYwNRwOkhZDdJsOJWkwonZ2Shb1w": 1,
-  "e1_AfqPShyq2P8Jtius1kbjFZbD91LpDdkXc9Tsr8AMJ93J2SIKqeY": 1,
-  "e1_AfqPShzL55YMsMDQ0j0JktjQFhcvyjNtM4MYFzFpux_kudWcy3E5": 1,
-  "e1_AfqPShyEzN0nUQ3t3J-fERguXnKEMuVo3KNfQb2R1p73RQPf6ygq": 1,
-  "e1_AfqPShyLwwBqDTXS9S89ugSc0dCuK3l7gSN1WAbILh9SEdl2wIw": 1,
+  "e1_AfqPShz0T7GzOEWbTNBiCotYwNRwOkhZDdJsOJWkwonZ2Shb1w": 3,
+  "e1_AfqPShyq2P8Jtius1kbjFZbD91LpDdkXc9Tsr8AMJ93J2SIKqeY": 3,
+  "e1_AfqPShzL55YMsMDQ0j0JktjQFhcvyjNtM4MYFzFpux_kudWcy3E5": 3,
+  "e1_AfqPShyEzN0nUQ3t3J-fERguXnKEMuVo3KNfQb2R1p73RQPf6ygq": 3,
+  "e1_AfqPShyLwwBqDTXS9S89ugSc0dCuK3l7gSN1WAbILh9SEdl2wIw": 3,
   "e1_AfqPShxnE81JPMj4KGyZAwDR71M5JOxdjdHTg8ABZ0UZXxsqZY6j": 1,
-  "e1_AfqPShzwLS9U8R9VP0rvruzBlJ3xjM-us9dh2wfOtr_ytS0bzlyz": 1,
-  "e1_AfqPShySx7tZ1KGE2I9dI13BLt5Ff-esskLigyrrf_SVN4Mvpv8": 1,
+  "e1_AfqPShzwLS9U8R9VP0rvruzBlJ3xjM-us9dh2wfOtr_ytS0bzlyz": 3,
+  "e1_AfqPShySx7tZ1KGE2I9dI13BLt5Ff-esskLigyrrf_SVN4Mvpv8": 4,
   "e1_AfqPShwkBhOgODj84XAeVtb4lWR9c7Q7YODSzFzpyVeWbJlMg6H97A": 1,
   "e1_AfqPShwat9Djx7c02oKawQz7RoK80nUjCG32KaSJNC5ItzI6pUoi": 1,
-  "e1_AfqPShwso_1O6UuywBVoG93SMYHZElGj4bGRzEywC203Qm0k3AjV": 1,
-  "e1_AfqPShyUXnI4E6qWsPYV_M3_ibcECRZ6eyu0upGnc6E2iJENEtk": 1,
-  "e1_AfqPShy9brXpekrhsdVcJRtiV6SuKUlHw4HxGUiiObFs1Q555A": 1
+  "e1_AfqPShwso_1O6UuywBVoG93SMYHZElGj4bGRzEywC203Qm0k3AjV": 2,
+  "e1_AfqPShyUXnI4E6qWsPYV_M3_ibcECRZ6eyu0upGnc6E2iJENEtk": 2,
+  "e1_AfqPShy9brXpekrhsdVcJRtiV6SuKUlHw4HxGUiiObFs1Q555A": 1,
+  "e1_AfqPShznMVOvOLkZNe0kR96wAFVxCPEcxo6oBnPY1pJ1zLEEqE8cVA": 1,
+  "e1_AfqPShwk1dHs2jbnxOlcTYpk5U8clrb2XzYvldx_Kdrl5cg7ejw03Q": 1,
+  "e1_AfqPShxn75MDlsMvBUf05rZFWmKlVfCR6FMjp3Kog9o-71i-aqI": 3,
+  "e1_AfqPShziUI1NQfISz_DOwN93RBtX8AXL9QwXNKou9swrFDXLm0k": 3,
+  "e1_AfqPShyJ-17N5GYjLde8K55J_nGcLgHatLnqVyomrwmx1KC8Tw": 2,
+  "e1_AfqPShw5g406W9_cecFQGs-JfBKWrm4ehcftyCJILt6OfcH--g": 1,
+  "e1_AfqPShyIyH3pf6joukXOa4yeDx4yg4frZ2euxJJ5cCSHsM4GgZU": 1,
+  "e1_AfqPShwF8uq69-Rt2kNXU7J5G2PvJ2RFX3cqvyWP9OdbOG_8xHXEtA": 1,
+  "e1_AfqPShwo6aihTVbF-3jJcHYUV3VDZEZpLI_9h1fijHJneVaBG_4h": 1
  }
 }
