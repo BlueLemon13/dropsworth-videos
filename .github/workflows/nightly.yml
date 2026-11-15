@@ -2,18 +2,24 @@ name: nightly-videos
 
 on:
   schedule:
-    - cron: '0 14 * * *' # 14:00 UTC = 1:00 am Sydney (AEDT). Change to '0 15 * * *' when daylight saving ends.
+    # GitHub can delay or drop scheduled runs, so there are 4 tries. The first that runs makes the batch;
+    # the rest see state/last_batch.txt already has today's date and skip.
+    # 14:00-15:30 UTC = 1:00-2:30 am Sydney (AEDT). Shift +1h when daylight saving ends (April).
+    - cron: '0 14 * * *'
+    - cron: '30 14 * * *'
+    - cron: '0 15 * * *'
+    - cron: '30 15 * * *'
   workflow_dispatch:
     inputs:
       date:
         description: 'Date to make videos for (YYYY-MM-DD, blank = today in Sydney)'
         required: false
       only:
-        description: 'Only these slots, e.g. A1,B3 (blank = all 6)'
+        description: 'Only these slots, e.g. A1,B3 (blank = all 8)'
         required: false
 
 permissions:
-  contents: write # to save state/used.json (topics + clips already used)
+  contents: write # to save state/ (topics + clips already used, last batch date)
 
 concurrency:
   group: nightly-videos
@@ -26,20 +32,39 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Already made today's batch?
+        id: guard
+        run: |
+          TODAY=$(TZ=Australia/Sydney date +%F)
+          git fetch -q origin "${GITHUB_REF_NAME:-main}"
+          LAST=$(git show "origin/${GITHUB_REF_NAME:-main}:state/last_batch.txt" 2>/dev/null || echo none)
+          echo "today=$TODAY last=$LAST event=${{ github.event_name }}"
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$LAST" = "$TODAY" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"; echo "Batch for $TODAY already made, skipping."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            git pull -q --rebase origin "${GITHUB_REF_NAME:-main}" || true
+          fi
+
       - uses: actions/setup-node@v4
+        if: steps.guard.outputs.skip != 'true'
         with:
           node-version: 22
           cache: npm
 
       - name: System packages (ffmpeg, emoji font)
+        if: steps.guard.outputs.skip != 'true'
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji
 
-      - run: npm ci
+      - if: steps.guard.outputs.skip != 'true'
+        run: npm ci
 
       - name: Headless browser for Remotion
+        if: steps.guard.outputs.skip != 'true'
         run: npx remotion browser ensure
 
       - name: Make the videos
+        if: steps.guard.outputs.skip != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -54,7 +79,7 @@ jobs:
           node tools/nightly.mjs $ARGS
 
       - name: Upload password-locked videos
-        if: always()
+        if: always() && steps.guard.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: videos
@@ -63,9 +88,9 @@ jobs:
           if-no-files-found: warn
 
       - name: Save what was used (so nothing repeats)
-        if: always()
+        if: always() && steps.guard.outputs.skip != 'true'
         run: |
           git config user.name "dropsworth-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/used.json || true
-          git diff --cached --quiet || (git commit -m "Nightly: update used topics and clips" && git pull --rebase -X theirs && git push)
+          git add state/ || true
+          git diff --cached --quiet || (git commit -m "Nightly: update used topics, clips and last batch" && git pull --rebase -X theirs && git push)

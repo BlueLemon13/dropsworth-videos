@@ -151,5 +151,7 @@ if (process.env.DW_LOCK === '1') {
 }
 
 const ok = results.filter((r) => r.ok).length;
+// mark today's full batch as done so the backup scheduled runs skip
+if (!only.length && ok) fs.writeFileSync(path.join(ROOT, 'state/last_batch.txt'), date);
 console.log(`\nDONE ${date}: ${ok}/${results.length} videos rendered -> ${outDir}`);
 if (!ok) process.exit(1);
