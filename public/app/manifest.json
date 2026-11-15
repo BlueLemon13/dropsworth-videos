@@ -1,0 +1,19 @@
+{
+ "hero": "app/hero/card.png",
+ "step1-drop": {
+  "dir": "app/step1-drop",
+  "frames": 36
+ },
+ "step2-demand": {
+  "dir": "app/step2-demand",
+  "frames": 36
+ },
+ "step3-competition": {
+  "dir": "app/step3-competition",
+  "frames": 36
+ },
+ "step4-supplier": {
+  "dir": "app/step4-supplier",
+  "frames": 36
+ }
+}

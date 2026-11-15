@@ -1,0 +1,1499 @@
+{
+ "audio": "audio/f5-guide.wav",
+ "words": [
+  {
+   "text": "Here's",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 0,
+   "end": 0.267
+  },
+  {
+   "text": "exactly",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 0.302,
+   "end": 0.731
+  },
+  {
+   "text": "how",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 0.778,
+   "end": 0.871
+  },
+  {
+   "text": "I",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 0.929,
+   "end": 0.952
+  },
+  {
+   "text": "validate",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 1.033,
+   "end": 1.37
+  },
+  {
+   "text": "a",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 1.405,
+   "end": 1.44
+  },
+  {
+   "text": "dropshipping",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 1.498,
+   "end": 2.009
+  },
+  {
+   "text": "product",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 2.055,
+   "end": 2.31
+  },
+  {
+   "text": "in",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 2.345,
+   "end": 2.415
+  },
+  {
+   "text": "four",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 2.519,
+   "end": 2.717
+  },
+  {
+   "text": "steps,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 2.763,
+   "end": 3.204
+  },
+  {
+   "text": "before",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.309,
+   "end": 3.738
+  },
+  {
+   "text": "I",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.773,
+   "end": 3.808
+  },
+  {
+   "text": "spend",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 3.866,
+   "end": 4.11
+  },
+  {
+   "text": "a",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 4.168,
+   "end": 4.214
+  },
+  {
+   "text": "single",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 4.331,
+   "end": 4.644
+  },
+  {
+   "text": "DOLLAR",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 4.679,
+   "end": 4.969
+  },
+  {
+   "text": "on",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.074,
+   "end": 5.201
+  },
+  {
+   "text": "ads.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.306,
+   "end": 5.817
+  },
+  {
+   "text": "Save",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 5.927,
+   "end": 6.182
+  },
+  {
+   "text": "this,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 6.217,
+   "end": 6.6
+  },
+  {
+   "text": "you're",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 6.751,
+   "end": 6.937
+  },
+  {
+   "text": "gonna",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 6.96,
+   "end": 7.111
+  },
+  {
+   "text": "need",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.146,
+   "end": 7.273
+  },
+  {
+   "text": "it.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.32,
+   "end": 7.517
+  },
+  {
+   "text": "Step",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.627,
+   "end": 7.836
+  },
+  {
+   "text": "one.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 7.941,
+   "end": 8.243
+  },
+  {
+   "text": "Find",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 8.353,
+   "end": 8.562
+  },
+  {
+   "text": "a",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 8.597,
+   "end": 8.62
+  },
+  {
+   "text": "product",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 8.666,
+   "end": 8.91
+  },
+  {
+   "text": "that's",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 8.933,
+   "end": 9.108
+  },
+  {
+   "text": "already",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.142,
+   "end": 9.433
+  },
+  {
+   "text": "selling",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.468,
+   "end": 9.688
+  },
+  {
+   "text": "on",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.735,
+   "end": 9.804
+  },
+  {
+   "text": "TikTok,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 9.851,
+   "end": 10.315
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.338,
+   "end": 10.466
+  },
+  {
+   "text": "drop",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.512,
+   "end": 10.721
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.779,
+   "end": 10.849
+  },
+  {
+   "text": "link",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 10.907,
+   "end": 11.093
+  },
+  {
+   "text": "into",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 11.174,
+   "end": 11.337
+  },
+  {
+   "text": "Dropsworth.",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 11.383,
+   "end": 12.045
+  },
+  {
+   "text": "Step",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 12.155,
+   "end": 12.364
+  },
+  {
+   "text": "two.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 12.422,
+   "end": 12.945
+  },
+  {
+   "text": "Check",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 13.055,
+   "end": 13.253
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 13.322,
+   "end": 13.392
+  },
+  {
+   "text": "DEMAND.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 13.45,
+   "end": 14.007
+  },
+  {
+   "text": "You",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 14.117,
+   "end": 14.21
+  },
+  {
+   "text": "want",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 14.268,
+   "end": 14.395
+  },
+  {
+   "text": "real",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 14.454,
+   "end": 14.604
+  },
+  {
+   "text": "daily",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 14.662,
+   "end": 14.86
+  },
+  {
+   "text": "sales,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 14.906,
+   "end": 15.347
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 15.382,
+   "end": 15.51
+  },
+  {
+   "text": "a",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 15.556,
+   "end": 15.58
+  },
+  {
+   "text": "number",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 15.614,
+   "end": 15.8
+  },
+  {
+   "text": "that's",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 15.835,
+   "end": 15.986
+  },
+  {
+   "text": "GROWING,",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 16.021,
+   "end": 16.45
+  },
+  {
+   "text": "not",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 16.56,
+   "end": 16.711
+  },
+  {
+   "text": "dying.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 16.757,
+   "end": 17.175
+  },
+  {
+   "text": "Step",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 17.285,
+   "end": 17.482
+  },
+  {
+   "text": "three.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 17.54,
+   "end": 17.946
+  },
+  {
+   "text": "Check",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 18.056,
+   "end": 18.241
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 18.288,
+   "end": 18.358
+  },
+  {
+   "text": "COMPETITION.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 18.392,
+   "end": 19.135
+  },
+  {
+   "text": "See",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 19.245,
+   "end": 19.395
+  },
+  {
+   "text": "who's",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 19.43,
+   "end": 19.593
+  },
+  {
+   "text": "already",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 19.628,
+   "end": 19.848
+  },
+  {
+   "text": "selling",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 19.883,
+   "end": 20.104
+  },
+  {
+   "text": "it,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 20.139,
+   "end": 20.313
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 20.429,
+   "end": 20.556
+  },
+  {
+   "text": "steal",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 20.603,
+   "end": 20.777
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 20.823,
+   "end": 20.893
+  },
+  {
+   "text": "hooks",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 20.928,
+   "end": 21.125
+  },
+  {
+   "text": "from",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.16,
+   "end": 21.276
+  },
+  {
+   "text": "their",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.311,
+   "end": 21.439
+  },
+  {
+   "text": "best",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.485,
+   "end": 21.671
+  },
+  {
+   "text": "ads.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 21.717,
+   "end": 22.182
+  },
+  {
+   "text": "Step",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 22.292,
+   "end": 22.489
+  },
+  {
+   "text": "four.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 22.547,
+   "end": 22.931
+  },
+  {
+   "text": "Find",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 23.041,
+   "end": 23.239
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 23.274,
+   "end": 23.344
+  },
+  {
+   "text": "SUPPLIER.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 23.378,
+   "end": 23.982
+  },
+  {
+   "text": "Compare",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 24.092,
+   "end": 24.405
+  },
+  {
+   "text": "price",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 24.44,
+   "end": 24.684
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 24.719,
+   "end": 24.823
+  },
+  {
+   "text": "shipping,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 24.87,
+   "end": 25.195
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 25.218,
+   "end": 25.322
+  },
+  {
+   "text": "make",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 25.357,
+   "end": 25.485
+  },
+  {
+   "text": "sure",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 25.508,
+   "end": 25.636
+  },
+  {
+   "text": "you",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 25.659,
+   "end": 25.729
+  },
+  {
+   "text": "PROFIT",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 25.787,
+   "end": 26.042
+  },
+  {
+   "text": "on",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 26.089,
+   "end": 26.17
+  },
+  {
+   "text": "every",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 26.251,
+   "end": 26.46
+  },
+  {
+   "text": "single",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 26.495,
+   "end": 26.704
+  },
+  {
+   "text": "sale.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 26.739,
+   "end": 27.064
+  },
+  {
+   "text": "All",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 27.192,
+   "end": 27.343
+  },
+  {
+   "text": "four",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 27.377,
+   "end": 27.517
+  },
+  {
+   "text": "check",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 27.563,
+   "end": 27.737
+  },
+  {
+   "text": "out?",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 27.784,
+   "end": 28.004
+  },
+  {
+   "text": "You",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 28.132,
+   "end": 28.236
+  },
+  {
+   "text": "test",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 28.283,
+   "end": 28.457
+  },
+  {
+   "text": "it.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 28.492,
+   "end": 28.666
+  },
+  {
+   "text": "If",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 28.771,
+   "end": 28.887
+  },
+  {
+   "text": "not,",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 28.945,
+   "end": 29.2
+  },
+  {
+   "text": "you",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 29.31,
+   "end": 29.403
+  },
+  {
+   "text": "just",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 29.461,
+   "end": 29.6
+  },
+  {
+   "text": "saved",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 29.635,
+   "end": 29.821
+  },
+  {
+   "text": "your",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 29.844,
+   "end": 29.937
+  },
+  {
+   "text": "BUDGET.",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 29.972,
+   "end": 30.39
+  },
+  {
+   "text": "Send",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 30.5,
+   "end": 30.663
+  },
+  {
+   "text": "me",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 30.698,
+   "end": 30.756
+  },
+  {
+   "text": "the",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 30.791,
+   "end": 30.86
+  },
+  {
+   "text": "word",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 30.895,
+   "end": 31.058
+  },
+  {
+   "text": "VALIDATE",
+   "big": true,
+   "blue": true,
+   "red": false,
+   "t": 31.104,
+   "end": 31.58
+  },
+  {
+   "text": "and",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 31.69,
+   "end": 31.852
+  },
+  {
+   "text": "I'll",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 31.887,
+   "end": 32.003
+  },
+  {
+   "text": "send",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 32.038,
+   "end": 32.154
+  },
+  {
+   "text": "you",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 32.189,
+   "end": 32.259
+  },
+  {
+   "text": "my",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 32.305,
+   "end": 32.375
+  },
+  {
+   "text": "FREE",
+   "big": true,
+   "blue": false,
+   "red": false,
+   "t": 32.445,
+   "end": 32.607
+  },
+  {
+   "text": "checklist.",
+   "big": false,
+   "blue": false,
+   "red": false,
+   "t": 32.642,
+   "end": 33.338
+  }
+ ],
+ "groups": [
+  {
+   "words": [
+    0,
+    1,
+    2
+   ],
+   "start": 0,
+   "end": 0.929
+  },
+  {
+   "words": [
+    3,
+    4,
+    5
+   ],
+   "start": 0.929,
+   "end": 1.498
+  },
+  {
+   "words": [
+    6,
+    7,
+    8
+   ],
+   "start": 1.498,
+   "end": 2.519
+  },
+  {
+   "words": [
+    9,
+    10
+   ],
+   "start": 2.519,
+   "end": 3.309
+  },
+  {
+   "words": [
+    11,
+    12,
+    13
+   ],
+   "start": 3.309,
+   "end": 4.168
+  },
+  {
+   "words": [
+    14,
+    15
+   ],
+   "start": 4.168,
+   "end": 4.679
+  },
+  {
+   "words": [
+    16,
+    17,
+    18
+   ],
+   "start": 4.679,
+   "end": 5.927
+  },
+  {
+   "words": [
+    19,
+    20
+   ],
+   "start": 5.927,
+   "end": 6.751
+  },
+  {
+   "words": [
+    21,
+    22,
+    23
+   ],
+   "start": 6.751,
+   "end": 7.32
+  },
+  {
+   "words": [
+    24
+   ],
+   "start": 7.32,
+   "end": 7.627
+  },
+  {
+   "words": [
+    25,
+    26
+   ],
+   "start": 7.627,
+   "end": 8.353
+  },
+  {
+   "words": [
+    27,
+    28,
+    29
+   ],
+   "start": 8.353,
+   "end": 8.933
+  },
+  {
+   "words": [
+    30,
+    31,
+    32
+   ],
+   "start": 8.933,
+   "end": 9.735
+  },
+  {
+   "words": [
+    33,
+    34
+   ],
+   "start": 9.735,
+   "end": 10.338
+  },
+  {
+   "words": [
+    35,
+    36,
+    37
+   ],
+   "start": 10.338,
+   "end": 10.907
+  },
+  {
+   "words": [
+    38,
+    39
+   ],
+   "start": 10.907,
+   "end": 11.383
+  },
+  {
+   "words": [
+    40
+   ],
+   "start": 11.383,
+   "end": 12.155
+  },
+  {
+   "words": [
+    41,
+    42
+   ],
+   "start": 12.155,
+   "end": 13.055
+  },
+  {
+   "words": [
+    43,
+    44
+   ],
+   "start": 13.055,
+   "end": 13.45
+  },
+  {
+   "words": [
+    45
+   ],
+   "start": 13.45,
+   "end": 14.117
+  },
+  {
+   "words": [
+    46,
+    47,
+    48
+   ],
+   "start": 14.117,
+   "end": 14.662
+  },
+  {
+   "words": [
+    49,
+    50
+   ],
+   "start": 14.662,
+   "end": 15.382
+  },
+  {
+   "words": [
+    51,
+    52,
+    53
+   ],
+   "start": 15.382,
+   "end": 15.835
+  },
+  {
+   "words": [
+    54,
+    55
+   ],
+   "start": 15.835,
+   "end": 16.56
+  },
+  {
+   "words": [
+    56,
+    57
+   ],
+   "start": 16.56,
+   "end": 17.285
+  },
+  {
+   "words": [
+    58,
+    59
+   ],
+   "start": 17.285,
+   "end": 18.056
+  },
+  {
+   "words": [
+    60,
+    61
+   ],
+   "start": 18.056,
+   "end": 18.392
+  },
+  {
+   "words": [
+    62
+   ],
+   "start": 18.392,
+   "end": 19.245
+  },
+  {
+   "words": [
+    63,
+    64,
+    65
+   ],
+   "start": 19.245,
+   "end": 19.883
+  },
+  {
+   "words": [
+    66,
+    67
+   ],
+   "start": 19.883,
+   "end": 20.429
+  },
+  {
+   "words": [
+    68,
+    69,
+    70
+   ],
+   "start": 20.429,
+   "end": 20.928
+  },
+  {
+   "words": [
+    71,
+    72,
+    73
+   ],
+   "start": 20.928,
+   "end": 21.485
+  },
+  {
+   "words": [
+    74,
+    75
+   ],
+   "start": 21.485,
+   "end": 22.292
+  },
+  {
+   "words": [
+    76,
+    77
+   ],
+   "start": 22.292,
+   "end": 23.041
+  },
+  {
+   "words": [
+    78,
+    79
+   ],
+   "start": 23.041,
+   "end": 23.378
+  },
+  {
+   "words": [
+    80
+   ],
+   "start": 23.378,
+   "end": 24.092
+  },
+  {
+   "words": [
+    81,
+    82,
+    83
+   ],
+   "start": 24.092,
+   "end": 24.87
+  },
+  {
+   "words": [
+    84
+   ],
+   "start": 24.87,
+   "end": 25.218
+  },
+  {
+   "words": [
+    85,
+    86,
+    87
+   ],
+   "start": 25.218,
+   "end": 25.659
+  },
+  {
+   "words": [
+    88,
+    89,
+    90
+   ],
+   "start": 25.659,
+   "end": 26.251
+  },
+  {
+   "words": [
+    91,
+    92,
+    93
+   ],
+   "start": 26.251,
+   "end": 27.192
+  },
+  {
+   "words": [
+    94,
+    95,
+    96
+   ],
+   "start": 27.192,
+   "end": 27.784
+  },
+  {
+   "words": [
+    97
+   ],
+   "start": 27.784,
+   "end": 28.132
+  },
+  {
+   "words": [
+    98,
+    99,
+    100
+   ],
+   "start": 28.132,
+   "end": 28.771
+  },
+  {
+   "words": [
+    101,
+    102
+   ],
+   "start": 28.771,
+   "end": 29.31
+  },
+  {
+   "words": [
+    103,
+    104,
+    105
+   ],
+   "start": 29.31,
+   "end": 29.844
+  },
+  {
+   "words": [
+    106,
+    107
+   ],
+   "start": 29.844,
+   "end": 30.5
+  },
+  {
+   "words": [
+    108,
+    109,
+    110
+   ],
+   "start": 30.5,
+   "end": 30.895
+  },
+  {
+   "words": [
+    111,
+    112
+   ],
+   "start": 30.895,
+   "end": 31.69
+  },
+  {
+   "words": [
+    113,
+    114,
+    115
+   ],
+   "start": 31.69,
+   "end": 32.189
+  },
+  {
+   "words": [
+    116,
+    117
+   ],
+   "start": 32.189,
+   "end": 32.445
+  },
+  {
+   "words": [
+    118,
+    119
+   ],
+   "start": 32.445,
+   "end": 36.238
+  }
+ ],
+ "scenes": [
+  {
+   "visual": "vid:working/e1_AfqPShy9ZRK0zrHmNCYWF--Bv4ldLLfwL1Vcu_-piY7petV8ZOdJ.mp4",
+   "grade": "bright",
+   "step": "0",
+   "start": 0,
+   "end": 5.877
+  },
+  {
+   "visual": "vid:working/e1_AfqPShyEzN0nUQ3t3J-fERguXnKEMuVo3KNfQb2R1p73RQPf6ygq.mp4",
+   "grade": "bright",
+   "start": 5.877,
+   "end": 7.577
+  },
+  {
+   "visual": "app:step1-drop",
+   "step": "1",
+   "start": 7.577,
+   "end": 12.105
+  },
+  {
+   "visual": "app:step2-demand",
+   "step": "2",
+   "start": 12.105,
+   "end": 17.235
+  },
+  {
+   "visual": "app:step3-competition",
+   "step": "3",
+   "start": 17.235,
+   "end": 22.242
+  },
+  {
+   "visual": "app:step4-supplier",
+   "step": "4",
+   "start": 22.242,
+   "end": 27.142
+  },
+  {
+   "visual": "vid:shopifysales/e1_AfqPShz6VFJpJTbyV8fZi-8pgtmGmMD_UL0-W1963gds-0NultBQ.mp4",
+   "grade": "bright",
+   "step": "0",
+   "start": 27.142,
+   "end": 30.45
+  },
+  {
+   "visual": "vid:madeit/e1_AfqPShxKEub2y35LEwcj5-6_FC_RVAYxT80nV7dy0A_jKZ07Twg.mp4",
+   "grade": "bright",
+   "start": 30.45,
+   "end": 31.64
+  },
+  {
+   "visual": "g-dm",
+   "start": 31.64,
+   "end": 36.238
+  }
+ ],
+ "sfx": [
+  {
+   "name": "whoosh",
+   "t": 5.817,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 7.517,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 12.045,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 17.175,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 22.182000000000002,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 27.082,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 30.39,
+   "vol": 0.12
+  },
+  {
+   "name": "whoosh",
+   "t": 31.580000000000002,
+   "vol": 0.12
+  }
+ ],
+ "duration": 36.238
+}

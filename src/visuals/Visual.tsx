@@ -3,7 +3,7 @@ import {Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame, u
 import {BLUE, Defs, Figure} from './Figure';
 import {Boxy} from './Boxy';
 import {Compare} from './Compare';
-import {GAdSpend, GComments, GDm, GRange, GScan, GScore, GStores, GTrend} from './Graphics';
+import {GAdSpend, GBackground, GComments, GDm, GRange, GScan, GScore, GStores, GTrend} from './Graphics';
 
 const FLOOR = 1180;
 const CX = 540;
@@ -64,6 +64,23 @@ export const Visual: React.FC<{name: string; items?: string[]; durationInFrames:
             <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%)'}} />
           </>
         )}
+      </div>
+    );
+  }
+
+  if (name.startsWith('app:')) {
+    // Real Dropsworth product demo, captured frame by frame from the landing page (tools/capture-app.mjs).
+    const dir = name.slice(4);
+    const frames = Number(opts.frames) || 36;
+    const idx = Math.min(frames - 1, Math.floor(interpolate(f, [4, Math.max(5, durationInFrames - 8)], [0, frames - 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})));
+    const enter = spring({frame: f, fps, config: {damping: 16, mass: 0.7}});
+    const z = interpolate(f, [0, durationInFrames], [1.0, 1.05]);
+    return (
+      <div style={{position: 'absolute', inset: 0, overflow: 'hidden'}}>
+        <GBackground />
+        <div style={{position: 'absolute', left: -22, right: -22, top: 600, transform: `translateY(${(1 - enter) * 120}px) scale(${(0.9 + 0.1 * enter) * z})`, opacity: enter, filter: 'drop-shadow(0 40px 60px rgba(0,0,0,0.55))'}}>
+          <Img src={staticFile(`app/${dir}/${String(idx).padStart(4, '0')}.png`)} style={{width: '100%', display: 'block'}} />
+        </div>
       </div>
     );
   }

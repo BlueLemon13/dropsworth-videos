@@ -13,15 +13,17 @@ const MODEL = process.env.SCRIPT_MODEL || 'claude-haiku-5-5'; // owner chose the
 const date = process.argv[2] || new Date().toISOString().slice(0, 10);
 const read = (p) => (fs.existsSync(path.join(ROOT, p)) ? fs.readFileSync(path.join(ROOT, p), 'utf8') : '');
 
-const SHOTS = ['opener', 'tired', 'working', 'phone', 'product', 'supercar', 'sales', 'penthouse', 'money', 'g-stores', 'g-score', 'g-trend'];
+const SHOTS = ['opener', 'tired', 'working', 'phone', 'product', 'supercar', 'sales', 'penthouse', 'money', 'g-stores', 'g-score', 'g-trend', 'app-drop', 'app-demand', 'app-competition', 'app-supplier'];
+const SLOTS = ['A1', 'A2', 'A3', 'A4', 'B1', 'B2', 'B3', 'B4'];
+const FORMAT_OF = (slot) => (slot[1] === '1' || slot[1] === '2' ? 'explainer' : 'sauce');
 const Line = z.object({
   shot: z.enum(SHOTS),
-  step: z.number().int().describe('Step number 1-5 for the line that starts a step in a steps video; 0 otherwise'),
+  step: z.number().int().describe('Step number 1-5 on the line that starts a step; 0 otherwise'),
   text: z.string().describe('One spoken sentence or two, with *BIG / ^BLUE markup and display=spoken_words for numbers'),
 });
 const Video = z.object({
-  slot: z.enum(['A1', 'A2', 'A3', 'B1', 'B2', 'B3']),
-  format: z.enum(['explainer', 'steps', 'sauce']),
+  slot: z.enum(SLOTS),
+  format: z.enum(['explainer', 'sauce']),
   topic: z.string(),
   hook_style: z.string(),
   lines: z.array(Line).describe('Voiced formats only (empty for sauce). Do NOT include the CTA, it is appended automatically.'),
@@ -33,7 +35,7 @@ const Plan = z.object({videos: z.array(Video)});
 
 const used = JSON.parse(read('state/used.json') || '{"topics":[]}');
 const recent = used.topics.filter((t) => (Date.parse(date) - Date.parse(t.date)) / 864e5 < 14).map((t) => `${t.date} ${t.slot}: ${t.topic} (hook: ${t.hook})`);
-const examples = ['scripts/f1-explainer.spec.json', 'scripts/f4-steps.spec.json'].map((f) => {
+const examples = ['scripts/f5-guide.spec.json', 'scripts/f4-steps.spec.json'].map((f) => {
   const s = JSON.parse(read(f));
   return `--- ${f}\n` + s.lines.map((l) => l.replace(/\[[^\]]*\]\s*/g, '')).join('\n');
 }).join('\n\n');
@@ -58,15 +60,17 @@ ${examples}
 opener = a person with a car/penthouse/computer (MUST be the first line of every voiced video)
 tired = struggling guy at laptop · working = guy at computer · phone = scrolling TikTok · product = real viral product
 supercar = winners · sales = Shopify sales notifications · penthouse = made it · money = cash
+app-drop / app-demand / app-competition / app-supplier = the REAL Dropsworth app showing that step (dropping in a TikTok link; daily sales + demand score; competitor stores + their top ads; supplier prices + profit per sale). Use these for the step lines of every explainer.
 g-stores = graphic: hundreds of stores selling the same product · g-score = graphic: demand/margin/competition scorecard (use only when the line says those three words) · g-trend = graphic: slow climb vs crashed spike
 Use graphics at most twice per video. Change shot every line or two; never the same shot twice in a row.`;
 
 const notes = read('notes.md').trim();
-const user = `Write tomorrow's 6 videos for ${date}: slots A1 A2 A3 B1 B2 B3, formats per the daily mix (A1/B1 explainer, A2/B2 steps, A3/B3 sauce).
+const user = `Write tomorrow's 8 videos for ${date}: slots A1 A2 A3 A4 B1 B2 B3 B4. A1, A2, B1, B2 are explainers; A3, A4, B3, B4 are sauce posts.
+Explainers are STEP-BY-STEP GUIDES (like scripts/f5-guide), never "judging" videos: a hook promising a how-to, "save this", 2-4 numbered steps where each step line uses the matching app-* shot so the viewer SEES Dropsworth doing it, then a short payoff line. 90-130 spoken words. Vary the angle between the 4 explainers (e.g. full 4-step validation, just reading demand properly, spotting saturated products with the competition step, the profit math with the supplier step).
 Topics used in the last 14 days (do NOT repeat these topics or hooks):
 ${recent.length ? recent.join('\n') : '(none yet)'}
 ${notes ? `\nOwner's notes for this batch (follow them):\n${notes}` : ''}
-Account A and B must have different topics. Every voiced video's first line uses shot "opener". Steps videos put "supercar" shots between steps and set step numbers on the line that starts each step. Do not write the CTA.`;
+Account A and B must have different topics. Every voiced video's first line uses shot "opener". Set step numbers on the line that starts each step. Do not write the CTA.`;
 
 const client = new Anthropic({apiKey: need('ANTHROPIC_API_KEY')});
 // Low effort: script writing doesn't need deep reasoning, and thinking tokens were eating the output budget.
@@ -103,8 +107,9 @@ for (const v of plan.videos) {
   } else if (!v.sauce_text) throw new Error(`${v.slot} sauce has no text`);
   v.hashtags = v.hashtags.map((h) => '#' + h.replace(/^#+/, '').replace(/\s+/g, '')).slice(0, 6);
 }
+for (const v of plan.videos) v.format = FORMAT_OF(v.slot);
 const slots = plan.videos.map((v) => v.slot).sort().join(',');
-if (slots !== 'A1,A2,A3,B1,B2,B3') throw new Error('Wrong slots: ' + slots);
+if (slots !== SLOTS.join(',')) throw new Error('Wrong slots: ' + slots);
 
 const outDir = path.join(ROOT, 'output', date);
 fs.mkdirSync(outDir, {recursive: true});

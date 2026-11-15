@@ -10,7 +10,7 @@ import {lock, unlock} from './crypt.mjs';
 const args = process.argv.slice(2);
 const sydneyDate = new Intl.DateTimeFormat('en-CA', {timeZone: 'Australia/Sydney'}).format(new Date());
 const date = args.find((a) => /^\d{4}-\d{2}-\d{2}$/.test(a)) || sydneyDate;
-const only = (args[args.indexOf('--only') + 1] || '').split(',').filter((s) => /^[AB][123]$/.test(s));
+const only = (args[args.indexOf('--only') + 1] || '').split(',').filter((s) => /^[AB][1-4]$/.test(s));
 const outDir = path.join(ROOT, 'output', date);
 const LIB = path.join(ROOT, 'public/bvideo/_lib');
 const RELEASE = 'https://github.com/BlueLemon13/dropsworth-videos/releases/download/clips/';
@@ -74,7 +74,8 @@ async function pick(tag, taken, minDur = 0) {
 const thumb = 'bvideo/_lib/' + (await ensure(catalog.productThumb));
 
 // ---------- 3. post times ----------
-const BASE = {1: [11, 0], 2: [16, 0], 3: [20, 0]};
+// 4 posts per account: explainers late morning + afternoon, sauce early evening + night. Account B 40 min later.
+const BASE = {1: [10, 30], 2: [14, 0], 3: [17, 30], 4: [20, 30]};
 const postTime = (slot) => {
   const [h, m] = BASE[slot[1]];
   const mins = h * 60 + m + (slot[0] === 'B' ? 40 : 0) + Math.floor(Math.random() * 26);
@@ -102,7 +103,10 @@ for (const v of plan.videos) {
       const lines = [];
       for (const [i, l] of v.lines.entries()) {
         let marker;
-        if (l.shot.startsWith('g-')) {
+        if (l.shot.startsWith('app-')) {
+          const dir = {'app-drop': 'step1-drop', 'app-demand': 'step2-demand', 'app-competition': 'step3-competition', 'app-supplier': 'step4-supplier'}[l.shot];
+          marker = `[app:${dir}${l.step ? ` step=${l.step}` : ''}]`;
+        } else if (l.shot.startsWith('g-')) {
           marker = `[${l.shot} img=${thumb}${l.shot === 'g-score' ? ' ticks=demand|margin|competition' : ''}${l.step ? ` step=${l.step}` : ''}]`;
         } else {
           const clip = await pick(l.shot, taken);
@@ -134,7 +138,7 @@ const cap = plan.videos.filter((v) => !only.length || only.includes(v.slot)).map
   const r = results.find((x) => x.slot === v.slot);
   return [`${v.slot} (${v.format}) post at ${postTime(v.slot)} — ${r?.ok ? r.file : 'FAILED: ' + r?.error}`, `topic: ${v.topic}`, ...(v.sound ? [`SOUND (add in TikTok): ${v.sound.title} by ${v.sound.artist} (search "${v.sound.search}")`] : []), v.caption, v.hashtags.join(' '), ''].join('\n');
 }).join('\n');
-fs.writeFileSync(path.join(outDir, 'captions.txt'), `Dropsworth videos for ${date}\nAccount A = teacher, Account B = lifestyle. Tick "AI-generated content" on upload.\n\n${cap}`);
+fs.writeFileSync(path.join(outDir, 'captions.txt'), `Dropsworth videos for ${date}\nAccount A = @dropsworth.app, Account B = second account. 2 explainers + 2 sauce each. Tick "AI-generated content" on upload.\n\n${cap}`);
 fs.mkdirSync(path.dirname(statePath), {recursive: true});
 state.topics = state.topics.filter((t) => (Date.parse(date) - Date.parse(t.date)) / 864e5 < 60);
 fs.writeFileSync(statePath, JSON.stringify(state, null, 1));

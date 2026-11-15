@@ -1,22 +1,21 @@
 # Content plan (read by the nightly script writer)
 
-## Daily mix: 6 videos, 2 accounts
-| Slot | Account A ("teacher") | Account B ("lifestyle") |
+## Daily mix: 8 videos, 2 accounts, 4 posts each
+| Slot | Account A (@dropsworth.app) | Account B (second account) |
 |---|---|---|
-| 1 | explainer (~25s) | explainer (~25s) |
-| 2 | steps (~45-55s) | steps (~45-55s), different topic from A |
-| 3 | sauce (silent text post) | sauce (silent text post) |
+| 1 | explainer: step-by-step guide | explainer: step-by-step guide |
+| 2 | explainer: step-by-step guide (different angle) | explainer: step-by-step guide (different angle) |
+| 3 | sauce | sauce |
+| 4 | sauce | sauce |
 
-Account A leans educational (how-to, mistakes, rules). Account B leans mindset/lifestyle (what winners do differently, money, freedom). Never the same topic or hook on both accounts on the same day.
+Never the same topic or hook on both accounts on the same day.
 
-## Posting times (local, AEDT)
-Slot 1 ~11:00, slot 2 ~16:00, slot 3 ~20:00. Add random 0-25 min jitter. Accounts A and B offset by ~40 min.
+## Posting times (local, Sydney)
+Slot 1 ~10:30, slot 2 ~14:00, slot 3 ~17:30, slot 4 ~20:30. Random 0-25 min jitter. Account B ~40 min after A.
 
 ## Formats
-### explainer
-Hook (1 line, names dropshipping or a money pain) -> problem (2-3 lines) -> the turn ("the ones who win do X") -> the method (2-4 lines) -> CTA. 70-100 spoken words.
-### steps
-"Here's how to X in N steps" hook + "save this, step N is where most people mess up" -> 3-5 numbered steps, each one usable today -> payoff (test small, scale or kill) -> CTA. 150-190 spoken words. Supercar shots between steps.
+### explainer = STEP-BY-STEP GUIDE (owner's direction, 2026-11-15)
+Feels like a friend showing exactly how they do it, NOT a "judging" AI video. Hook promising a how-to ("here's exactly how I validate a product in 4 steps before spending a dollar on ads") -> "save this" -> 2-4 numbered steps, each step shows the REAL Dropsworth app doing it (app-drop / app-demand / app-competition / app-supplier shots) -> short payoff ("all four check out? test it. if not you just saved your budget") -> CTA (auto). 90-130 spoken words. Approved example: scripts/f5-guide.spec.json.
 ### sauce
 Owner's favourite styles (copy these): POV / self-deprecating ("pov: making 10k a month and thinking im all that. in reality im a f*cking dumbass who found one winning product with dropsworth and the rest is history") and casual flex ("putting the day ones on wasnt even that hard. they just validated products until one hit and now bros making 13k a month"). Monthly numbers like 10k / 13k / 15k / 20k a month attract dropshippers; tie them to validating or finding one winning product. Censor swearing (f*cking).
 ONE short nonchalant block of text (18-40 words; a short clip with lots of text is fine, people rewatch to finish reading), lowercase, no dashes, no hashtags in the text, like someone casually dropping a secret. Can include a dollar amount or a mildly controversial take. No CTA. Example: "started checking demand and competition before testing any product. thats literally when the money started coming in"
