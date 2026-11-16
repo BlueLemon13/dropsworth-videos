@@ -3,6 +3,7 @@ import {Easing, Img, OffthreadVideo, interpolate, spring, staticFile, useCurrent
 import {BLUE, Defs, Figure} from './Figure';
 import {Boxy} from './Boxy';
 import walkManifest from '../../public/app/walk/manifest.json';
+import tabsInfo from '../../public/app/tabs.json';
 import {Compare} from './Compare';
 import {GSales, GAdSpend, GBackground, GComments, GDm, GRange, GScan, GScore, GStores, GTrend} from './Graphics';
 
@@ -69,6 +70,76 @@ export const Visual: React.FC<{name: string; items?: string[]; durationInFrames:
     );
   }
 
+  if (name === 'tabs') {
+    // the 4 validation tabs from the real app; a mouse visits each, an arrow + highlight pops on each
+    const T = (tabsInfo as any).tabs;
+    const W = 900, H = W * (T.h / T.w), X = 90, Y = 1040 - H / 2;
+    const items = T.items;
+    const per = Math.max(10, (durationInFrames - 14) / items.length);
+    const active = Math.min(items.length - 1, Math.max(0, Math.floor((f - 8) / per)));
+    const into = (f - 8 - active * per) / per;
+    const prev = active === 0 ? {cx: 0.9, cy: 1.1} : items[active - 1];
+    const k = Easing.inOut(Easing.cubic)(Math.min(1, Math.max(0, into / 0.45)));
+    const cx = X + W * (prev.cx + (items[active].cx - prev.cx) * k) + Math.sin(f / 5) * 1.5;
+    const cy = Y + H * (prev.cy + (items[active].cy - prev.cy) * k) + Math.cos(f / 6) * 1.5;
+    const enter = spring({frame: f, fps, config: {damping: 16, mass: 0.7}});
+    return (
+      <div style={{position: 'absolute', inset: 0, overflow: 'hidden'}}>
+        <GBackground />
+        <div style={{position: 'absolute', left: X, top: Y, width: W, height: H, borderRadius: 36, overflow: 'hidden', boxShadow: '0 40px 90px rgba(0,0,0,0.6)', opacity: enter, transform: `scale(${0.92 + 0.08 * enter})`}}>
+          <Img src={staticFile('app/tabs.png')} style={{width: W, height: H, display: 'block'}} />
+          {items.map((it: any, i: number) => {
+            const o = interpolate(f - 8 - (i * per + per * 0.4), [0, 5], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+            return o > 0 ? <div key={i} style={{position: 'absolute', left: W * 0.03, width: W * 0.94, top: H * it.cy - 52, height: 104, borderRadius: 22, border: '6px solid #39E46F', boxShadow: '0 0 0 4px rgba(57,228,111,0.25)', opacity: o}} /> : null;
+          })}
+        </div>
+        {items.map((it: any, i: number) => {
+          const o = interpolate(f - 8 - (i * per + per * 0.4), [0, 6], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+          if (o <= 0) return null;
+          const y = Y + H * it.cy;
+          return (
+            <div key={'a' + i} style={{position: 'absolute', left: X + W - 20 + (1 - o) * 60, top: y - 40, opacity: o}}>
+              <svg width="90" height="80" viewBox="0 0 90 80"><path d="M86 40 L30 40 M30 40 L52 18 M30 40 L52 62" stroke="#39E46F" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" fill="none" /></svg>
+            </div>
+          );
+        })}
+        <svg width="46" height="66" viewBox="0 0 26 38" style={{position: 'absolute', left: cx, top: cy, filter: 'drop-shadow(0 3px 4px rgba(0,0,0,.4))'}}><path d="M2 2 L2 30 L9 23 L14 35 L19 33 L14 21 L24 21 Z" fill="#111" stroke="#fff" strokeWidth="2.2" strokeLinejoin="round"/></svg>
+      </div>
+    );
+  }
+
+  if (name === 'demandchart') {
+    // ONLY the demand bars from the real app, with a green line drawing the steady climb
+    const C = (tabsInfo as any).chart;
+    const cx0 = 0.0, cx1 = 0.76, cy0 = 0.17, cy1 = 0.76;
+    const W = 1000, H = W * ((cy1 - cy0) * C.h) / ((cx1 - cx0) * C.w);
+    const X = 40, Y = 960 - H / 2;
+    const iw = W / (cx1 - cx0), ih = iw * (C.h / C.w);
+    const pts = C.tops.map(([x, y]: number[]) => [(x - cx0) / (cx1 - cx0), (y - cy0) / (cy1 - cy0)]);
+    const n = pts.length;
+    const mx = pts.reduce((s: number, p: number[]) => s + p[0], 0) / n, my = pts.reduce((s: number, p: number[]) => s + p[1], 0) / n;
+    const slope = pts.reduce((s: number, p: number[]) => s + (p[0] - mx) * (p[1] - my), 0) / pts.reduce((s: number, p: number[]) => s + (p[0] - mx) ** 2, 0);
+    const yAt = (x: number) => my + slope * (x - mx) - 0.06;
+    const xa = pts[0][0], xb = pts[n - 1][0];
+    const p = interpolate(f, [8, Math.max(12, durationInFrames * 0.6)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)});
+    const enter = spring({frame: f, fps, config: {damping: 16, mass: 0.7}});
+    const lab = interpolate(f, [durationInFrames * 0.6, durationInFrames * 0.6 + 8], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+    return (
+      <div style={{position: 'absolute', inset: 0, overflow: 'hidden'}}>
+        <GBackground />
+        <div style={{position: 'absolute', left: X, top: Y, width: W, height: H, borderRadius: 32, overflow: 'hidden', background: '#f7f3ea', boxShadow: '0 40px 90px rgba(0,0,0,0.6)', opacity: enter, transform: `scale(${0.92 + 0.08 * enter})`}}>
+          <Img src={staticFile('app/demand-chart.png')} style={{position: 'absolute', width: iw, height: ih, left: -cx0 * iw, top: -cy0 * ih}} />
+          <svg width={W} height={H} style={{position: 'absolute', left: 0, top: 0}}>
+            <line x1={xa * W} y1={yAt(xa) * H} x2={(xa + (xb - xa) * p) * W} y2={yAt(xa + (xb - xa) * p) * H} stroke="#39E46F" strokeWidth={14} strokeLinecap="round" />
+          </svg>
+        </div>
+        <div style={{position: 'absolute', left: 0, right: 0, top: Y + H + 40, textAlign: 'center', opacity: lab}}>
+          <span style={{fontFamily: 'Montserrat', fontWeight: 900, fontSize: 58, color: '#39E46F', textShadow: '0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000'}}>Steady climb</span>
+        </div>
+      </div>
+    );
+  }
+
   if (name.startsWith('walk:')) {
     const seg = name.slice(5);
     const M = walkManifest as any;
@@ -79,10 +150,10 @@ export const Visual: React.FC<{name: string; items?: string[]; durationInFrames:
     const idx = Math.min(b, a + Math.floor(f * speed));
     // smoothed cursor (avg of nearby frames) -> camera target
     let sx = 0, sy = 0, c = 0;
-    for (let k = Math.max(a, idx - 14); k <= Math.min(b, idx + 14); k++) { sx += M.cursor[k][0]; sy += M.cursor[k][1]; c++; }
+    for (let k = Math.max(a, idx - 40); k <= Math.min(b, idx + 40); k++) { sx += M.cursor[k][0]; sy += M.cursor[k][1]; c++; }
     const tx = sx / c, ty = sy / c;
     // tour: start on the full app (sidebar visible), then zoom in and follow the mouse
-    const Z = seg === 'tour' ? interpolate(f, [0, 30, 50], [1, 1, 1.75], {extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)}) : 1.75;
+    const Z = seg === 'tour' ? interpolate(f, [0, 30, 50], [1, 1, 1.4], {extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)}) : 1.4;
     const iw = 1080 * Z, ih = iw * (M.height / M.width);
     const winH = 1180;
     const left = Math.min(0, Math.max(1080 - iw, 540 - tx * iw));

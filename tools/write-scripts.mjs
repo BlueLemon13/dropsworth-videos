@@ -13,7 +13,7 @@ const MODEL = process.env.SCRIPT_MODEL || 'claude-haiku-5-5'; // owner chose the
 const date = process.argv[2] || new Date().toISOString().slice(0, 10);
 const read = (p) => (fs.existsSync(path.join(ROOT, p)) ? fs.readFileSync(path.join(ROOT, p), 'utf8') : '');
 
-const SHOTS = ['opener', 'tired', 'working', 'phone', 'product', 'supercar', 'sales', 'penthouse', 'money', 'g-stores', 'g-score', 'g-trend', 'app-drop', 'app-demand', 'app-competition', 'app-supplier', 'app-score', 'app-tour', 'yacht', 'friends'];
+const SHOTS = ['opener', 'tired', 'working', 'phone', 'product', 'supercar', 'sales', 'penthouse', 'money', 'g-stores', 'g-score', 'g-trend', 'app-drop', 'app-demand', 'app-competition', 'app-supplier', 'app-score', 'app-tour', 'app-tabs', 'yacht', 'friends'];
 const SLOTS = ['A1', 'A2', 'A3', 'A4', 'B1', 'B2', 'B3', 'B4'];
 const FORMAT_OF = (slot) => (slot[1] === '1' || slot[1] === '2' ? 'explainer' : 'sauce');
 const Line = z.object({
@@ -72,7 +72,8 @@ Explainers are STEP-BY-STEP GUIDES (like scripts/f5-guide), never "judging" vide
 - TWO HOOK TYPES. POV slots A1 and B1: a silent intro clip (rich friends with a Lamborghini) shows intro_text ("POV: You and your friends got rich from AI dropshipping."), then a hard cut and the FIRST spoken line is "F*ck it. Here's how you start AI dropshipping." Direct slots A2 and B2: the FIRST spoken line is "Here's how you can start AI dropshipping." (optionally "...in three steps.").
 - The FIRST spoken line's shot is ALWAYS "sales" (Shopify sales notifications on a phone), so it's instantly clear this is about making sales.
 - ANY other line that mentions sales, orders, selling or making money (and isn't a step shown in the app) uses shot "sales".
-- Right after the hook, ONE line explains what Dropsworth is, using shot "app-tour" (a live screen recording of the app). Make it sound good and specific, e.g. "Drop in ^any dropshipping product and Dropsworth shows you ^everything: how many sell every day, every store competing with you, the cheapest supplier, your ^profit on every sale, and a score out of a hundred."
+- Right after the hook (and "save this"), ONE simple line with shot "app-tabs" (the 4 tabs of the app with a mouse pointing at each) that says these are the main parts of validating a product, e.g. "Every product comes down to four things: ^demand, competition, supplier, and the product score." Keep it super simple.
+- Each step line is SHORT (max 16 words). Step 1 demand uses "app-demand" (only the demand graph with a steady-climb line): say you want a steady climb, not a spike. Competition: one short line. Easy to understand, not slow.
 - Colour words: ^word = GREEN for good/winning words (profit, winning, growing, sales, money, scale); !word = RED for bad words (saturated, late, dead, losing, burn). 3-6 green and 1-3 red per explainer. Don't use *word in explainers.
 - All b-roll is POV (first person): supercar = POV driving, penthouse = POV view from a penthouse, yacht = POV on a yacht/boat.
 - 100% positive: NO sad, struggling, losing-money or "most beginners fail" beats. Confident how-to energy.
@@ -107,7 +108,7 @@ for (let attempt = 1; attempt <= 3; attempt++) {
 }
 
 // ---- validation / clean-up (never trust, always fix) ----
-const EXPLAINER_SHOTS = new Set(['app-tour', 'sales', 'supercar', 'penthouse', 'yacht', 'working', 'app-drop', 'app-demand', 'app-competition', 'app-supplier', 'app-score']);
+const EXPLAINER_SHOTS = new Set(['app-tabs', 'app-tour', 'sales', 'supercar', 'penthouse', 'yacht', 'working', 'app-drop', 'app-demand', 'app-competition', 'app-supplier', 'app-score']);
 const DASH = /[–—]/g;
 for (const v of plan.videos) {
   v.sauce_text = v.sauce_text.replace(DASH, ',').replace(/\s+-\s+/g, ', ').trim();

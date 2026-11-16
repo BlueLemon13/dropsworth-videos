@@ -66,7 +66,7 @@ const audioDir = path.join(ROOT, 'public/audio');
 const cacheDir = path.join(ROOT, 'cache');
 fs.mkdirSync(audioDir, {recursive: true});
 fs.mkdirSync(cacheDir, {recursive: true});
-const voiceOpts = {model_id: 'eleven_multilingual_v2', voice_settings: {stability: 0.4, similarity_boost: 0.8, style: 0.35, use_speaker_boost: true, speed: spec.options?.speed ?? 1.15}};
+const voiceOpts = {model_id: 'eleven_multilingual_v2', voice_settings: {stability: spec.options?.stability ?? 0.4, similarity_boost: 0.8, style: spec.options?.style ?? 0.35, use_speaker_boost: true, speed: spec.options?.speed ?? 1.15}};
 const VOICE = process.env.PREVIEW_VOICE || spec.options?.voice || process.env.EXPLAINER_VOICE_ID || need('VOICE_ID');
 const hash = crypto.createHash('md5').update(text + JSON.stringify(voiceOpts) + VOICE).digest('hex').slice(0, 10);
 const rawMp3 = path.join(cacheDir, `${name}-${hash}.mp3`);
@@ -162,7 +162,7 @@ scenes.forEach((s, i) => {
   s.end = i + 1 < scenes.length ? scenes[i + 1].start : +(end + tail).toFixed(3);
   delete s.kind;
   if (s.sfx && !minimal) sfx.push({name: s.sfx, t: s.start});
-  else if (i > 0 && s.transition !== 'none') sfx.push({name: 'whoosh', t: Math.max(0, s.start - 0.06), vol: minimal ? 0.12 : 0.5});
+  else if (i > 0 && s.transition !== 'none') sfx.push({name: 'whoosh', t: Math.max(0, s.start - 0.06), vol: minimal ? 0.05 : 0.5});
   delete s.sfx;
   if (s.tickWords) {
     s.ticks = s.tickWords.map((tw) => {
@@ -201,7 +201,7 @@ if (intro) {
   for (const x of sfx) x.t = +(x.t + d).toFixed(3);
   if (scenes[0]) { scenes[0].start = d; scenes[0].transition = 'flash'; }
   scenes.unshift({visual: intro.visual, start: 0, end: d, hook: intro.hook, cap: 'none', grade: intro.grade ?? 'bright', step: 0});
-  sfx.push({name: 'whoosh', t: Math.max(0, d - 0.15), vol: 0.9});
+  sfx.push({name: 'whoosh', t: Math.max(0, d - 0.15), vol: 0.22});
 }
 
 const props = {

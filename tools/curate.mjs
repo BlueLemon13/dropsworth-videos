@@ -16,7 +16,7 @@ const PICKS = {
   phone: ['B6', 'B7'],                                    // scrolling TikTok
   product: ['N0', 'N2', 'N3', 'N5', 'N10', 'N11', 'N14'], // real viral dropshipping products
   supercar: ['P1', 'P2', 'P4', 'P8', 'P9', 'P12', 'P3'], // POV driving only (owner: always POV), no McLaren
-  sales: ['G15'],                                         // Shopify sales (G10 removed: TikTok watermark + a real customer's name)
+  sales: ['G15', 'X6', 'X2'], // REAL Shopify sales footage only (owner: never self-made). X1/X3 rejected: burned-in text
   penthouse: ['P24', 'S13', 'S14', 'S19', 'N22', 'N24'], // POV-style views from penthouses
   friends: ['F16', 'F8', 'F12', 'F6'], // POV hook intro: rich young friends with supercars (F7 McLaren excluded)
   yacht: ['P26', 'P31', 'P32', 'P33', 'P30', 'P29', 'P34', 'P25'], // POV yacht / boat views
@@ -27,7 +27,7 @@ const PICKS = {
 };
 // product photo shown inside the store-grid / scorecard graphics
 const PRODUCT_THUMB = 'N14';
-const SHEETS = {A: 'v-all', B: 'v-all2', N: 'v-new', M: 'v-new2', G: 'v-g1', C: 'v-car', S: 'v-s1', T: 'v-s2', P: 'v-pov', F: 'v-fr'};
+const SHEETS = {A: 'v-all', B: 'v-all2', N: 'v-new', M: 'v-new2', G: 'v-g1', C: 'v-car', S: 'v-s1', T: 'v-s2', P: 'v-pov', F: 'v-fr', X: 'v-sx'};
 const GH = process.env.GH_BIN || 'C:\\Program Files\\GitHub CLI\\gh.exe';
 const REPO = 'BlueLemon13/dropsworth-videos';
 

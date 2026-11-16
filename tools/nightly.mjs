@@ -58,6 +58,8 @@ async function ensure(asset) {
   return plain;
 }
 
+// clips where only part is usable: start offset in seconds (owner: dark penthouse, only the 2nd half is good)
+const START = {'povpent-JzRgixwgYg.mp4.enc': 5.2};
 // least-used clip for a tag, never reusing a clip inside the same video
 // minDur: only clips at least this long (sauce posts never loop their clip)
 async function pick(tag, taken, minDur = 0) {
@@ -69,7 +71,7 @@ async function pick(tag, taken, minDur = 0) {
   const c = choices[0];
   taken.add(c.id);
   state.clips[c.id] = (state.clips[c.id] || 0) + 1;
-  return {file: await ensure(c.asset), dur: c.dur};
+  return {file: await ensure(c.asset), dur: c.dur, from: START[c.asset]};
 }
 const thumb = 'bvideo/_lib/' + (await ensure(catalog.productThumb));
 
@@ -108,30 +110,40 @@ for (const v of plan.videos) {
         let marker;
         if (l.shot.startsWith('app-')) {
           // live screen recording of the real app (public/app/walk) with a moving mouse, camera following it
-          const seg = {'app-drop': 'demand', 'app-demand': 'demand', 'app-competition': 'competition', 'app-supplier': 'supplier', 'app-score': 'score', 'app-tour': 'tour'}[l.shot];
-          marker = `[walk:${seg}${l.step ? ` step=${l.step}` : ''}]`;
+          // app-tabs = the 4 validation tabs with mouse + arrows; app-demand = ONLY the demand graph + steady-climb line;
+          // others = live screen recording (calm camera)
+          const st = l.step ? ` step=${l.step}` : '';
+          if (l.shot === 'app-tabs') marker = `[tabs${st}]`;
+          else if (l.shot === 'app-demand') marker = `[demandchart${st}]`;
+          else marker = `[walk:${{'app-drop': 'demand', 'app-competition': 'competition', 'app-supplier': 'supplier', 'app-score': 'score', 'app-tour': 'tour'}[l.shot]}${st}]`;
         } else if (l.shot.startsWith('g-')) {
           marker = `[${l.shot} img=${thumb}${l.shot === 'g-score' ? ' ticks=demand|margin|competition' : ''}${l.step ? ` step=${l.step}` : ''}]`;
         } else {
-          if (l.shot === 'sales' && i > 0 && Math.random() < 0.8) { lines.push(`[g-sales${l.step ? ` step=${l.step}` : ''}] ${l.text}`); continue; }
-          if (l.shot === 'sales' && i === 0) {
-            const hk = (v.hook_text || []).map(enc).filter(Boolean);
-            lines.push(`[g-sales step=0${hk.length ? ` cap=none hook=${hk.join('|')}` : ''}] ${l.text}`);
-            continue;
-          }
           const clip = await pick(l.shot, taken);
           const step = l.step ? ` step=${l.step}` : i === 0 ? ' step=0' : '';
           // the first voiced shot (Shopify sales) carries the on-screen title; voice captions hidden under it
           const hookLines = i === 0 ? (v.hook_text || []).map(enc).filter(Boolean) : [];
           const hook = hookLines.length ? ` cap=none hook=${hookLines.join('|')}` : '';
-          marker = `[vid:_lib/${clip.file} grade=bright${step}${hook}]`;
+          const from = clip.from ? ` from=${clip.from}` : '';
+          marker = `[vid:_lib/${clip.file} grade=bright${step}${hook}${from}]`;
+          // long b-roll lines get a 2nd clip halfway through (owner: 2 vids instead of one long one)
+          const words = l.text.split(' ');
+          if (i > 0 && words.length > 12) {
+            const alt = l.shot === 'penthouse' ? 'yacht' : l.shot === 'yacht' ? 'penthouse' : l.shot;
+            const c2 = await pick(alt, taken);
+            const mid = Math.floor(words.length / 2);
+            words.splice(mid, 0, `[vid:_lib/${c2.file} grade=bright${c2.from ? ` from=${c2.from}` : ''}]`);
+            lines.push(`${marker} ${words.join(' ')}`);
+            continue;
+          }
         }
         lines.push(`${marker} ${l.text}`);
       }
       const end = await pick(Math.random() < 0.5 ? 'penthouse' : 'yacht', taken); // made it, then the DM graphic
       lines.push(`[vid:_lib/${end.file} grade=bright step=0] Send me the word ^VALIDATE [g-dm] and I'll send you my *FREE checklist.`);
       const specPath = path.join(outDir, `${v.slot}.spec.json`);
-      const options = {sfx: 'minimal', tail: 2.6, voice: EXPLAINER_VOICE};
+      // Adam at normal speed + steadier delivery (owner: sped-up version slurred words)
+      const options = {sfx: 'minimal', tail: 2.6, voice: EXPLAINER_VOICE, speed: 1.0, stability: 0.6, style: 0.1};
       if (v.hook_type === 'pov') {
         const fr = await pick('friends', taken);
         options.intro = {visual: `vid:_lib/${fr.file}`, seconds: 2.8, hook: [v.intro_text]};
