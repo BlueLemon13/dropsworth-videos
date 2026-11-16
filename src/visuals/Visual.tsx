@@ -1,9 +1,10 @@
 import React from 'react';
-import {Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {Easing, Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {BLUE, Defs, Figure} from './Figure';
 import {Boxy} from './Boxy';
+import walkManifest from '../../public/app/walk/manifest.json';
 import {Compare} from './Compare';
-import {GAdSpend, GBackground, GComments, GDm, GRange, GScan, GScore, GStores, GTrend} from './Graphics';
+import {GSales, GAdSpend, GBackground, GComments, GDm, GRange, GScan, GScore, GStores, GTrend} from './Graphics';
 
 const FLOOR = 1180;
 const CX = 540;
@@ -68,6 +69,35 @@ export const Visual: React.FC<{name: string; items?: string[]; durationInFrames:
     );
   }
 
+  if (name.startsWith('walk:')) {
+    const seg = name.slice(5);
+    const M = walkManifest as any;
+    const segs = M.segments, keys = ['demand', 'competition', 'supplier', 'score', 'end'];
+    let a = 0, b = M.frames - 1, speed = 1;
+    if (seg !== 'tour') { a = segs[seg]; b = segs[keys[keys.indexOf(seg) + 1]] - 1; }
+    else speed = Math.max(1, (M.frames - 1) / Math.max(1, durationInFrames - 4));
+    const idx = Math.min(b, a + Math.floor(f * speed));
+    // smoothed cursor (avg of nearby frames) -> camera target
+    let sx = 0, sy = 0, c = 0;
+    for (let k = Math.max(a, idx - 14); k <= Math.min(b, idx + 14); k++) { sx += M.cursor[k][0]; sy += M.cursor[k][1]; c++; }
+    const tx = sx / c, ty = sy / c;
+    // tour: start on the full app (sidebar visible), then zoom in and follow the mouse
+    const Z = seg === 'tour' ? interpolate(f, [0, 30, 50], [1, 1, 1.75], {extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)}) : 1.75;
+    const iw = 1080 * Z, ih = iw * (M.height / M.width);
+    const winH = 1180;
+    const left = Math.min(0, Math.max(1080 - iw, 540 - tx * iw));
+    const top = Math.min(0, Math.max(winH - ih, winH / 2 - ty * ih));
+    const enter = spring({frame: f, fps, config: {damping: 16, mass: 0.7}});
+    return (
+      <div style={{position: 'absolute', inset: 0, overflow: 'hidden'}}>
+        <GBackground />
+        <div style={{position: 'absolute', left: 0, right: 0, top: 470, height: winH, overflow: 'hidden', borderTop: '3px solid rgba(255,255,255,0.15)', borderBottom: '3px solid rgba(255,255,255,0.15)', opacity: enter, boxShadow: '0 30px 80px rgba(0,0,0,0.6)'}}>
+          <Img src={staticFile(`app/walk/${String(idx).padStart(4, '0')}.jpg`)} style={{position: 'absolute', left, top, width: iw, height: ih}} />
+        </div>
+      </div>
+    );
+  }
+
   if (name.startsWith('appreal:')) {
     // REAL Dropsworth app page (tools/capture-real-app.mjs): a phone-width card that slowly scrolls the page.
     const pg = name.slice(8);
@@ -115,6 +145,7 @@ export const Visual: React.FC<{name: string; items?: string[]; durationInFrames:
         {name === 'g-trend' && <GTrend dur={d} />}
         {name === 'g-range' && <GRange ticks={ticks} dur={d} />}
         {name === 'g-dm' && <GDm dur={d} />}
+        {name === 'g-sales' && <GSales dur={d} />}
       </div>
     );
   }

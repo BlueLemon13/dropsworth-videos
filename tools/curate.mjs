@@ -18,6 +18,7 @@ const PICKS = {
   supercar: ['P1', 'P2', 'P4', 'P8', 'P9', 'P12', 'P3'], // POV driving only (owner: always POV), no McLaren
   sales: ['G15'],                                         // Shopify sales (G10 removed: TikTok watermark + a real customer's name)
   penthouse: ['P24', 'S13', 'S14', 'S19', 'N22', 'N24'], // POV-style views from penthouses
+  friends: ['F16', 'F8', 'F12', 'F6'], // POV hook intro: rich young friends with supercars (F7 McLaren excluded)
   yacht: ['P26', 'P31', 'P32', 'P33', 'P30', 'P29', 'P34', 'P25'], // POV yacht / boat views
   money: ['A13', 'A14', 'A12', 'A16'],                    // cash
   // calm, slow, moving, SHARP + BRIGHT ENOUGH (removed: A21 watermark, A4 blurry, A19 + A9 too dark/low quality,
@@ -26,7 +27,7 @@ const PICKS = {
 };
 // product photo shown inside the store-grid / scorecard graphics
 const PRODUCT_THUMB = 'N14';
-const SHEETS = {A: 'v-all', B: 'v-all2', N: 'v-new', M: 'v-new2', G: 'v-g1', C: 'v-car', S: 'v-s1', T: 'v-s2', P: 'v-pov'};
+const SHEETS = {A: 'v-all', B: 'v-all2', N: 'v-new', M: 'v-new2', G: 'v-g1', C: 'v-car', S: 'v-s1', T: 'v-s2', P: 'v-pov', F: 'v-fr'};
 const GH = process.env.GH_BIN || 'C:\\Program Files\\GitHub CLI\\gh.exe';
 const REPO = 'BlueLemon13/dropsworth-videos';
 

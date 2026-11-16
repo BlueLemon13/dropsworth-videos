@@ -75,6 +75,9 @@ const thumb = 'bvideo/_lib/' + (await ensure(catalog.productThumb));
 
 // ---------- 3. post times ----------
 // 4 posts per account: explainers late morning + afternoon, sauce early evening + night. Account B 40 min later.
+// owner: explainers use the classic deep male TikTok narrator voice (ElevenLabs 'Adam')
+const EXPLAINER_VOICE = process.env.EXPLAINER_VOICE_ID || 'pNInz6obpgDQGcFmaJgB';
+const enc = (h) => String(h).replace(/[\[\]=|]/g, '').trim().replace(/\s+/g, '_');
 const BASE = {1: [10, 30], 2: [14, 0], 3: [17, 30], 4: [20, 30]};
 const postTime = (slot) => {
   const [h, m] = BASE[slot[1]];
@@ -104,16 +107,22 @@ for (const v of plan.videos) {
       for (const [i, l] of v.lines.entries()) {
         let marker;
         if (l.shot.startsWith('app-')) {
-          // REAL app pages (public/app/real, captured from the app in demo mode)
-          const pg = {'app-drop': 'find', 'app-demand': 'demand', 'app-competition': 'competition', 'app-supplier': 'supplier', 'app-score': 'verdict'}[l.shot];
-          marker = `[appreal:${pg}${l.step ? ` step=${l.step}` : ''}]`;
+          // live screen recording of the real app (public/app/walk) with a moving mouse, camera following it
+          const seg = {'app-drop': 'demand', 'app-demand': 'demand', 'app-competition': 'competition', 'app-supplier': 'supplier', 'app-score': 'score', 'app-tour': 'tour'}[l.shot];
+          marker = `[walk:${seg}${l.step ? ` step=${l.step}` : ''}]`;
         } else if (l.shot.startsWith('g-')) {
           marker = `[${l.shot} img=${thumb}${l.shot === 'g-score' ? ' ticks=demand|margin|competition' : ''}${l.step ? ` step=${l.step}` : ''}]`;
         } else {
+          if (l.shot === 'sales' && i > 0 && Math.random() < 0.8) { lines.push(`[g-sales${l.step ? ` step=${l.step}` : ''}] ${l.text}`); continue; }
+          if (l.shot === 'sales' && i === 0) {
+            const hk = (v.hook_text || []).map(enc).filter(Boolean);
+            lines.push(`[g-sales step=0${hk.length ? ` cap=none hook=${hk.join('|')}` : ''}] ${l.text}`);
+            continue;
+          }
           const clip = await pick(l.shot, taken);
           const step = l.step ? ` step=${l.step}` : i === 0 ? ' step=0' : '';
-          // the opening supercar carries the on-screen hook text; voice captions are hidden under it
-          const hookLines = i === 0 ? (v.hook_text || []).map((h) => h.replace(/[\[\]=|]/g, '').trim().replace(/\s+/g, '_')).filter(Boolean) : [];
+          // the first voiced shot (Shopify sales) carries the on-screen title; voice captions hidden under it
+          const hookLines = i === 0 ? (v.hook_text || []).map(enc).filter(Boolean) : [];
           const hook = hookLines.length ? ` cap=none hook=${hookLines.join('|')}` : '';
           marker = `[vid:_lib/${clip.file} grade=bright${step}${hook}]`;
         }
@@ -122,7 +131,12 @@ for (const v of plan.videos) {
       const end = await pick(Math.random() < 0.5 ? 'penthouse' : 'yacht', taken); // made it, then the DM graphic
       lines.push(`[vid:_lib/${end.file} grade=bright step=0] Send me the word ^VALIDATE [g-dm] and I'll send you my *FREE checklist.`);
       const specPath = path.join(outDir, `${v.slot}.spec.json`);
-      fs.writeFileSync(specPath, JSON.stringify({name, lines, options: {sfx: 'minimal', tail: 2.6}, props: {uniformText: true}}, null, 2));
+      const options = {sfx: 'minimal', tail: 2.6, voice: EXPLAINER_VOICE};
+      if (v.hook_type === 'pov') {
+        const fr = await pick('friends', taken);
+        options.intro = {visual: `vid:_lib/${fr.file}`, seconds: 2.8, hook: [v.intro_text]};
+      }
+      fs.writeFileSync(specPath, JSON.stringify({name, lines, options, props: {uniformText: true}}, null, 2));
       run('node', ['tools/build.mjs', specPath], 'voice + timing');
       run('npx', ['remotion', 'render', 'src/index.ts', 'Reel', out, `--props=${specPath.replace(/\.spec\.json$/, '.props.json')}`, '--timeout=120000', '--log=error'], 'render');
     }

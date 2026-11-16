@@ -361,3 +361,44 @@ export const GComments: React.FC<{dur: number}> = ({dur}) => {
     </>
   );
 };
+
+// ---------------- Shopify sales: iPhone lock screen with order notifications stacking in ----------------
+const ORDERS = [34.99, 29.99, 69.98, 34.99, 104.97, 39.99, 34.99, 59.98];
+export const GSales: React.FC<{dur: number}> = ({dur}) => {
+  const {f, fps, sp} = useAnim();
+  const phone = sp(0, 18);
+  const every = Math.max(7, Math.round(dur / 7));
+  const n = Math.min(ORDERS.length, 1 + Math.floor(Math.max(0, f - 6) / every));
+  const total = ORDERS.slice(0, n).reduce((a, b) => a + b, 0);
+  return (
+    <>
+      <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 30%, #2a3550 0%, #0a0d16 70%)'}} />
+      <div style={{position: 'absolute', left: 110, right: 110, top: 300, bottom: -120, borderRadius: 90, background: 'linear-gradient(160deg,#1c2235,#0d0f18)', border: '12px solid #1a1a1f', boxShadow: '0 50px 120px rgba(0,0,0,0.7)', overflow: 'hidden', transform: `translateY(${(1 - phone) * 300}px)`}}>
+        <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(80,110,200,0.35), rgba(10,10,20,0))'}} />
+        <div style={{textAlign: 'center', marginTop: 90, color: '#fff', fontFamily: T, fontWeight: 500, fontSize: 34, opacity: 0.85}}>Monday 16 November</div>
+        <div style={{textAlign: 'center', color: '#fff', fontFamily: T, fontWeight: 700, fontSize: 170, lineHeight: 1}}>9:41</div>
+        <div style={{position: 'absolute', left: 26, right: 26, top: 380, display: 'flex', flexDirection: 'column', gap: 16}}>
+          {Array.from({length: n}).map((_, k) => {
+            const i = n - 1 - k; // newest on top
+            const born = 6 + i * every;
+            const o = interpolate(f, [born, born + 6], [0, 1], clamp);
+            return (
+              <div key={i} style={{background: 'rgba(245,245,250,0.82)', borderRadius: 34, padding: '20px 24px', display: 'flex', gap: 18, alignItems: 'center', opacity: o, transform: `translateY(${(1 - o) * -40}px) scale(${0.96 + 0.04 * o})`}}>
+                <div style={{width: 70, height: 70, borderRadius: 16, background: '#5E8E3E', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>
+                  <svg width="40" height="44" viewBox="0 0 40 44"><path d="M8 12 L32 12 L35 40 L5 40 Z" fill="#fff"/><path d="M14 14 C14 4 26 4 26 14" stroke="#fff" strokeWidth="3.5" fill="none"/></svg>
+                </div>
+                <div style={{flex: 1, fontFamily: T}}>
+                  <div style={{display: 'flex', justifyContent: 'space-between', fontSize: 26, color: '#333', fontWeight: 700}}><span>SHOPIFY</span><span style={{fontWeight: 500, color: '#777'}}>now</span></div>
+                  <div style={{fontSize: 28, color: '#111', fontWeight: 500, lineHeight: 1.25}}>You have a new order for {i % 3 === 2 ? 2 : 1} item{i % 3 === 2 ? 's' : ''} totaling ${ORDERS[i].toFixed(2)} from Online Store.</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div style={{position: 'absolute', left: 0, right: 0, top: 1500, textAlign: 'center', opacity: n > 2 ? 1 : 0}}>
+        <span style={{fontFamily: M, fontWeight: 900, fontSize: 64, color: '#39E46F', textShadow: '0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000'}}>${total.toFixed(2)}</span>
+      </div>
+    </>
+  );
+};
