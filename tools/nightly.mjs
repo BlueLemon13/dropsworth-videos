@@ -110,7 +110,7 @@ for (const v of plan.videos) {
       const oneOf = (arr) => arr[Math.floor(Math.random() * arr.length)];
       const clipOf = async (tag) => `_lib/${(await pick(tag, taken)).file}`;
       const V = (f, extra = '') => `[vid:${f} grade=bright${extra}]`;
-      const sp = (s) => s.replace(/s+/g, '_');
+      const sp = (s) => s.replace(/\s+/g, '_');
       const AGE = 'Age 14 - 25';
       const options = {sfx: 'minimal', tail: 0.15, voice: EXPLAINER_VOICE, speed: 1.1, stability: 0.6, style: 0.1};
       if (pov) options.intro = {visual: `vid:${await clipOf('mintro')}`, seconds: 2.8, hook: ['POV: You make $15k a month with AI dropshipping the actual way.', AGE]};
