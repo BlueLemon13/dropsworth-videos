@@ -1,8 +1,20 @@
 {
- "note": "Owner's pick (2026-11-17): trending motivational TikTok sounds on EVERY explainer, added IN TIKTOK at upload (licensed there), never baked into the file. Not quiet: sound loud, voice still clear on top.",
+ "note": "Owner (2026-11-18): trending motivational TikTok sound on every explainer, added IN TIKTOK at upload, set to -10 dB in the Audio panel so it sits UNDER the voice (background music, not loud). Sauce posts (no voice) keep the sound at 0 dB.",
  "sounds": [
-  {"title": "Where Have You Been", "artist": "Rihanna", "search": "where have you been rihanna"},
-  {"title": "Legacy", "artist": "(trending motivational)", "search": "legacy"},
-  {"title": "we can go up up up", "artist": "(trending)", "search": "we can go up up up"}
+  {
+   "title": "Where Have You Been",
+   "artist": "Rihanna",
+   "search": "where have you been rihanna"
+  },
+  {
+   "title": "LEGACY (main)",
+   "artist": "PIXY",
+   "search": "legacy"
+  },
+  {
+   "title": "VYZEE (UP UP UP, WE CAN GO LOCO)",
+   "artist": "GO LOCO",
+   "search": "we can go up up up"
+  }
  ]
 }
