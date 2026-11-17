@@ -79,6 +79,7 @@ Explainers are STEP-BY-STEP GUIDES (like scripts/f5-guide), never "judging" vide
 - 100% positive: NO sad, struggling, losing-money or "most beginners fail" beats. Confident how-to energy.
 - Shots ONLY: sales, supercar, penthouse, yacht (mix them), app-drop/app-demand/app-competition/app-supplier/app-score (REAL Dropsworth app screens: find a product, demand chart, competition, supplier & profit, product score), and "working" at most ONCE. Nothing else.
 Structure: a hook promising a how-to, "save this", 2-4 numbered steps where each step line uses the matching app-* shot so the viewer SEES Dropsworth doing it, then a short payoff line. 90-130 spoken words. Vary the angle between the 4 explainers (e.g. full 4-step validation, just reading demand properly, spotting saturated products with the competition step, the profit math with the supplier step).
+SAUCE POSTS (owner, 2026-11-18): the goal is to sound WISE, like someone who learned the real lesson. Talk about VALIDATING products ("then i started validating"), not vague "checked demand". Name the unglamorous truth plainly (e.g. "the fees, refunds and chargebacks are the bit nobody talks about in dropshipping. i priced every one of my products with all these factors in mind first, and now i'm making 10k a month"). First person, lowercase, calm, ends on the result.
 Topics used in the last 14 days (do NOT repeat these topics or hooks):
 ${recent.length ? recent.join('\n') : '(none yet)'}
 ${notes ? `\nOwner's notes for this batch (follow them):\n${notes}` : ''}
