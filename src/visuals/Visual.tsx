@@ -5,7 +5,7 @@ import {Boxy} from './Boxy';
 import walkManifest from '../../public/app/walk/manifest.json';
 import tabsInfo from '../../public/app/tabs.json';
 import {Compare} from './Compare';
-import {GSales, GAdSpend, GBackground, GComments, GDm, GRange, GScan, GScore, GStores, GTrend} from './Graphics';
+import {BgVideo, GGuru, GContents, GDemandLine, GDemandSimple, GComp, GSup, GSales, GAdSpend, GBackground, GComments, GDm, GRange, GScan, GScore, GStores, GTrend} from './Graphics';
 
 const FLOOR = 1180;
 const CX = 540;
@@ -207,6 +207,7 @@ export const Visual: React.FC<{name: string; items?: string[]; durationInFrames:
     const img = opts.img as string | undefined;
     const d = durationInFrames;
     return (
+      <BgVideo.Provider value={opts.bgvid ? `bvideo/${opts.bgvid}` : null}>
       <div style={{position: 'absolute', inset: 0, overflow: 'hidden'}}>
         {name === 'g-adspend' && <GAdSpend dur={d} />}
         {name === 'g-stores' && <GStores img={img} dur={d} />}
@@ -217,7 +218,14 @@ export const Visual: React.FC<{name: string; items?: string[]; durationInFrames:
         {name === 'g-range' && <GRange ticks={ticks} dur={d} />}
         {name === 'g-dm' && <GDm dur={d} />}
         {name === 'g-sales' && <GSales dur={d} />}
+        {name === 'g-guru' && <GGuru dur={d} />}
+        {name === 'g-contents' && <GContents dur={d} ticks={ticks} />}
+        {name === 'g-demandline' && <GDemandLine dur={d} />}
+        {name === 'g-demandsimple' && <GDemandSimple dur={d} />}
+        {name === 'g-comp' && <GComp dur={d} />}
+        {name === 'g-sup' && <GSup dur={d} />}
       </div>
+      </BgVideo.Provider>
     );
   }
 

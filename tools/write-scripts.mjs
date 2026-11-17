@@ -109,6 +109,7 @@ for (let attempt = 1; attempt <= 3; attempt++) {
 
 // ---- validation / clean-up (never trust, always fix) ----
 const EXPLAINER_SHOTS = new Set(['app-tabs', 'app-tour', 'sales', 'supercar', 'penthouse', 'yacht', 'working', 'app-drop', 'app-demand', 'app-competition', 'app-supplier', 'app-score']);
+function slotHash(str) { let h = 2166136261; for (const ch of str) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return h; }
 const DASH = /[–—]/g;
 for (const v of plan.videos) {
   v.sauce_text = v.sauce_text.replace(DASH, ',').replace(/\s+-\s+/g, ', ').trim();
@@ -127,11 +128,19 @@ for (const v of plan.videos) {
       if (l.shot === v.lines[i - 1].shot && !l.shot.startsWith('app-')) l.shot = l.shot === 'penthouse' ? 'yacht' : 'penthouse';
     });
     const first = pov ? "F*ck it. Here's how you start AI dropshipping." : "Here's how you can start AI dropshipping.";
-    if (!/AI dropshipping/i.test(v.lines[0].text)) v.lines.unshift({shot: 'sales', step: 0, text: first.replace('AI dropshipping', '^AI dropshipping')});
-    v.lines[0].shot = 'sales';
+    // ---- v5: fixed SHORT structure, no brand name, light wording variety ----
+    const pick = (arr) => arr[(slotHash(v.slot + date) >>> 0) % arr.length];
+    const L = [];
+    L.push({shot: 'sales', step: 0, text: pov ? "F*ck=Fuck it. Here's how you start ^AI dropshipping." : "Here's how you can start ^AI dropshipping."});
+    L.push({shot: 'contents', step: 0, text: pick(["First, you need to validate. This is the basic structure. ^Demand, competition, supplier.", "First, you validate. Here's the basic structure. ^Demand, competition, supplier."])});
+    L.push({shot: 'demandline', step: 1, text: pick(["Demand. You want a steady line going up. That means the product is ^scaling, and people keep buying it.", "Demand. Look for a line that climbs steadily. That means it's ^scaling, and buyers keep coming back."])});
+    L.push({shot: 'pov', step: 2, text: pick(["Competition. A product can sell like crazy, but if 65+=sixty_five_plus stores {pov} sell it, it's !saturated.", "Competition. High sales mean nothing if 65+=sixty_five_plus stores {pov} already sell it. That's !saturated."])});
+    L.push({shot: 'pov', step: 3, text: pick(["Supplier. A good supplier {pov} means a good ^margin on every sale.", "Supplier. Find a solid supplier, {pov} so every sale leaves a real ^margin."])});
+    L.push({shot: 'sales', step: 0, text: "If you made it this far, comment the hardest part of product research, {sales} and DM me ^VALIDATE for my full validation workflow."});
+    v.lines = L;
+    v.hook_text = [pov ? "F*ck it. Here\u2019s how you start AI dropshipping." : "Here\u2019s how you can start AI dropshipping."];
+    if (false && (!/AI dropshipping/i.test(v.lines[0].text))) v.lines.unshift({shot: 'sales', step: 0, text: first.replace('AI dropshipping', '^AI dropshipping')});
     const fixCaps = (t) => t.replace(/ai dropshipping/gi, 'AI dropshipping').replace(/pov:?/i, 'POV:').replace(/^./, (c) => c.toUpperCase());
-    v.hook_text = [fixCaps((v.hook_text || [])[0] && /AI dropshipping/i.test(v.hook_text[0]) ? v.hook_text[0] : first)];
-    if (!/[.!?]$/.test(v.hook_text[0])) v.hook_text[0] += '.';
     v.intro_text = pov ? fixCaps(v.intro_text && /AI dropshipping/i.test(v.intro_text) ? v.intro_text : 'POV: You and your friends got rich from AI dropshipping.') : '';
     if (pov && !/[.!?]$/.test(v.intro_text)) v.intro_text += '.';
   } else if (!v.sauce_text) throw new Error(`${v.slot} sauce has no text`);

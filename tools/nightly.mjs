@@ -105,50 +105,54 @@ for (const v of plan.videos) {
       fs.writeFileSync(propsPath, JSON.stringify(props, null, 1));
       run('npx', ['remotion', 'render', 'src/index.ts', 'Sauce', out, `--props=${propsPath}`, '--timeout=120000', '--log=error'], 'render');
     } else {
-      const lines = [];
-      for (const [i, l] of v.lines.entries()) {
-        let marker;
-        if (l.shot.startsWith('app-')) {
-          // live screen recording of the real app (public/app/walk) with a moving mouse, camera following it
-          // app-tabs = the 4 validation tabs with mouse + arrows; app-demand = ONLY the demand graph + steady-climb line;
-          // others = live screen recording (calm camera)
-          const st = l.step ? ` step=${l.step}` : '';
-          if (l.shot === 'app-tabs') marker = `[tabs${st}]`;
-          else if (l.shot === 'app-demand') marker = `[demandchart${st}]`;
-          else marker = `[walk:${{'app-drop': 'demand', 'app-competition': 'competition', 'app-supplier': 'supplier', 'app-score': 'score', 'app-tour': 'tour'}[l.shot]}${st}]`;
-        } else if (l.shot.startsWith('g-')) {
-          marker = `[${l.shot} img=${thumb}${l.shot === 'g-score' ? ' ticks=demand|margin|competition' : ''}${l.step ? ` step=${l.step}` : ''}]`;
-        } else {
-          const clip = await pick(l.shot, taken);
-          const step = l.step ? ` step=${l.step}` : i === 0 ? ' step=0' : '';
-          // the first voiced shot (Shopify sales) carries the on-screen title; voice captions hidden under it
-          const hookLines = i === 0 ? (v.hook_text || []).map(enc).filter(Boolean) : [];
-          const hook = hookLines.length ? ` cap=none hook=${hookLines.join('|')}` : '';
-          const from = clip.from ? ` from=${clip.from}` : '';
-          marker = `[vid:_lib/${clip.file} grade=bright${step}${hook}${from}]`;
-          // long b-roll lines get a 2nd clip halfway through (owner: 2 vids instead of one long one)
-          const words = l.text.split(' ');
-          if (i > 0 && words.length > 12) {
-            const alt = l.shot === 'penthouse' ? 'yacht' : l.shot === 'yacht' ? 'penthouse' : l.shot;
-            const c2 = await pick(alt, taken);
-            const mid = Math.floor(words.length / 2);
-            words.splice(mid, 0, `[vid:_lib/${c2.file} grade=bright${c2.from ? ` from=${c2.from}` : ''}]`);
-            lines.push(`${marker} ${words.join(' ')}`);
-            continue;
-          }
-        }
-        lines.push(`${marker} ${l.text}`);
-      }
-      const end = await pick(Math.random() < 0.5 ? 'penthouse' : 'yacht', taken); // made it, then the DM graphic
-      lines.push(`[vid:_lib/${end.file} grade=bright step=0] Send me the word ^VALIDATE [g-dm] and I'll send you my *FREE checklist.`);
+      // owner-approved structure (2026-11-17, tools/make-mine.mjs): owner's own clips, mixed per video
+      const pov = v.hook_type === 'pov';
+      const oneOf = (arr) => arr[Math.floor(Math.random() * arr.length)];
+      const clipOf = async (tag) => `_lib/${(await pick(tag, taken)).file}`;
+      const V = (f, extra = '') => `[vid:${f} grade=bright${extra}]`;
+      const sp = (s) => s.replace(/s+/g, '_');
+      const AGE = 'Age 14 - 25';
+      const options = {sfx: 'minimal', tail: 0.15, voice: EXPLAINER_VOICE, speed: 1.1, stability: 0.6, style: 0.1};
+      if (pov) options.intro = {visual: `vid:${await clipOf('mintro')}`, seconds: 2.8, hook: ['POV: You make $15k a month with AI dropshipping the actual way.', AGE]};
+      const hookClip = await clipOf('mhook');
+      const ctaClip = await clipOf('mhook');
+      const bgC = await clipOf('mpov'), bgD = await clipOf('mpov');
+      const comp = [await clipOf('mpov'), await clipOf('mpov')];
+      const sup = [await clipOf('mpov'), await clipOf('mpov')];
+      const hookLine = pov ? "F*ck=Fuck it. Here's how you start ^AI dropshipping." : "Here's how you can start ^AI dropshipping.";
+      const hookCard = pov ? '' : ` cap=none hook=${sp('Here’s how you can start AI dropshipping.')}|${sp(AGE)}`;
+      // owner: say that we are validating a DROPSHIPPING PRODUCT (product research -> validation -> 3 parts)
+      const contents = oneOf([
+        'Start with product research, and validating your product. This includes ^demand, competition, and supplier.',
+        'It all starts with product research, and validating your dropshipping product. That includes ^demand, competition, and supplier.',
+        'Step one is product research. You validate your product before you sell it. That includes ^demand, competition, and supplier.',
+      ]);
+      const demand = oneOf([
+        'Demand. This shows how many sell every day. If the line keeps going up, the product is ^scaling.',
+        'Demand. Every bar is how many sold that day. A line that keeps climbing means it is ^scaling.',
+        'Demand. You are looking at sales every day. A line that keeps rising means it is ^scaling.',
+      ]);
+      const compL = oneOf([
+        ['Competition. A product can sell like crazy, but if 65+=sixty_five_plus stores', "sell it, it's !saturated."],
+        ['Competition. High sales mean nothing if 65+=sixty_five_plus stores', "already sell it. That's !saturated."],
+        ['Competition. Even a best seller is a trap if 65+=sixty_five_plus stores', "are selling it. That's !saturated."],
+      ]);
+      const supL = oneOf([
+        ['Supplier. A good supplier means a', 'good ^margin on every sale.'],
+        ['Supplier. Find a solid supplier,', 'so every sale leaves a real ^margin.'],
+        ['Supplier. The right supplier gives you a', 'healthy ^margin on every single sale.'],
+      ]);
+      const CTA_TXT = sp('Comment what the hardest step of validating is for you, and DM me "VALIDATE".') + '|' + sp("I'll be happy to send over my validation workflow.");
+      const lines = [
+        `${V(hookClip, ` step=0${hookCard}`)} ${hookLine}`,
+        `[g-contents bgvid=${bgC} ticks=demand|competition|supplier] ${contents}`,
+        `[g-demandsimple bgvid=${bgD} step=1] ${demand}`,
+        `${V(comp[0], ' step=2')} ${compL[0]} ${V(comp[1])} ${compL[1]}`,
+        `${V(sup[0], ' step=3')} ${supL[0]} ${V(sup[1])} ${supL[1]}`,
+        `${V(ctaClip, ` step=0 cap=none card=1 hook=${CTA_TXT}`)} Comment what the hardest step of validating is for you, and DM me ^VALIDATE. I'll be happy to send over my validation workflow.`,
+      ];
       const specPath = path.join(outDir, `${v.slot}.spec.json`);
-      // Adam at normal speed + steadier delivery (owner: sped-up version slurred words)
-      const options = {sfx: 'minimal', tail: 2.6, voice: EXPLAINER_VOICE, speed: 1.0, stability: 0.6, style: 0.1};
-      if (v.hook_type === 'pov') {
-        const fr = await pick('friends', taken);
-        options.intro = {visual: `vid:_lib/${fr.file}`, seconds: 2.8, hook: [v.intro_text]};
-      }
-      fs.writeFileSync(specPath, JSON.stringify({name, lines, options, props: {uniformText: true}}, null, 2));
+      fs.writeFileSync(specPath, JSON.stringify({name, lines, options, props: {uniformText: true, softCuts: true}}, null, 2));
       run('node', ['tools/build.mjs', specPath], 'voice + timing');
       run('npx', ['remotion', 'render', 'src/index.ts', 'Reel', out, `--props=${specPath.replace(/\.spec\.json$/, '.props.json')}`, '--timeout=120000', '--log=error'], 'render');
     }
@@ -164,6 +168,10 @@ for (const v of plan.videos) {
 // sauce posts get a random calm sound (added in TikTok at upload), no repeats within the day
 const sounds = JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog/sounds.json'), 'utf8')).sounds.sort(() => Math.random() - 0.5);
 for (const v of plan.videos) if (v.format === 'sauce') v.sound = sounds.pop();
+// explainers: trending motivational sound, rotated (owner: loud, not background-quiet)
+const exSounds = JSON.parse(fs.readFileSync(path.join(ROOT, 'catalog/explainer-sounds.json'), 'utf8')).sounds.sort(() => Math.random() - 0.5);
+let exI = 0;
+for (const v of plan.videos) if (v.format !== 'sauce') v.sound = exSounds[exI++ % exSounds.length];
 const cap = plan.videos.filter((v) => !only.length || only.includes(v.slot)).map((v) => {
   const r = results.find((x) => x.slot === v.slot);
   return [`${v.slot} (${v.format}) post at ${postTime(v.slot)} — ${r?.ok ? r.file : 'FAILED: ' + r?.error}`, `topic: ${v.topic}`, ...(v.sound ? [`SOUND (add in TikTok): ${v.sound.title} by ${v.sound.artist} (search "${v.sound.search}")`] : []), v.caption, v.hashtags.join(' '), ''].join('\n');

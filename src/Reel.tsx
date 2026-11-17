@@ -9,7 +9,7 @@ export type Word = {text: string; big: boolean; blue: boolean; red?: boolean; t:
 export type Group = {words: number[]; start: number; end: number};
 export type ReelScene = {visual: string; start: number; end: number; zoom?: number; items?: string[]; ticks?: (number | null)[]; transition?: string; cap?: string; [k: string]: any};
 export type Sfx = {name: string; t: number; vol?: number};
-export type ReelProps = {audio?: string; words: Word[]; groups: Group[]; scenes: ReelScene[]; sfx?: Sfx[]; duration: number; music?: string; musicVol?: number; uniformText?: boolean; audioDelay?: number};
+export type ReelProps = {audio?: string; words: Word[]; groups: Group[]; scenes: ReelScene[]; sfx?: Sfx[]; duration: number; music?: string; musicVol?: number; uniformText?: boolean; audioDelay?: number; softCuts?: boolean};
 
 const BLUE = '#2F7BFF';
 const RED = '#FF3B3B';
@@ -19,8 +19,14 @@ const OUTLINE = '0 0 2px #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000,
 const SWIPE = 6; // frames
 const DIRS: [number, number][] = [[1, 0], [0, 1], [-1, 0], [0, -1]];
 
-const Swipe: React.FC<{dir: [number, number]; first: boolean; flash?: boolean; children: React.ReactNode}> = ({dir, first, flash, children}) => {
+const Swipe: React.FC<{dir: [number, number]; first: boolean; flash?: boolean; fade?: boolean; children: React.ReactNode}> = ({dir, first, flash, fade, children}) => {
   const f = useCurrentFrame();
+  if (fade && !first) {
+    // subtle: quick cross-fade with a tiny settle, feels like one continuous video
+    const o = interpolate(f, [0, 7], [0, 1], {extrapolateRight: 'clamp'});
+    const s = interpolate(f, [0, 10], [1.03, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+    return <AbsoluteFill style={{opacity: o, transform: `scale(${s})`}}>{children}</AbsoluteFill>;
+  }
   if (flash) {
     // big hard cut: punch-in zoom + white flash
     const z = interpolate(f, [0, 8], [1.25, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
@@ -95,8 +101,17 @@ const HookCard: React.FC<{scenes: ReelScene[]}> = ({scenes}) => {
   const local = f - from;
   const o = interpolate(local, [0, 5, to - from - 5, to - from], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const lines: string[] = Array.isArray(s.hook) ? s.hook : [String(s.hook)];
+  if (s.card) {
+    return (
+      <div style={{position: 'absolute', left: 60, right: 60, top: 640, padding: '46px 44px', borderRadius: 34, background: 'rgba(0,0,0,0.62)', border: '2px solid rgba(255,255,255,0.18)', opacity: o, display: 'flex', flexDirection: 'column', gap: 26}}>
+        {lines.map((l, i) => (
+          <div key={i} style={{fontFamily: 'TikTok Sans', fontWeight: 700, fontSize: 54, lineHeight: 1.25, color: i === 0 ? '#fff' : '#39E46F', textAlign: 'center', textShadow: OUTLINE}}>{l}</div>
+        ))}
+      </div>
+    );
+  }
   return (
-    <div style={{position: 'absolute', left: 70, right: 70, top: s.visual === 'g-sales' ? 1380 : 520, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18, opacity: o, transform: `scale(${interpolate(local, [0, 6], [0.92, 1], {extrapolateRight: 'clamp'})})`}}>
+    <div style={{position: 'absolute', left: 70, right: 70, top: s.visual === 'g-sales' ? 1380 : s.visual === 'g-guru' ? 1640 : 520, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18, opacity: o, transform: `scale(${interpolate(local, [0, 6], [0.92, 1], {extrapolateRight: 'clamp'})})`}}>
       {lines.map((l, i) => (
         <div key={i} style={{fontFamily: 'TikTok Sans', fontWeight: 700, fontSize: i === 0 ? 58 : 44, lineHeight: 1.18, color: '#fff', textAlign: 'center', textShadow: OUTLINE}}>{l}</div>
       ))}
@@ -104,7 +119,7 @@ const HookCard: React.FC<{scenes: ReelScene[]}> = ({scenes}) => {
   );
 };
 
-export const Reel: React.FC<ReelProps> = ({audio, words, groups, scenes, sfx = [], music, musicVol = 0.12, uniformText, audioDelay = 0}) => {
+export const Reel: React.FC<ReelProps> = ({audio, words, groups, scenes, sfx = [], music, musicVol = 0.12, uniformText, audioDelay = 0, softCuts}) => {
   const {fps} = useVideoConfig();
   let swipeIdx = 0;
   return (
@@ -124,11 +139,11 @@ export const Reel: React.FC<ReelProps> = ({audio, words, groups, scenes, sfx = [
         const from = Math.round(s.start * fps);
         const flash = s.transition === 'flash';
         const noSwipe = i === 0 || s.transition === 'none' || flash;
-        const dur = Math.round((s.end - s.start) * fps) + (i + 1 < scenes.length && scenes[i + 1].transition === 'none' ? 0 : SWIPE);
+        const dur = Math.round((s.end - s.start) * fps) + (i + 1 < scenes.length && scenes[i + 1].transition === 'none' ? 0 : softCuts ? 8 : SWIPE);
         const dir = DIRS[noSwipe ? 0 : swipeIdx++ % 4];
         return (
           <Sequence key={i} from={from} durationInFrames={dur}>
-            <Swipe dir={dir} first={noSwipe} flash={flash}>
+            <Swipe dir={dir} first={i === 0} flash={flash} fade={softCuts && !flash}>
               <AbsoluteFill style={{background: '#000'}}>
                 <Visual name={s.visual} items={s.items} durationInFrames={dur} zoom={s.zoom} ticks={s.ticks} opts={s} index={i} />
               </AbsoluteFill>

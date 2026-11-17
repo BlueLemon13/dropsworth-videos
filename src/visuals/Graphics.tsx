@@ -1,5 +1,5 @@
 import React from 'react';
-import {Easing, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {Easing, Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import '@fontsource/tiktok-sans/500.css';
 import '@fontsource/tiktok-sans/700.css';
 
@@ -20,8 +20,17 @@ const useAnim = () => {
   return {f, fps, sp, lin};
 };
 
+export const BgVideo = React.createContext<string | null>(null);
 export const GBackground: React.FC = () => {
   const {f} = useAnim();
+  const bg = React.useContext(BgVideo);
+  if (bg) {
+    return (
+      <div style={{position: 'absolute', inset: 0, overflow: 'hidden', background: '#000'}}>
+        <OffthreadVideo src={staticFile(bg)} muted style={{position: 'absolute', inset: -40, width: 'calc(100% + 80px)', height: 'calc(100% + 80px)', objectFit: 'cover', filter: 'blur(14px) brightness(0.55) saturate(1.1)'}} />
+      </div>
+    );
+  }
   const shift = (f * 1.2) % 120;
   return (
     <div style={{position: 'absolute', inset: 0, overflow: 'hidden', background: 'radial-gradient(ellipse at 50% 60%, #1d4ed8 0%, #0b1a4a 45%, #050914 100%)'}}>
@@ -398,6 +407,166 @@ export const GSales: React.FC<{dur: number}> = ({dur}) => {
       </div>
       <div style={{position: 'absolute', left: 0, right: 0, top: 1500, textAlign: 'center', opacity: n > 2 ? 1 : 0}}>
         <span style={{fontFamily: M, fontWeight: 900, fontSize: 64, color: '#39E46F', textShadow: '0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000'}}>${total.toFixed(2)}</span>
+      </div>
+    </>
+  );
+};
+
+
+// ================= v5 explainer scenes (unbranded app crops) =================
+const STROKE = '0 0 2px #000, 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, -3px -3px 0 #000, 0 4px 0 #000';
+const Card: React.FC<{src: string; w: number; top: number; enter: number; children?: React.ReactNode}> = ({src, w, top, enter, children}) => (
+  <div style={{position: 'absolute', left: (1080 - w) / 2, width: w, top, borderRadius: 28, overflow: 'hidden', boxShadow: '0 40px 90px rgba(0,0,0,0.6)', background: '#faf7f0', opacity: enter, transform: `translateY(${(1 - enter) * 80}px) scale(${0.94 + 0.06 * enter})`}}>
+    <Img src={staticFile(src)} style={{width: '100%', display: 'block'}} />
+    {children}
+  </div>
+);
+
+// guru with eyes crossed out
+export const GGuru: React.FC<{dur: number}> = ({dur}) => {
+  const {f, sp} = useAnim();
+  const e = sp(0, 14);
+  const x1 = sp(8, 9), x2 = sp(12, 9);
+  const X = (cx: number, p: number) => (
+    <g transform={`translate(${cx} 0) scale(${p})`}>
+      <line x1={-46} y1={-46} x2={46} y2={46} stroke="#FF3B3B" strokeWidth={22} strokeLinecap="round" />
+      <line x1={46} y1={-46} x2={-46} y2={46} stroke="#FF3B3B" strokeWidth={22} strokeLinecap="round" />
+    </g>
+  );
+  return (
+    <>
+      <GBackground />
+      <svg width={1080} height={1920} style={{position: 'absolute', opacity: e}}>
+        <g transform={`translate(540 900) scale(${0.9 + 0.1 * e})`}>
+          <path d="M -330 520 Q -330 230 -150 190 L 150 190 Q 330 230 330 520 Z" fill="#11151f" stroke="#2f3a52" strokeWidth={6} />
+          <path d="M -60 190 L 0 300 L 60 190 Z" fill="#e8e8ea" />
+          <circle cx={0} cy={-20} r={175} fill="#1a2030" stroke="#2f3a52" strokeWidth={6} />
+          <rect x={-150} y={-60} width={130} height={62} rx={22} fill="#05070c" />
+          <rect x={20} y={-60} width={130} height={62} rx={22} fill="#05070c" />
+          <rect x={-22} y={-42} width={44} height={10} fill="#05070c" />
+          <g transform="translate(0 -30)">{X(-85, x1)}{X(85, x2)}</g>
+          <path d="M -60 80 Q 0 110 60 80" stroke="#2f3a52" strokeWidth={10} fill="none" strokeLinecap="round" />
+        </g>
+      </svg>
+      <div style={{position: 'absolute', left: 0, right: 0, top: 1480, textAlign: 'center', opacity: sp(10, 12)}}>
+        <span style={{fontFamily: M, fontWeight: 900, fontSize: 76, color: '#fff', textShadow: STROKE, position: 'relative'}}>
+          GURUS
+          <span style={{position: 'absolute', left: -10, right: -10, top: '52%', height: 12, background: '#FF3B3B', transform: `scaleX(${sp(16, 12)})`, transformOrigin: 'left'}} />
+        </span>
+      </div>
+    </>
+  );
+};
+
+// contents: the basic structure as a clean list of app crops (Demand, Competition, Supplier)
+export const GContents: React.FC<{dur: number; ticks?: (number | null)[]}> = ({dur, ticks}) => {
+  const {f, fps, sp} = useAnim();
+  const items = ['item-demand', 'item-competition', 'item-supplier'];
+  const gap = Math.max(6, Math.round(dur / 5));
+  return (
+    <>
+      <GBackground />
+      <div style={{position: 'absolute', left: 0, right: 0, top: 560, textAlign: 'center', opacity: sp(0, 14)}}>
+        <span style={{fontFamily: M, fontWeight: 900, fontSize: 58, color: '#fff', textShadow: STROKE}}>The basic structure</span>
+      </div>
+      {items.map((it, i) => {
+        const e = sp(6 + i * gap, 13);
+        return (
+          <div key={it} style={{position: 'absolute', left: 120, width: 840, top: 720 + i * 210, borderRadius: 26, overflow: 'hidden', boxShadow: '0 24px 60px rgba(0,0,0,0.5)', opacity: e, transform: `translateX(${(1 - e) * -120}px)`}}>
+            <Img src={staticFile(`app/crops/${it}.png`)} style={{width: '100%', display: 'block'}} />
+          </div>
+        );
+      })}
+      {items.map((it, i) => {
+        const at = ticks && ticks[i] != null ? Math.round((ticks[i] as number) * fps) : null;
+        if (at == null || f < at) return null;
+        const p = interpolate(f - at, [0, 7], [0, 1], {extrapolateRight: 'clamp'});
+        return (
+          <svg key={'c' + i} width={960} height={200} style={{position: 'absolute', left: 60, top: 720 + i * 210 - 26}}>
+            <ellipse cx={480} cy={100} rx={462} ry={88} fill="none" stroke="#FF3B3B" strokeWidth={10} pathLength={1} strokeDasharray={1} strokeDashoffset={1 - p} transform="rotate(-2 480 100)" />
+          </svg>
+        );
+      })}
+    </>
+  );
+};
+
+// demand: the real line graph + an animated uptrend arrow
+export const GDemandSimple: React.FC<{dur: number}> = ({dur}) => {
+  const {f, sp, lin} = useAnim();
+  const e = sp(0, 14);
+  const W = 1000, H = W * (1053 / 2178);
+  const z = interpolate(f, [0, dur], [1, 1.04], {extrapolateRight: 'clamp'});
+  const lab = (from: number) => lin(from, from + 8);
+  return (
+    <>
+      <GBackground />
+      <div style={{position: 'absolute', left: 0, right: 0, top: 560, textAlign: 'center', opacity: lab(4)}}>
+        <span style={{fontFamily: M, fontWeight: 900, fontSize: 60, color: '#fff', textShadow: STROKE}}>Sales every day</span>
+      </div>
+      <div style={{position: 'absolute', left: 0, right: 0, top: 0, transform: `scale(${z})`, transformOrigin: '50% 900px'}}>
+        <Card src="app/crops/demand-line.png" w={W} top={680} enter={e} />
+      </div>
+      <div style={{position: 'absolute', left: 60, top: 680 + H + 20, opacity: lab(dur * 0.25), fontFamily: M, fontWeight: 800, fontSize: 40, color: '#fff', textShadow: STROKE}}>4 weeks ago</div>
+      <div style={{position: 'absolute', right: 60, top: 680 + H + 20, opacity: lab(dur * 0.25), fontFamily: M, fontWeight: 800, fontSize: 40, color: '#fff', textShadow: STROKE}}>Today</div>
+      <div style={{position: 'absolute', left: 0, right: 0, top: 680 + H + 110, textAlign: 'center', opacity: lab(dur * 0.5)}}>
+        <span style={{fontFamily: M, fontWeight: 900, fontSize: 66, color: '#39E46F', textShadow: STROKE}}>Going up = scaling</span>
+      </div>
+    </>
+  );
+};
+
+export const GDemandLine: React.FC<{dur: number}> = ({dur}) => {
+  const {f, sp, lin} = useAnim();
+  const e = sp(0, 14);
+  const p = lin(8, Math.max(14, dur * 0.65), 0, 1, Easing.inOut(Easing.cubic));
+  const W = 1000, H = W * (1053 / 2178);
+  const ax = 70 + 860 * p, ay = H * 0.72 - (H * 0.5) * p;
+  const ang = Math.atan2(-(H * 0.5), 860) * 180 / Math.PI;
+  return (
+    <>
+      <GBackground />
+      <Card src="app/crops/demand-line.png" w={W} top={700} enter={e}>
+        <svg width={W} height={H} style={{position: 'absolute', left: 0, top: 0}}>
+          <line x1={70} y1={H * 0.72} x2={ax} y2={ay} stroke="#39E46F" strokeWidth={18} strokeLinecap="round" />
+          {p > 0.05 && <path d="M -40 -26 L 0 0 L -40 26" transform={`translate(${ax} ${ay}) rotate(${ang})`} stroke="#39E46F" strokeWidth={18} strokeLinecap="round" strokeLinejoin="round" fill="none" />}
+        </svg>
+      </Card>
+      <div style={{position: 'absolute', left: 0, right: 0, top: 700 + H + 50, textAlign: 'center', opacity: lin(dur * 0.65, dur * 0.65 + 8)}}>
+        <span style={{fontFamily: M, fontWeight: 900, fontSize: 70, color: '#39E46F', textShadow: STROKE}}>SCALING</span>
+      </div>
+    </>
+  );
+};
+
+// competition: the real card + "65+ STORES = SATURATED"
+export const GComp: React.FC<{dur: number}> = ({dur}) => {
+  const {sp} = useAnim();
+  const e = sp(0, 14);
+  const s1 = sp(Math.round(dur * 0.35), 9);
+  return (
+    <>
+      <GBackground />
+      <Card src="app/crops/competition.png" w={1020} top={760} enter={e} />
+      <div style={{position: 'absolute', left: 0, right: 0, top: 1010, textAlign: 'center', transform: `scale(${2 - s1}) rotate(-4deg)`, opacity: s1}}>
+        <div style={{fontFamily: M, fontWeight: 900, fontSize: 96, color: '#fff', textShadow: STROKE}}>65+ STORES</div>
+        <div style={{display: 'inline-block', marginTop: 14, fontFamily: M, fontWeight: 900, fontSize: 84, color: '#fff', background: '#FF3B3B', padding: '6px 34px', borderRadius: 18}}>SATURATED</div>
+      </div>
+    </>
+  );
+};
+
+// supplier: the real supplier stats + "GOOD MARGIN"
+export const GSup: React.FC<{dur: number}> = ({dur}) => {
+  const {sp} = useAnim();
+  const e = sp(0, 14);
+  const s1 = sp(Math.round(dur * 0.4), 10);
+  return (
+    <>
+      <GBackground />
+      <Card src="app/crops/supplier.png" w={1020} top={780} enter={e} />
+      <div style={{position: 'absolute', left: 0, right: 0, top: 1040, textAlign: 'center', opacity: s1, transform: `scale(${0.8 + 0.2 * s1})`}}>
+        <span style={{fontFamily: M, fontWeight: 900, fontSize: 84, color: '#fff', background: '#22C55E', padding: '8px 36px', borderRadius: 20, textShadow: '0 3px 0 rgba(0,0,0,0.35)'}}>GOOD MARGIN</span>
       </div>
     </>
   );

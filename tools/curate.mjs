@@ -16,24 +16,29 @@ const PICKS = {
   phone: ['B6', 'B7'],                                    // scrolling TikTok
   product: ['N0', 'N2', 'N3', 'N5', 'N10', 'N11', 'N14'], // real viral dropshipping products
   supercar: ['P1', 'P2', 'P4', 'P8', 'P9', 'P12', 'P3'], // POV driving only (owner: always POV), no McLaren
-  sales: ['G15', 'X6', 'X2'], // REAL Shopify sales footage only (owner: never self-made). X1/X3 rejected: burned-in text
+  sales: ['G15', 'W2'], // REAL Shopify notifications on a phone (W4 removed: opens on a person)
   penthouse: ['P24', 'S13', 'S14', 'S19', 'N22', 'N24'], // POV-style views from penthouses
   friends: ['F16', 'F8', 'F12', 'F6'], // POV hook intro: rich young friends with supercars (F7 McLaren excluded)
+  pov: ['Y1', 'Y3', 'Y4', 'Y5', 'Y7', 'Y8', 'Y9', 'Y10', 'Y11', 'W11', 'W14', 'W15', 'W13', 'W7'], // + hands-in-frame rich lifestyle POV (Rolls wheel + watch, Dubai drive, wrist watch, superyacht, palm walk) // POV luxury: jet window, jet tarmac, car door to jet, Lambo dash night, infinity pools, iced Rolex, sunset terrace
   yacht: ['P26', 'P31', 'P32', 'P33', 'P30', 'P29', 'P34', 'P25'], // POV yacht / boat views
   money: ['A13', 'A14', 'A12', 'A16'],                    // cash
   // calm, slow, moving, SHARP + BRIGHT ENOUGH (removed: A21 watermark, A4 blurry, A19 + A9 too dark/low quality,
   // S15 TikTok watermark, S6 burned-in text). S/T = MacBook sessions, penthouses, non-McLaren cars (2026-11-16).
   sauce: ['B0', 'A24', 'N19', 'N22', 'N24', 'B16', 'S13', 'S14', 'S19', 'S23', 'S24', 'T0', 'T1'], // cozy MacBook clips S1 S4 S8 S11 removed: MacBooks must look RICH (black, luxury setting)
+  // owner's own saves (2026-11-17). mhook = real Shopify notifications on a phone, mpov = rich POV b-roll, mintro = silent POV intro
+  mhook: ['mine/1089589703636819985', 'mine/1089589703636819880', 'mine/1089589703636820004', 'mine/1089589703636819616', 'mine/1089589703636819643'],
+  mpov: ['mine/1089589703636819229', 'mine/1089589703636819493', 'mine/1089589703636819557', 'mine/1089589703636819701', 'mine/1089589703636819757', 'mine/1089589703636819778', 'mine/1089589703636820013'],
+  mintro: ['mine/1089589703636819229', 'mine/1089589703636819557'],
 };
 // product photo shown inside the store-grid / scorecard graphics
 const PRODUCT_THUMB = 'N14';
-const SHEETS = {A: 'v-all', B: 'v-all2', N: 'v-new', M: 'v-new2', G: 'v-g1', C: 'v-car', S: 'v-s1', T: 'v-s2', P: 'v-pov', F: 'v-fr', X: 'v-sx'};
+const SHEETS = {A: 'v-all', B: 'v-all2', N: 'v-new', M: 'v-new2', G: 'v-g1', C: 'v-car', S: 'v-s1', T: 'v-s2', P: 'v-pov', F: 'v-fr', X: 'v-sx', Y: 'v-pv', W: 'v-w'};
 const GH = process.env.GH_BIN || 'C:\\Program Files\\GitHub CLI\\gh.exe';
 const REPO = 'BlueLemon13/dropsworth-videos';
 
 const lib = JSON.parse(fs.readFileSync(path.join(ROOT, 'public/bvideo/library.json'), 'utf8'));
 const byFile = new Map(lib.map((x) => [x.file, x]));
-const sheetFile = (k) => JSON.parse(fs.readFileSync(path.join(ROOT, 'output/sheets', `${SHEETS[k[0]]}.json`), 'utf8')).files[Number(k.slice(1))].replace(/^bvideo\//, '');
+const sheetFile = (k) => k.startsWith('mine/') ? k + '.mp4' : JSON.parse(fs.readFileSync(path.join(ROOT, 'output/sheets', `${SHEETS[k[0]]}.json`), 'utf8')).files[Number(k.slice(1))].replace(/^bvideo\//, '');
 
 const clips = new Map(); // id -> entry
 for (const [tag, refs] of Object.entries(PICKS)) {
