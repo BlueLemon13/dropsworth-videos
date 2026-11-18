@@ -1,5 +1,5 @@
 // Morning: download the latest nightly run's locked videos, unlock them, and save them to
-// E:\all dropsworth videos here\<date>\ (falls back to output/<date>/ if E: isn't plugged in).
+// output/<date>/ (the review area). After posting, tools/save-posted.mjs files the videos on E: by type.
 // usage: node tools/fetch-day.mjs [runId]
 import fs from 'node:fs';
 import path from 'node:path';
