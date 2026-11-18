@@ -174,7 +174,7 @@ let exI = 0;
 for (const v of plan.videos) if (v.format !== 'sauce') v.sound = exSounds[exI++ % exSounds.length];
 const cap = plan.videos.filter((v) => !only.length || only.includes(v.slot)).map((v) => {
   const r = results.find((x) => x.slot === v.slot);
-  return [`${v.slot} (${v.format}) post at ${postTime(v.slot)} — ${r?.ok ? r.file : 'FAILED: ' + r?.error}`, `topic: ${v.topic}`, ...(v.sound ? [`SOUND (add in TikTok): ${v.sound.title} by ${v.sound.artist} (search "${v.sound.search}")${v.format !== "sauce" ? ", volume -30 dB" : ""}`] : []), v.caption, v.hashtags.join(' '), ''].join('\n');
+  return [`${v.slot} (${v.format}) post at ${postTime(v.slot)} — ${r?.ok ? r.file : 'FAILED: ' + r?.error}`, `topic: ${v.topic}`, ...(v.sound ? [`SOUND (add in TikTok): ${v.sound.title} by ${v.sound.artist} (search "${v.sound.search}")${v.format !== "sauce" ? ", volume -20 dB" : ""}`] : []), v.caption, v.hashtags.join(' '), ''].join('\n');
 }).join('\n');
 fs.writeFileSync(path.join(outDir, 'captions.txt'), `Dropsworth videos for ${date}\nAccount A = @dropsworth.app, Account B = second account. 2 explainers + 2 sauce each. Tick "AI-generated content" on upload.\n\n${cap}`);
 fs.mkdirSync(path.dirname(statePath), {recursive: true});
