@@ -29,7 +29,8 @@ walk(tmp);
 if (!found.length) throw new Error('No locked files in that run');
 const date = found.map((f) => f.match(/\d{4}-\d{2}-\d{2}/)?.[0]).find(Boolean) || 'unknown-date';
 
-const base = fs.existsSync('E:\\') ? SAVE_ROOT : path.join(ROOT, 'output');
+// review area on the PC; E: only gets videos once they're posted (tools/save-posted.mjs, owner's folder layout)
+const base = path.join(ROOT, 'output');
 const dest = path.join(base, date);
 fs.mkdirSync(dest, {recursive: true});
 for (const f of found) {
