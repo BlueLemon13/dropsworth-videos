@@ -245,6 +245,54 @@
    "slot": "B4",
    "topic": "AOV upsells that double profit per order",
    "hook": "Casual flex"
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "A1",
+   "topic": "competition check: how many stores is too many",
+   "hook": "POV how-to promise"
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "A2",
+   "topic": "the product score: pick the highest scoring product",
+   "hook": "direct how-to"
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "A3",
+   "topic": "how much to spend testing a product",
+   "hook": "casual flex"
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "A4",
+   "topic": "I quit after 2 products mindset trap",
+   "hook": "POV self-deprecating"
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "B1",
+   "topic": "price anchoring and bundles for margin",
+   "hook": "POV exact-steps how-to"
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "B2",
+   "topic": "when to kill a product (clear numbers)",
+   "hook": "direct save-this how-to"
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "B3",
+   "topic": "cost per purchase vs profit per order",
+   "hook": "casual secret"
+  },
+  {
+   "date": "2026-11-19",
+   "slot": "B4",
+   "topic": "branding vs generic store",
+   "hook": "POV"
   }
  ],
  "clips": {
@@ -284,16 +332,16 @@
   "e1_AfqPShwXj_NDJYkjoU37yu_uhYw1ghj6eHEzzv2sSS5tmwZIjXUW": 1,
   "e1_AfqPShx5dhHUvOC6Hcb2MWgQaaZXuk0WuvLPXq6bsmcHcIRwf8_vWw": 1,
   "e1_AfqPShw4F87Ae6QjSETh1Wrld7LKUiAwc-avr7L2YTzF-joONofJ": 1,
-  "e1_AfqPShwLN08iFDDSipBV9nF9BYW0xEOIGKFvTSabJ4bFoxmAhlOdsg": 4,
+  "e1_AfqPShwLN08iFDDSipBV9nF9BYW0xEOIGKFvTSabJ4bFoxmAhlOdsg": 5,
   "e1_AfqPShxG3Thx5Vs2aCIr-byiwCq89fZt5dAdYMl0PGq-iDHMkcMk0Q": 1,
   "e1_AfqPShwWqXUDitO-UBcqAYOq0bHY6BhudzOthFs3OAbaxD0CRYU0": 1,
   "e1_AfqPShzKP9dzISDFn4P9QQ_9OptbnVxEEpKzBEcfQYPWX0g88teQcQ": 4,
-  "e1_AfqPShyupTeF_8OAUyGVLFBTElms-AjY4WBG9rDFNmfeGRngherCcg": 3,
+  "e1_AfqPShyupTeF_8OAUyGVLFBTElms-AjY4WBG9rDFNmfeGRngherCcg": 4,
   "e1_AfqPShycG-93VFGGIsf3VGaoBoty9C62NKoYrOw2vp8fmj8RkuTm": 5,
   "e1_AfqPShwgg2uXh8Zdcn--ltkngU9hEnR_Y_Oy4yT_yUYrkex0rp9SIg": 6,
-  "e1_AfqPShxShlpPj3BWA3lMKxbZ_kXk3NbyJjZHGTTQZI9Qfeu_8Bpy": 4,
+  "e1_AfqPShxShlpPj3BWA3lMKxbZ_kXk3NbyJjZHGTTQZI9Qfeu_8Bpy": 5,
   "e1_AfqPShw7esilH3z0Qn5Z34YAbtTHyIU0c3NBW5D7GGpr0vxEMju8": 5,
-  "e1_AfqPShyhwMNKOkHzQ8aTzjSMae9XB_E8Y_9ZlFBJ3nrK6SmaSYA": 3,
+  "e1_AfqPShyhwMNKOkHzQ8aTzjSMae9XB_E8Y_9ZlFBJ3nrK6SmaSYA": 4,
   "e1_AfqPShybSyCBN10YFl1rG3IiLk69aOTX4k-ExhfvNNg5XX-4pt--": 4,
   "e1_AfqPShzwDjcI8pMG8VAKzqyzCESBa6V8kiyXKdnaBw_iZhMSI0Cg": 4,
   "e1_AfqPShxijaqxYO7LbacJehgrr5KMgPO2heZsZHr_CzvUhSgylQ": 1,
@@ -311,17 +359,17 @@
   "e1_AfqPShxRjr2TLzXMM4cvjnj7Rwf3P-heXrG7og_qbo0vsJVYFI_P": 1,
   "e1_AfqPShzCEF1aDn94D4MJZjOg4o9WnKiUy_NszFEffptFHWUG5xr5": 1,
   "e1_AfqPShyC6Pjx64zFg5Eo9T_ka5LeES4FFw92XBAt01lWgX9GaF5c": 1,
-  "1089589703636819557": 7,
-  "1089589703636819880": 2,
-  "1089589703636819985": 3,
-  "1089589703636819701": 7,
-  "1089589703636819229": 6,
-  "1089589703636819493": 6,
-  "1089589703636820013": 6,
-  "1089589703636819778": 6,
-  "1089589703636819757": 7,
-  "1089589703636819643": 3,
-  "1089589703636820004": 3,
-  "1089589703636819616": 3
+  "1089589703636819557": 11,
+  "1089589703636819880": 4,
+  "1089589703636819985": 4,
+  "1089589703636819701": 10,
+  "1089589703636819229": 10,
+  "1089589703636819493": 10,
+  "1089589703636820013": 10,
+  "1089589703636819778": 10,
+  "1089589703636819757": 10,
+  "1089589703636819643": 4,
+  "1089589703636820004": 5,
+  "1089589703636819616": 5
  }
 }
