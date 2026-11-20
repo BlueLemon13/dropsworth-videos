@@ -341,6 +341,54 @@
    "slot": "B4",
    "topic": "the boring part is where the money is",
    "hook": "Casual flex"
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "A1",
+   "topic": "start from a product already selling, not a random idea",
+   "hook": "How-to promise"
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "A2",
+   "topic": "profit math with the supplier check before ads",
+   "hook": "Direct how-to"
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "A3",
+   "topic": "validating your price before you launch",
+   "hook": "Mistake"
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "A4",
+   "topic": "validating demand from real daily orders",
+   "hook": "Flex"
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "B1",
+   "topic": "spotting saturated products with the competition step",
+   "hook": "POV how-to"
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "B2",
+   "topic": "reading demand and the product score in two steps",
+   "hook": "Direct save-this how-to"
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "B3",
+   "topic": "validating product ideas against real buyers",
+   "hook": "Identity"
+  },
+  {
+   "date": "2026-11-21",
+   "slot": "B4",
+   "topic": "validating your first ten orders before ads",
+   "hook": "Casual secret"
   }
  ],
  "clips": {
@@ -384,12 +432,12 @@
   "e1_AfqPShxG3Thx5Vs2aCIr-byiwCq89fZt5dAdYMl0PGq-iDHMkcMk0Q": 1,
   "e1_AfqPShwWqXUDitO-UBcqAYOq0bHY6BhudzOthFs3OAbaxD0CRYU0": 1,
   "e1_AfqPShzKP9dzISDFn4P9QQ_9OptbnVxEEpKzBEcfQYPWX0g88teQcQ": 5,
-  "e1_AfqPShyupTeF_8OAUyGVLFBTElms-AjY4WBG9rDFNmfeGRngherCcg": 4,
-  "e1_AfqPShycG-93VFGGIsf3VGaoBoty9C62NKoYrOw2vp8fmj8RkuTm": 5,
+  "e1_AfqPShyupTeF_8OAUyGVLFBTElms-AjY4WBG9rDFNmfeGRngherCcg": 6,
+  "e1_AfqPShycG-93VFGGIsf3VGaoBoty9C62NKoYrOw2vp8fmj8RkuTm": 6,
   "e1_AfqPShwgg2uXh8Zdcn--ltkngU9hEnR_Y_Oy4yT_yUYrkex0rp9SIg": 6,
   "e1_AfqPShxShlpPj3BWA3lMKxbZ_kXk3NbyJjZHGTTQZI9Qfeu_8Bpy": 5,
   "e1_AfqPShw7esilH3z0Qn5Z34YAbtTHyIU0c3NBW5D7GGpr0vxEMju8": 5,
-  "e1_AfqPShyhwMNKOkHzQ8aTzjSMae9XB_E8Y_9ZlFBJ3nrK6SmaSYA": 4,
+  "e1_AfqPShyhwMNKOkHzQ8aTzjSMae9XB_E8Y_9ZlFBJ3nrK6SmaSYA": 5,
   "e1_AfqPShybSyCBN10YFl1rG3IiLk69aOTX4k-ExhfvNNg5XX-4pt--": 5,
   "e1_AfqPShzwDjcI8pMG8VAKzqyzCESBa6V8kiyXKdnaBw_iZhMSI0Cg": 4,
   "e1_AfqPShxijaqxYO7LbacJehgrr5KMgPO2heZsZHr_CzvUhSgylQ": 1,
@@ -407,17 +455,17 @@
   "e1_AfqPShxRjr2TLzXMM4cvjnj7Rwf3P-heXrG7og_qbo0vsJVYFI_P": 1,
   "e1_AfqPShzCEF1aDn94D4MJZjOg4o9WnKiUy_NszFEffptFHWUG5xr5": 1,
   "e1_AfqPShyC6Pjx64zFg5Eo9T_ka5LeES4FFw92XBAt01lWgX9GaF5c": 1,
-  "1089589703636819557": 14,
-  "1089589703636819880": 6,
-  "1089589703636819985": 6,
-  "1089589703636819701": 14,
-  "1089589703636819229": 14,
-  "1089589703636819493": 14,
-  "1089589703636820013": 14,
-  "1089589703636819778": 14,
-  "1089589703636819757": 13,
-  "1089589703636819643": 6,
-  "1089589703636820004": 6,
-  "1089589703636819616": 6
+  "1089589703636819557": 18,
+  "1089589703636819880": 8,
+  "1089589703636819985": 8,
+  "1089589703636819701": 18,
+  "1089589703636819229": 18,
+  "1089589703636819493": 18,
+  "1089589703636820013": 17,
+  "1089589703636819778": 17,
+  "1089589703636819757": 17,
+  "1089589703636819643": 7,
+  "1089589703636820004": 7,
+  "1089589703636819616": 8
  }
 }
