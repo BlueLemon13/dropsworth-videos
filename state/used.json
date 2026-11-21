@@ -389,6 +389,54 @@
    "slot": "B4",
    "topic": "validating your first ten orders before ads",
    "hook": "Casual secret"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "A1",
+   "topic": "dropshipping isn't dead, you're picking the wrong products",
+   "hook": "POV how-to promise"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "A2",
+   "topic": "why your first ten products failed, and the three checks that fix it",
+   "hook": "Direct save-this how-to"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "A3",
+   "topic": "validating your niche against your own numbers, not someone else's screenshots",
+   "hook": "POV self-deprecating"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "A4",
+   "topic": "validating your second product while the first one runs",
+   "hook": "Casual flex"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "B1",
+   "topic": "a five minute check before you open ad manager",
+   "hook": "POV step-by-step"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "B2",
+   "topic": "three checks before you put money in",
+   "hook": "Direct save-this how-to"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "B3",
+   "topic": "validating a gut feeling with a number",
+   "hook": "Identity"
+  },
+  {
+   "date": "2026-11-22",
+   "slot": "B4",
+   "topic": "validating the margin on every product, cheap and expensive, before ads",
+   "hook": "POV"
   }
  ],
  "clips": {
@@ -402,7 +450,7 @@
   "e1_AfqPShxKEub2y35LEwcj5-6_FC_RVAYxT80nV7dy0A_jKZ07Twg": 5,
   "e1_AfqPShxid5adI9k1IDFQZcY79llCvTutrbNTYMUlxamltiDe9yRw": 4,
   "e1_AfqPShzZao19Dk052EWZB4LHwC-D-1CcHmZtGXyYpSa-9bkJuZQA": 4,
-  "e1_AfqPShzK2xUkMqchMBS9X3J8hdRULI2ZyLPkp8ootY039Ctou1U": 5,
+  "e1_AfqPShzK2xUkMqchMBS9X3J8hdRULI2ZyLPkp8ootY039Ctou1U": 6,
   "e1_AfqPShz0T7GzOEWbTNBiCotYwNRwOkhZDdJsOJWkwonZ2Shb1w": 5,
   "e1_AfqPShyq2P8Jtius1kbjFZbD91LpDdkXc9Tsr8AMJ93J2SIKqeY": 4,
   "e1_AfqPShzL55YMsMDQ0j0JktjQFhcvyjNtM4MYFzFpux_kudWcy3E5": 3,
@@ -431,13 +479,13 @@
   "e1_AfqPShwLN08iFDDSipBV9nF9BYW0xEOIGKFvTSabJ4bFoxmAhlOdsg": 5,
   "e1_AfqPShxG3Thx5Vs2aCIr-byiwCq89fZt5dAdYMl0PGq-iDHMkcMk0Q": 1,
   "e1_AfqPShwWqXUDitO-UBcqAYOq0bHY6BhudzOthFs3OAbaxD0CRYU0": 1,
-  "e1_AfqPShzKP9dzISDFn4P9QQ_9OptbnVxEEpKzBEcfQYPWX0g88teQcQ": 5,
+  "e1_AfqPShzKP9dzISDFn4P9QQ_9OptbnVxEEpKzBEcfQYPWX0g88teQcQ": 6,
   "e1_AfqPShyupTeF_8OAUyGVLFBTElms-AjY4WBG9rDFNmfeGRngherCcg": 6,
   "e1_AfqPShycG-93VFGGIsf3VGaoBoty9C62NKoYrOw2vp8fmj8RkuTm": 6,
   "e1_AfqPShwgg2uXh8Zdcn--ltkngU9hEnR_Y_Oy4yT_yUYrkex0rp9SIg": 6,
   "e1_AfqPShxShlpPj3BWA3lMKxbZ_kXk3NbyJjZHGTTQZI9Qfeu_8Bpy": 5,
-  "e1_AfqPShw7esilH3z0Qn5Z34YAbtTHyIU0c3NBW5D7GGpr0vxEMju8": 5,
-  "e1_AfqPShyhwMNKOkHzQ8aTzjSMae9XB_E8Y_9ZlFBJ3nrK6SmaSYA": 5,
+  "e1_AfqPShw7esilH3z0Qn5Z34YAbtTHyIU0c3NBW5D7GGpr0vxEMju8": 6,
+  "e1_AfqPShyhwMNKOkHzQ8aTzjSMae9XB_E8Y_9ZlFBJ3nrK6SmaSYA": 6,
   "e1_AfqPShybSyCBN10YFl1rG3IiLk69aOTX4k-ExhfvNNg5XX-4pt--": 5,
   "e1_AfqPShzwDjcI8pMG8VAKzqyzCESBa6V8kiyXKdnaBw_iZhMSI0Cg": 4,
   "e1_AfqPShxijaqxYO7LbacJehgrr5KMgPO2heZsZHr_CzvUhSgylQ": 1,
@@ -455,17 +503,17 @@
   "e1_AfqPShxRjr2TLzXMM4cvjnj7Rwf3P-heXrG7og_qbo0vsJVYFI_P": 1,
   "e1_AfqPShzCEF1aDn94D4MJZjOg4o9WnKiUy_NszFEffptFHWUG5xr5": 1,
   "e1_AfqPShyC6Pjx64zFg5Eo9T_ka5LeES4FFw92XBAt01lWgX9GaF5c": 1,
-  "1089589703636819557": 18,
-  "1089589703636819880": 8,
-  "1089589703636819985": 8,
-  "1089589703636819701": 18,
-  "1089589703636819229": 18,
-  "1089589703636819493": 18,
-  "1089589703636820013": 17,
-  "1089589703636819778": 17,
-  "1089589703636819757": 17,
-  "1089589703636819643": 7,
-  "1089589703636820004": 7,
-  "1089589703636819616": 8
+  "1089589703636819557": 22,
+  "1089589703636819880": 9,
+  "1089589703636819985": 9,
+  "1089589703636819701": 22,
+  "1089589703636819229": 21,
+  "1089589703636819493": 21,
+  "1089589703636820013": 21,
+  "1089589703636819778": 21,
+  "1089589703636819757": 21,
+  "1089589703636819643": 9,
+  "1089589703636820004": 9,
+  "1089589703636819616": 10
  }
 }
