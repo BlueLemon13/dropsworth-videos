@@ -14,7 +14,7 @@ const G = path.join(ROOT, 'output/guide');
 const slim = process.env.GUIDE_SLIM || (process.platform === 'win32' ? 'E:/tmp/guidepub' : path.join(os.tmpdir(), 'guidepub'));
 fs.rmSync(slim, {recursive: true, force: true});
 const all = keys.map((k) => [k, JSON.parse(fs.readFileSync(path.join(G, `props/${k}.json`), 'utf8'))]);
-const need = new Set(['walk/paper.png', 'guide/logo.png']);
+const need = new Set(['walk/paper.png', 'guide/logo.png', 'guide/cover-phone.jpg']);
 for (const [, p] of all) { need.add(p.audio); p.shots.forEach((s) => s.file && need.add(s.file)); p.pops.forEach((x) => { need.add(x.src); (x.row || []).forEach((r) => need.add(r)); }); }
 for (const f of need) { fs.mkdirSync(path.dirname(path.join(slim, f)), {recursive: true}); fs.copyFileSync(path.join(ROOT, 'public', f), path.join(slim, f)); }
 
