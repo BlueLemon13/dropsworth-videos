@@ -101,6 +101,19 @@ const HookCard: React.FC<{scenes: ReelScene[]}> = ({scenes}) => {
   const local = f - from;
   const o = interpolate(local, [0, 5, to - from - 5, to - from], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const lines: string[] = Array.isArray(s.hook) ? s.hook : [String(s.hook)];
+  // Big-number hook (UGC money-number style): line 1 is a huge number, visible from frame 0 so it doubles as the cover.
+  if ((s as any).hookstyle === 'num') {
+    const on = interpolate(local, [to - from - 5, to - from], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+    const color = (s as any).numcolor === 'green' ? '#39E46F' : '#FF3B3B';
+    return (
+      <div style={{position: 'absolute', left: 50, right: 50, top: 430, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, opacity: on}}>
+        <div style={{fontFamily: 'TikTok Sans', fontWeight: 800, fontSize: 230, lineHeight: 1, color, textAlign: 'center', textShadow: OUTLINE, letterSpacing: -4}}>{lines[0]}</div>
+        {lines.slice(1).map((l, i) => (
+          <div key={i} style={{fontFamily: 'TikTok Sans', fontWeight: 700, fontSize: 62, lineHeight: 1.15, color: '#fff', textAlign: 'center', textShadow: OUTLINE}}>{l}</div>
+        ))}
+      </div>
+    );
+  }
   if (s.card) {
     return (
       <div style={{position: 'absolute', left: 60, right: 60, top: 640, padding: '46px 44px', borderRadius: 34, background: 'rgba(0,0,0,0.62)', border: '2px solid rgba(255,255,255,0.18)', opacity: o, display: 'flex', flexDirection: 'column', gap: 26}}>

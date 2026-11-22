@@ -1,0 +1,47 @@
+name: guide-render
+
+# Renders the "dropshipping guide" videos in parallel. Inputs (clips, voice, cards, props) come from the
+# encrypted release asset guide-assets/guide-assets.tar.lock, unlocked with DW_ARCHIVE_KEY.
+on:
+  push:
+    branches: [guide-render]
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        key: [dogA, dogB, dogC, pillowA, pillowB, pillowC]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: System packages (emoji font)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-color-emoji
+      - run: npm ci
+      - name: Headless browser for Remotion
+        run: npx remotion browser ensure
+      - name: Get and unlock render assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DW_ARCHIVE_KEY: ${{ secrets.DW_ARCHIVE_KEY }}
+        run: |
+          gh release download guide-assets -p guide-assets.tar.lock -D /tmp
+          node tools/crypt.mjs unlock /tmp/guide-assets.tar.lock /tmp/guide-assets.tar
+          tar -xf /tmp/guide-assets.tar
+          rm /tmp/guide-assets.tar /tmp/guide-assets.tar.lock
+      - name: Render ${{ matrix.key }}
+        env:
+          GUIDE_CONC: '4'
+          GUIDE_OUT: out
+        run: node tools/render-guide.mjs ${{ matrix.key }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: guide-${{ matrix.key }}
+          path: out/${{ matrix.key }}.mp4
+          retention-days: 7
