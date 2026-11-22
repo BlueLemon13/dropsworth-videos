@@ -10,7 +10,7 @@ import {Footage, PaperImg, WalkShot} from './Walk';
 export type GuideWord = {html: string; t0: number};
 export type GuideChunk = {t0: number; t1: number; words: GuideWord[]; paper: boolean; fill?: boolean; glue?: boolean};
 export type GuidePop = {t0: number; t1: number; src: string; logo?: boolean; tilt?: number; wide?: boolean; video?: boolean; row?: string[]; delays?: number[]};
-export type GuideProps = {audio: string; duration: number; shots: WalkShot[]; chunks: GuideChunk[]; pops: GuidePop[]};
+export type GuideProps = {audio: string; duration: number; shots: WalkShot[]; chunks: GuideChunk[]; pops: GuidePop[]; title?: string; titleUntil?: number};
 
 const FPS = 30;
 const fr = (s: number) => Math.round(s * FPS);
@@ -107,7 +107,21 @@ const Pop: React.FC<{p: GuidePop}> = ({p}) => {
   );
 };
 
-export const Guide: React.FC<GuideProps> = ({audio, shots, chunks, pops}) => {
+// Cover title in TikTok classic text (white, thin black outline, no box) over the opening, so the
+// first frame works as the thumbnail.
+const Title: React.FC<{text: string}> = ({text}) => (
+  <AbsoluteFill>
+    <PaperImg />
+    <AbsoluteFill style={{alignItems: 'center', paddingTop: 230}}>
+      <div style={{width: 900, fontFamily: 'TikTok Sans', fontWeight: 800, fontSize: 112, lineHeight: 1.1, letterSpacing: -3, color: '#fff', WebkitTextStroke: '12px #000', paintOrder: 'stroke fill', textAlign: 'center'}}>{text.split(/($d+k–$d+k)/).map((x, i) => (i % 2 ? <span key={i} style={{whiteSpace: 'nowrap'}}>{x}</span> : x))}</div>
+      <div style={{marginTop: 60, width: 560, height: 900, background: '#fff', padding: 14, borderRadius: 26, boxShadow: '0 30px 60px rgba(40,30,10,0.35)', transform: 'rotate(-3deg)'}}>
+        <Img src={staticFile('guide/cover-phone.jpg')} style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: 14}} />
+      </div>
+    </AbsoluteFill>
+  </AbsoluteFill>
+);
+
+export const Guide: React.FC<GuideProps> = ({audio, shots, chunks, pops, title, titleUntil}) => {
   return (
     <AbsoluteFill style={{background: '#000'}}>
       <Audio src={staticFile(audio)} />
@@ -126,6 +140,11 @@ export const Guide: React.FC<GuideProps> = ({audio, shots, chunks, pops}) => {
           <Caption c={c} pops={pops} />
         </Sequence>
       ))}
+      {title && (
+        <Sequence from={0} durationInFrames={fr(titleUntil ?? 1.5)}>
+          <Title text={title} />
+        </Sequence>
+      )}
     </AbsoluteFill>
   );
 };
