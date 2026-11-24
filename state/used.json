@@ -533,6 +533,54 @@
    "slot": "B4",
    "topic": "validating an idea with a waitlist before ordering stock",
    "hook": "Casual flex"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": "A1",
+   "topic": "full four-step validation: demand to product score",
+   "hook": "POV how-to promise"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": "A2",
+   "topic": "reading demand, spotting saturation, picking by score",
+   "hook": "Direct save-this how-to"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": "A3",
+   "topic": "three validated products beat thirty untested ones",
+   "hook": "POV self-deprecating"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": "A4",
+   "topic": "stop buying guru lists, validate with your own numbers",
+   "hook": "Casual flex"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": "B1",
+   "topic": "profit math and the supplier screen",
+   "hook": "POV step-by-step"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": "B2",
+   "topic": "three screens before you touch ads",
+   "hook": "Direct how-to"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": "B3",
+   "topic": "unboxing a sample as free validation",
+   "hook": "POV"
+  },
+  {
+   "date": "2026-11-25",
+   "slot": "B4",
+   "topic": "learn on validation, not your ad account",
+   "hook": "Casual secret"
   }
  ],
  "clips": {
@@ -546,7 +594,7 @@
   "e1_AfqPShxKEub2y35LEwcj5-6_FC_RVAYxT80nV7dy0A_jKZ07Twg": 5,
   "e1_AfqPShxid5adI9k1IDFQZcY79llCvTutrbNTYMUlxamltiDe9yRw": 4,
   "e1_AfqPShzZao19Dk052EWZB4LHwC-D-1CcHmZtGXyYpSa-9bkJuZQA": 4,
-  "e1_AfqPShzK2xUkMqchMBS9X3J8hdRULI2ZyLPkp8ootY039Ctou1U": 6,
+  "e1_AfqPShzK2xUkMqchMBS9X3J8hdRULI2ZyLPkp8ootY039Ctou1U": 7,
   "e1_AfqPShz0T7GzOEWbTNBiCotYwNRwOkhZDdJsOJWkwonZ2Shb1w": 5,
   "e1_AfqPShyq2P8Jtius1kbjFZbD91LpDdkXc9Tsr8AMJ93J2SIKqeY": 4,
   "e1_AfqPShzL55YMsMDQ0j0JktjQFhcvyjNtM4MYFzFpux_kudWcy3E5": 3,
@@ -558,7 +606,7 @@
   "e1_AfqPShwkBhOgODj84XAeVtb4lWR9c7Q7YODSzFzpyVeWbJlMg6H97A": 2,
   "e1_AfqPShwat9Djx7c02oKawQz7RoK80nUjCG32KaSJNC5ItzI6pUoi": 2,
   "e1_AfqPShwso_1O6UuywBVoG93SMYHZElGj4bGRzEywC203Qm0k3AjV": 5,
-  "e1_AfqPShyUXnI4E6qWsPYV_M3_ibcECRZ6eyu0upGnc6E2iJENEtk": 6,
+  "e1_AfqPShyUXnI4E6qWsPYV_M3_ibcECRZ6eyu0upGnc6E2iJENEtk": 7,
   "e1_AfqPShy9brXpekrhsdVcJRtiV6SuKUlHw4HxGUiiObFs1Q555A": 1,
   "e1_AfqPShznMVOvOLkZNe0kR96wAFVxCPEcxo6oBnPY1pJ1zLEEqE8cVA": 1,
   "e1_AfqPShwk1dHs2jbnxOlcTYpk5U8clrb2XzYvldx_Kdrl5cg7ejw03Q": 1,
@@ -575,13 +623,13 @@
   "e1_AfqPShwLN08iFDDSipBV9nF9BYW0xEOIGKFvTSabJ4bFoxmAhlOdsg": 6,
   "e1_AfqPShxG3Thx5Vs2aCIr-byiwCq89fZt5dAdYMl0PGq-iDHMkcMk0Q": 1,
   "e1_AfqPShwWqXUDitO-UBcqAYOq0bHY6BhudzOthFs3OAbaxD0CRYU0": 1,
-  "e1_AfqPShzKP9dzISDFn4P9QQ_9OptbnVxEEpKzBEcfQYPWX0g88teQcQ": 6,
+  "e1_AfqPShzKP9dzISDFn4P9QQ_9OptbnVxEEpKzBEcfQYPWX0g88teQcQ": 7,
   "e1_AfqPShyupTeF_8OAUyGVLFBTElms-AjY4WBG9rDFNmfeGRngherCcg": 6,
   "e1_AfqPShycG-93VFGGIsf3VGaoBoty9C62NKoYrOw2vp8fmj8RkuTm": 7,
   "e1_AfqPShwgg2uXh8Zdcn--ltkngU9hEnR_Y_Oy4yT_yUYrkex0rp9SIg": 7,
   "e1_AfqPShxShlpPj3BWA3lMKxbZ_kXk3NbyJjZHGTTQZI9Qfeu_8Bpy": 6,
   "e1_AfqPShw7esilH3z0Qn5Z34YAbtTHyIU0c3NBW5D7GGpr0vxEMju8": 6,
-  "e1_AfqPShyhwMNKOkHzQ8aTzjSMae9XB_E8Y_9ZlFBJ3nrK6SmaSYA": 6,
+  "e1_AfqPShyhwMNKOkHzQ8aTzjSMae9XB_E8Y_9ZlFBJ3nrK6SmaSYA": 7,
   "e1_AfqPShybSyCBN10YFl1rG3IiLk69aOTX4k-ExhfvNNg5XX-4pt--": 6,
   "e1_AfqPShzwDjcI8pMG8VAKzqyzCESBa6V8kiyXKdnaBw_iZhMSI0Cg": 4,
   "e1_AfqPShxijaqxYO7LbacJehgrr5KMgPO2heZsZHr_CzvUhSgylQ": 1,
@@ -599,17 +647,17 @@
   "e1_AfqPShxRjr2TLzXMM4cvjnj7Rwf3P-heXrG7og_qbo0vsJVYFI_P": 1,
   "e1_AfqPShzCEF1aDn94D4MJZjOg4o9WnKiUy_NszFEffptFHWUG5xr5": 1,
   "e1_AfqPShyC6Pjx64zFg5Eo9T_ka5LeES4FFw92XBAt01lWgX9GaF5c": 1,
-  "1089589703636819557": 28,
-  "1089589703636819880": 13,
-  "1089589703636819985": 12,
-  "1089589703636819701": 29,
-  "1089589703636819229": 29,
-  "1089589703636819493": 29,
-  "1089589703636820013": 28,
-  "1089589703636819778": 29,
-  "1089589703636819757": 29,
-  "1089589703636819643": 12,
-  "1089589703636820004": 12,
-  "1089589703636819616": 13
+  "1089589703636819557": 32,
+  "1089589703636819880": 14,
+  "1089589703636819985": 14,
+  "1089589703636819701": 32,
+  "1089589703636819229": 33,
+  "1089589703636819493": 32,
+  "1089589703636820013": 32,
+  "1089589703636819778": 33,
+  "1089589703636819757": 33,
+  "1089589703636819643": 14,
+  "1089589703636820004": 14,
+  "1089589703636819616": 14
  }
 }
