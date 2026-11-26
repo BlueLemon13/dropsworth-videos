@@ -629,6 +629,54 @@
    "slot": "B4",
    "topic": "keep one validated product running while testing the next",
    "hook": "Casual secret"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "A1",
+   "topic": "the three-tab routine: find a product, read demand, check the product score",
+   "hook": "POV how-to promise"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "A2",
+   "topic": "the competition and score check that skips saturated products",
+   "hook": "Direct how-to"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "A3",
+   "topic": "validating the niche before the product",
+   "hook": "POV self-deprecating"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "A4",
+   "topic": "validating restock timing before scaling",
+   "hook": "Casual flex"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "B1",
+   "topic": "the demand chart, supplier price and profit math before buying stock",
+   "hook": "POV step-by-step"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "B2",
+   "topic": "a two minute app scan of daily sales, demand and competition before ads",
+   "hook": "Direct save-this how-to"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "B3",
+   "topic": "the three numbers I check every monday",
+   "hook": "POV wise"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "B4",
+   "topic": "validating stock size before buying units",
+   "hook": "Casual secret"
   }
  ],
  "clips": {
@@ -642,7 +690,7 @@
   "e1_AfqPShxKEub2y35LEwcj5-6_FC_RVAYxT80nV7dy0A_jKZ07Twg": 5,
   "e1_AfqPShxid5adI9k1IDFQZcY79llCvTutrbNTYMUlxamltiDe9yRw": 4,
   "e1_AfqPShzZao19Dk052EWZB4LHwC-D-1CcHmZtGXyYpSa-9bkJuZQA": 4,
-  "e1_AfqPShzK2xUkMqchMBS9X3J8hdRULI2ZyLPkp8ootY039Ctou1U": 7,
+  "e1_AfqPShzK2xUkMqchMBS9X3J8hdRULI2ZyLPkp8ootY039Ctou1U": 8,
   "e1_AfqPShz0T7GzOEWbTNBiCotYwNRwOkhZDdJsOJWkwonZ2Shb1w": 5,
   "e1_AfqPShyq2P8Jtius1kbjFZbD91LpDdkXc9Tsr8AMJ93J2SIKqeY": 4,
   "e1_AfqPShzL55YMsMDQ0j0JktjQFhcvyjNtM4MYFzFpux_kudWcy3E5": 3,
@@ -676,9 +724,9 @@
   "e1_AfqPShycG-93VFGGIsf3VGaoBoty9C62NKoYrOw2vp8fmj8RkuTm": 7,
   "e1_AfqPShwgg2uXh8Zdcn--ltkngU9hEnR_Y_Oy4yT_yUYrkex0rp9SIg": 7,
   "e1_AfqPShxShlpPj3BWA3lMKxbZ_kXk3NbyJjZHGTTQZI9Qfeu_8Bpy": 7,
-  "e1_AfqPShw7esilH3z0Qn5Z34YAbtTHyIU0c3NBW5D7GGpr0vxEMju8": 6,
+  "e1_AfqPShw7esilH3z0Qn5Z34YAbtTHyIU0c3NBW5D7GGpr0vxEMju8": 8,
   "e1_AfqPShyhwMNKOkHzQ8aTzjSMae9XB_E8Y_9ZlFBJ3nrK6SmaSYA": 7,
-  "e1_AfqPShybSyCBN10YFl1rG3IiLk69aOTX4k-ExhfvNNg5XX-4pt--": 6,
+  "e1_AfqPShybSyCBN10YFl1rG3IiLk69aOTX4k-ExhfvNNg5XX-4pt--": 7,
   "e1_AfqPShzwDjcI8pMG8VAKzqyzCESBa6V8kiyXKdnaBw_iZhMSI0Cg": 4,
   "e1_AfqPShxijaqxYO7LbacJehgrr5KMgPO2heZsZHr_CzvUhSgylQ": 1,
   "e1_AfqPShzF-Ewl1x4Z-X6N3sooXsoDIW3EvUSildddQe2TgG4LESJCOw": 1,
@@ -695,17 +743,17 @@
   "e1_AfqPShxRjr2TLzXMM4cvjnj7Rwf3P-heXrG7og_qbo0vsJVYFI_P": 1,
   "e1_AfqPShzCEF1aDn94D4MJZjOg4o9WnKiUy_NszFEffptFHWUG5xr5": 1,
   "e1_AfqPShyC6Pjx64zFg5Eo9T_ka5LeES4FFw92XBAt01lWgX9GaF5c": 1,
-  "1089589703636819557": 36,
-  "1089589703636819880": 16,
-  "1089589703636819985": 15,
-  "1089589703636819701": 36,
-  "1089589703636819229": 37,
-  "1089589703636819493": 36,
-  "1089589703636820013": 36,
-  "1089589703636819778": 36,
-  "1089589703636819757": 36,
-  "1089589703636819643": 16,
-  "1089589703636820004": 15,
-  "1089589703636819616": 16
+  "1089589703636819557": 40,
+  "1089589703636819880": 17,
+  "1089589703636819985": 17,
+  "1089589703636819701": 40,
+  "1089589703636819229": 40,
+  "1089589703636819493": 40,
+  "1089589703636820013": 40,
+  "1089589703636819778": 40,
+  "1089589703636819757": 39,
+  "1089589703636819643": 17,
+  "1089589703636820004": 17,
+  "1089589703636819616": 18
  }
 }
