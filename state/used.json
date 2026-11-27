@@ -677,6 +677,54 @@
    "slot": "B4",
    "topic": "validating stock size before buying units",
    "hook": "Casual secret"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": "A1",
+   "topic": "demand, rival stores and product score: the three-check find",
+   "hook": "POV how-to promise"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": "A2",
+   "topic": "saturation check: skip crowded products with the competition step",
+   "hook": "Direct how-to"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": "B1",
+   "topic": "product score and profit math: picking by numbers",
+   "hook": "POV step-by-step"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": "B2",
+   "topic": "score first: reading steady sales before a product goes viral",
+   "hook": "Direct save-this how-to"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": "A3",
+   "topic": "a validated product paid my first month of rent",
+   "hook": "POV wise"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": "A4",
+   "topic": "supplier reply speed before you pay",
+   "hook": "Casual flex"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": "B3",
+   "topic": "cart abandon rate as proof people want it",
+   "hook": "POV wise"
+  },
+  {
+   "date": "2026-11-28",
+   "slot": "B4",
+   "topic": "validating the weekend sales dip before panicking",
+   "hook": "Casual secret"
   }
  ],
  "clips": {
@@ -702,13 +750,13 @@
   "e1_AfqPShwkBhOgODj84XAeVtb4lWR9c7Q7YODSzFzpyVeWbJlMg6H97A": 2,
   "e1_AfqPShwat9Djx7c02oKawQz7RoK80nUjCG32KaSJNC5ItzI6pUoi": 2,
   "e1_AfqPShwso_1O6UuywBVoG93SMYHZElGj4bGRzEywC203Qm0k3AjV": 5,
-  "e1_AfqPShyUXnI4E6qWsPYV_M3_ibcECRZ6eyu0upGnc6E2iJENEtk": 7,
+  "e1_AfqPShyUXnI4E6qWsPYV_M3_ibcECRZ6eyu0upGnc6E2iJENEtk": 8,
   "e1_AfqPShy9brXpekrhsdVcJRtiV6SuKUlHw4HxGUiiObFs1Q555A": 1,
   "e1_AfqPShznMVOvOLkZNe0kR96wAFVxCPEcxo6oBnPY1pJ1zLEEqE8cVA": 1,
   "e1_AfqPShwk1dHs2jbnxOlcTYpk5U8clrb2XzYvldx_Kdrl5cg7ejw03Q": 1,
-  "e1_AfqPShxn75MDlsMvBUf05rZFWmKlVfCR6FMjp3Kog9o-71i-aqI": 7,
+  "e1_AfqPShxn75MDlsMvBUf05rZFWmKlVfCR6FMjp3Kog9o-71i-aqI": 8,
   "e1_AfqPShziUI1NQfISz_DOwN93RBtX8AXL9QwXNKou9swrFDXLm0k": 3,
-  "e1_AfqPShyJ-17N5GYjLde8K55J_nGcLgHatLnqVyomrwmx1KC8Tw": 7,
+  "e1_AfqPShyJ-17N5GYjLde8K55J_nGcLgHatLnqVyomrwmx1KC8Tw": 8,
   "e1_AfqPShw5g406W9_cecFQGs-JfBKWrm4ehcftyCJILt6OfcH--g": 1,
   "e1_AfqPShyIyH3pf6joukXOa4yeDx4yg4frZ2euxJJ5cCSHsM4GgZU": 1,
   "e1_AfqPShwF8uq69-Rt2kNXU7J5G2PvJ2RFX3cqvyWP9OdbOG_8xHXEtA": 1,
@@ -721,7 +769,7 @@
   "e1_AfqPShwWqXUDitO-UBcqAYOq0bHY6BhudzOthFs3OAbaxD0CRYU0": 1,
   "e1_AfqPShzKP9dzISDFn4P9QQ_9OptbnVxEEpKzBEcfQYPWX0g88teQcQ": 7,
   "e1_AfqPShyupTeF_8OAUyGVLFBTElms-AjY4WBG9rDFNmfeGRngherCcg": 7,
-  "e1_AfqPShycG-93VFGGIsf3VGaoBoty9C62NKoYrOw2vp8fmj8RkuTm": 7,
+  "e1_AfqPShycG-93VFGGIsf3VGaoBoty9C62NKoYrOw2vp8fmj8RkuTm": 8,
   "e1_AfqPShwgg2uXh8Zdcn--ltkngU9hEnR_Y_Oy4yT_yUYrkex0rp9SIg": 7,
   "e1_AfqPShxShlpPj3BWA3lMKxbZ_kXk3NbyJjZHGTTQZI9Qfeu_8Bpy": 7,
   "e1_AfqPShw7esilH3z0Qn5Z34YAbtTHyIU0c3NBW5D7GGpr0vxEMju8": 8,
@@ -743,17 +791,17 @@
   "e1_AfqPShxRjr2TLzXMM4cvjnj7Rwf3P-heXrG7og_qbo0vsJVYFI_P": 1,
   "e1_AfqPShzCEF1aDn94D4MJZjOg4o9WnKiUy_NszFEffptFHWUG5xr5": 1,
   "e1_AfqPShyC6Pjx64zFg5Eo9T_ka5LeES4FFw92XBAt01lWgX9GaF5c": 1,
-  "1089589703636819557": 40,
-  "1089589703636819880": 17,
-  "1089589703636819985": 17,
-  "1089589703636819701": 40,
-  "1089589703636819229": 40,
-  "1089589703636819493": 40,
-  "1089589703636820013": 40,
-  "1089589703636819778": 40,
-  "1089589703636819757": 39,
-  "1089589703636819643": 17,
-  "1089589703636820004": 17,
-  "1089589703636819616": 18
+  "1089589703636819557": 43,
+  "1089589703636819880": 18,
+  "1089589703636819985": 19,
+  "1089589703636819701": 44,
+  "1089589703636819229": 44,
+  "1089589703636819493": 44,
+  "1089589703636820013": 44,
+  "1089589703636819778": 43,
+  "1089589703636819757": 43,
+  "1089589703636819643": 19,
+  "1089589703636820004": 19,
+  "1089589703636819616": 19
  }
 }
